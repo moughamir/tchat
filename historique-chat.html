@@ -2,7 +2,7 @@
 <html lang="fr" class="default">
     <head>
         <meta charset="UTF-8" />
-        <title>Ma consommation</title>
+        <title>Historique tchat</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="noindex, nofollow" />
@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower:300,400,700&subset=latin,latin-ext" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400,700" />
     </head>
-    <body class="default">
+    <body class="account">
         <section class="header header-default">
             <div class="header__content">
                 <span>Tirage de tarot gratuit avec interprétation en live !</span>
@@ -39,34 +39,42 @@
                     <a href="/tarot-en-direct/informations-personnelles" class="sidebar__button">
                         Infos perso
                     </a>
-                    <a href="/tarot-en-direct/ma-consommation" class="sidebar__button sidebar__button--active">
+                    <a href="/tarot-en-direct/ma-consommation" class="sidebar__button">
                         Ma consommation
                     </a>
                     <a href="/tarot-en-direct/cartes-enregistrees" class="sidebar__button">
                         Cartes enregistrées
                     </a>
-                    <a href="/tarot-en-direct/historique-chat" class="sidebar__button">
+                    <a href="/tarot-en-direct/historique-chat" class="sidebar__button sidebar__button--active">
                         Historique tchat
                     </a>
                 </div>
             </div>
             <div class="page__content">
                 <div class="page-user">
-                    <h1 class="page__title">Ma consommation</h1>
-                    <div class="row">
-                        <div class="small-12 columns">
-                            Il vous reste: <span class="remaining_credit">0 seconde</span><br/>
-                            <span class="button recredit_action">Recharger mon compte</span>
+                    <h1 class="page__title">Historique tchat</h1>
+                    <div class="account_block ">
+                        <div class="header">
+                            <a href="#">
+                                <div class="row">
+                                    <div class="small-2 columns img_container">
+                                        <div class="row">
+                                        </div>
+                                    </div>
+                                    <div class="small-10 columns title_container">
+                                        <div class="row">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content">
+                            <ul class="conversations"></ul>
+                            <div class="conversations">
+                                Vous n&#039;avez encore eu aucune conversation avec nos voyants !
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="small-12 columns">
-                            <br /><br />
-                            Vous n&#039;avez aucun abonnement en cours
-                        </div>
-                    </div>
-                    <div id="buy_formula_modal" class="reveal-modal buy_formula_modal" data-reveal aria-hidden="true" role="dialog"></div>
-
                 </div>
             </div>
         </section>
@@ -95,46 +103,23 @@
         </div>
         <footer class="footer">
             <p class="footer__content">
-                © 2016 - <a href="/tarot-en-direct/voyants/">Tarot Direct</a> - <a href="/tarot-en-direct/cgv">CGV</a> - <a href="/tarot-en-direct/mentions-legales">Mentions légales</a>
+                © 2016 -
+                <a href="/tarot-en-direct/voyants/">Tarot Direct</a> -
+                <a href="/tarot-en-direct/cgv">CGV</a> -
+                <a href="/tarot-en-direct/mentions-legales">Mentions légales</a>
             </p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="/js/tarot.js"></script>
         <script type="text/javascript">
-            var buy_formula_modal_id = 'buy_formula_modal';
-            var cancel_subscription_modal_id = 'cancelSubscriptionModal';
             $(window).load(function () {
-                $('.recredit_action').on('click', function () {
-                    $('#' + buy_formula_modal_id).foundation('reveal', 'open', '/tarot-en-direct/recherche-formules', {multiple_opened: true});
-                });
-                $('.open_cancel_subscription_modal').on('click', function () {
-                    var modal = $('#' + cancel_subscription_modal_id), p = modal.find('p.subscriptionUntil'), jLink = $(this);
-
-                    p.html(p.html().replace('%xx/xx%', jLink.data('committed_until')));
-
-                    modal
-                            .find('.chat_subscription_id_receiver')
-                            .val(jLink.data('subscription_id'))
-                            .end()
-                            .foundation('reveal', 'open');
-                });
-                initBuyFormulaModal('#' + buy_formula_modal_id, function (data) {
-                    $('#buyFormulaSuccessModal').remove();
-
-                    $('<div class="reveal-modal success tiny" id="buyFormulaSuccessModal" data-reveal role="dialog">'
-                            + '<div class="content">'
-                            + data.message
-                            + '<a class="close-reveal-modal" aria-label="Close">&#215;</a>'
-                            + '</div>'
-                            + '</div>')
-                            .appendTo('body')
-                            .foundation('reveal', 'open');
-
-                    $.get(document.location.href, function (response) {
-                        $('.remaining_credit').html(
-                                $(response).find('.remaining_credit').html()
-                                );
-                    });
+                var eLiConversations = $('ul.conversations li');
+                eLiConversations.on('click', function () {
+                    eLiConversations.removeClass('active');
+                    $(this).addClass('active');
+                    $('div.conversations')
+                            .find('.conversation.active').removeClass('active').end()
+                            .find('.conversation[data-conversation_id="' + $(this).data('conversation_id') + '"]').addClass('active');
                 });
             });
         </script>
@@ -147,17 +132,14 @@
         </script>
         <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
         <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/933151112/?value=0&amp;guid=ON&amp;script=0"/>
-        </div>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/933151112/?value=0&amp;guid=ON&amp;script=0"/>
+            </div>
         </noscript>
         <script>
             (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
+                i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)}, i[r].l = 1 * new Date();a = s.createElement(o),
                         m = s.getElementsByTagName(o)[0];
                 a.async = 1;
                 a.src = g;
