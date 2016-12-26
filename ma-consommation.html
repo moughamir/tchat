@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr" class="default">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ma consommation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="stylesheet" href="/css/tarot.css">
+        <link rel="icon" type="image/x-icon" href="/tarot-favicon.png" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,latin-ext" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower:300,400,700&subset=latin,latin-ext" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400,700" />
+    </head>
+    <body class="default">
+        <section class="header header-default">
+            <div class="header__content">
+                <span>Tirage de tarot gratuit avec interprétation en live !</span>
+                <a href="/tarot-en-direct/voyants/">
+                    <img src="/img/tarot/logo.png" alt="Tarot Direct" class="header__logo" />
+                </a>
+            </div>
+            <div class="header__login">
+                Amine&nbsp;&nbsp;
+                <a href="/tarot-en-direct/informations-personnelles" class="button">Mon compte</a>&nbsp;&nbsp;
+                <a href="/tarot-en-direct/logout" class="button">Me déconnecter</a>
+            </div>
+        </section>
+        <section class="page">
+            <div class="page__sidebar">
+                <div class="sidebar__block sidebar__block--user">
+                    <p class="sidebar__title sidebar__title--user">Amine</p>
+                    <a href="/tarot-en-direct/logout" class="sidebar__button">Me déconnecter</a>
+                </div>
+                <div class="sidebar__block sidebar__block--nav">
+                    <a href="/tarot-en-direct/compte" class="sidebar__button">
+                        Menu
+                    </a>
+                    <a href="/tarot-en-direct/informations-personnelles" class="sidebar__button">
+                        Infos perso
+                    </a>
+                    <a href="/tarot-en-direct/ma-consommation" class="sidebar__button sidebar__button--active">
+                        Ma consommation
+                    </a>
+                    <a href="/tarot-en-direct/cartes-enregistrees" class="sidebar__button">
+                        Cartes enregistrées
+                    </a>
+                    <a href="/tarot-en-direct/historique-chat" class="sidebar__button">
+                        Historique tchat
+                    </a>
+                </div>
+            </div>
+            <div class="page__content">
+                <div class="page-user">
+                    <h1 class="page__title">Ma consommation</h1>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            Il vous reste: <span class="remaining_credit">0 seconde</span><br/>
+                            <span class="button recredit_action">Recharger mon compte</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <br /><br />
+                            Vous n&#039;avez aucun abonnement en cours
+                        </div>
+                    </div>
+                    <div id="buy_formula_modal" class="reveal-modal buy_formula_modal" data-reveal aria-hidden="true" role="dialog"></div>
+
+                </div>
+            </div>
+        </section>
+        <div class="page">
+            <div class="page-home__content">
+                <div class="page__block page__block--white">
+                    <div class="page__block__reinsurance">
+                        <i class="icon icon-reinsurance-security"></i>
+                        <i class="icon"></i>
+                        <p>Garantie anonymat<br />Protection des données personnelles</p>
+                    </div>
+                    <div class="page__block__reinsurance">
+                        <i class="icon icon-reinsurance-expertise"></i>
+                        <p>Voyants experts<br />Grâce à plusieurs années d’expériences</p>
+                    </div>
+                    <div class="page__block__reinsurance">
+                        <i class="icon icon-reinsurance-plan"></i>
+                        <p>Prix adaptatifs<br />Des formules adaptées à vos besoins</p>
+                    </div>
+                    <div class="page__block__reinsurance">
+                        <i class="icon icon-reinsurance-payment"></i>
+                        <p>Paiement sécurisé<br />Transaction vias Be2Bill</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p class="footer__content">
+                © 2016 -
+                <a href="/tarot-en-direct/voyants/">Tarot Direct</a> -
+                <a href="/tarot-en-direct/cgv">CGV</a> -
+                <a href="/tarot-en-direct/mentions-legales">Mentions légales</a>
+            </p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="/js/tarot.js"></script>
+        <script type="text/javascript">
+            var buy_formula_modal_id = 'buy_formula_modal';
+            var cancel_subscription_modal_id = 'cancelSubscriptionModal';
+            $(window).load(function () {
+                $('.recredit_action').on('click', function () {
+                    $('#' + buy_formula_modal_id).foundation('reveal', 'open', '/tarot-en-direct/recherche-formules', {multiple_opened: true});
+                });
+                $('.open_cancel_subscription_modal').on('click', function () {
+                    var modal = $('#' + cancel_subscription_modal_id), p = modal.find('p.subscriptionUntil'), jLink = $(this);
+
+                    p.html(p.html().replace('%xx/xx%', jLink.data('committed_until')));
+
+                    modal
+                            .find('.chat_subscription_id_receiver')
+                            .val(jLink.data('subscription_id'))
+                            .end()
+                            .foundation('reveal', 'open');
+                });
+                initBuyFormulaModal('#' + buy_formula_modal_id, function (data) {
+                    $('#buyFormulaSuccessModal').remove();
+
+                    $('<div class="reveal-modal success tiny" id="buyFormulaSuccessModal" data-reveal role="dialog">'
+                            + '<div class="content">'
+                            + data.message
+                            + '<a class="close-reveal-modal" aria-label="Close">&#215;</a>'
+                            + '</div>'
+                            + '</div>')
+                            .appendTo('body')
+                            .foundation('reveal', 'open');
+
+                    $.get(document.location.href, function (response) {
+                        $('.remaining_credit').html(
+                                $(response).find('.remaining_credit').html()
+                                );
+                    });
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 933151112;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/933151112/?value=0&amp;guid=ON&amp;script=0"/>
+            </div>
+        </noscript>
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)}, i[r].l = 1 * new Date();a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-16975536-8', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
