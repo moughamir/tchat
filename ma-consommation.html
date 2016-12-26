@@ -16,36 +16,36 @@
         <section class="header header-default">
             <div class="header__content">
                 <span>Tirage de tarot gratuit avec interprétation en live !</span>
-                <a href="/tarot-en-direct/voyants/">
+                <a href="voyants/">
                     <img src="img/tarot/logo.png" alt="Tarot Direct" class="header__logo" />
                 </a>
             </div>
             <div class="header__login">
                 Amine&nbsp;&nbsp;
-                <a href="/tarot-en-direct/informations-personnelles" class="button">Mon compte</a>&nbsp;&nbsp;
-                <a href="/tarot-en-direct/logout" class="button">Me déconnecter</a>
+                <a href="informations-personnelles.html" class="button">Mon compte</a>&nbsp;&nbsp;
+                <a href="logout" class="button">Me déconnecter</a>
             </div>
         </section>
         <section class="page">
             <div class="page__sidebar">
                 <div class="sidebar__block sidebar__block--user">
                     <p class="sidebar__title sidebar__title--user">Amine</p>
-                    <a href="/tarot-en-direct/logout" class="sidebar__button">Me déconnecter</a>
+                    <a href="logout" class="sidebar__button">Me déconnecter</a>
                 </div>
                 <div class="sidebar__block sidebar__block--nav">
-                    <a href="/tarot-en-direct/compte" class="sidebar__button">
+                    <a href="compte.html" class="sidebar__button">
                         Menu
                     </a>
-                    <a href="/tarot-en-direct/informations-personnelles" class="sidebar__button">
+                    <a href="informations-personnelles.html" class="sidebar__button">
                         Infos perso
                     </a>
-                    <a href="/tarot-en-direct/ma-consommation" class="sidebar__button sidebar__button--active">
+                    <a href="ma-consommation.html" class="sidebar__button sidebar__button--active">
                         Ma consommation
                     </a>
-                    <a href="/tarot-en-direct/cartes-enregistrees" class="sidebar__button">
+                    <a href="cartes-enregistrees.html" class="sidebar__button">
                         Cartes enregistrées
                     </a>
-                    <a href="/tarot-en-direct/historique-chat" class="sidebar__button">
+                    <a href="historique-chat.html" class="sidebar__button">
                         Historique tchat
                     </a>
                 </div>
@@ -95,7 +95,7 @@
         </div>
         <footer class="footer">
             <p class="footer__content">
-                © 2016 - <a href="/tarot-en-direct/voyants/">Tarot Direct</a> - <a href="/tarot-en-direct/cgv">CGV</a> - <a href="/tarot-en-direct/mentions-legales">Mentions légales</a>
+                © 2016 - <a href="voyants.html">Tarot Direct</a> - <a href="cgv.html">CGV</a> - <a href="mentions-legales.html">Mentions légales</a>
             </p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -105,7 +105,7 @@
             var cancel_subscription_modal_id = 'cancelSubscriptionModal';
             $(window).load(function () {
                 $('.recredit_action').on('click', function () {
-                    $('#' + buy_formula_modal_id).foundation('reveal', 'open', '/tarot-en-direct/recherche-formules', {multiple_opened: true});
+                    $('#' + buy_formula_modal_id).foundation('reveal', 'open', 'recherche-formules', {multiple_opened: true});
                 });
                 $('.open_cancel_subscription_modal').on('click', function () {
                     var modal = $('#' + cancel_subscription_modal_id), p = modal.find('p.subscriptionUntil'), jLink = $(this);
