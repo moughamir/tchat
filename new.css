@@ -10,8 +10,8 @@
 
 }
 body {
-  background: #EAEEF4 url(img/tarot/background.png) repeat fixed;
-  background-size: cover;
+    background: #EAEEF4 url(img/tarot/background.png) center fixed;
+    background-size: cover;
 }
 .header{
   background: #fff;
@@ -52,10 +52,29 @@ body {
     font-size: 45px;
 }
 .sidebar__button{
-  background: #454545;
+    background: #454545;
 }
 .button {
     background: #71efc4;
     color: #454545;
     font-weight: 600;
+}
+.button:hover{
+    background: linear-gradient(35deg, rgba(113,239,196,1) 0%, rgba(17,194,180,1) 100%);
+}
+.psychic__button--chat {
+    background-color: #71efc4;
+}
+.psychic__button--chat:hover{
+    background: linear-gradient(35deg, rgba(113,239,196,1) 0%, rgba(17,194,180,1) 100%);
+}
+
+.rating {
+    display: inline-block;
+}
+.star {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #FFC20E;
 }
