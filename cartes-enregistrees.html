@@ -2,7 +2,7 @@
 <html lang="fr" class="default">
     <head>
         <meta charset="UTF-8" />
-        <title>Ma consommation</title>
+        <title>Cartes enregistrées</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="noindex, nofollow" />
@@ -39,10 +39,10 @@
                     <a href="/tarot-en-direct/informations-personnelles" class="sidebar__button">
                         Infos perso
                     </a>
-                    <a href="/tarot-en-direct/ma-consommation" class="sidebar__button sidebar__button--active">
+                    <a href="/tarot-en-direct/ma-consommation" class="sidebar__button">
                         Ma consommation
                     </a>
-                    <a href="/tarot-en-direct/cartes-enregistrees" class="sidebar__button">
+                    <a href="/tarot-en-direct/cartes-enregistrees" class="sidebar__button sidebar__button--active">
                         Cartes enregistrées
                     </a>
                     <a href="/tarot-en-direct/historique-chat" class="sidebar__button">
@@ -52,21 +52,15 @@
             </div>
             <div class="page__content">
                 <div class="page-user">
-                    <h1 class="page__title">Ma consommation</h1>
-                    <div class="row">
-                        <div class="small-12 columns">
-                            Il vous reste: <span class="remaining_credit">0 seconde</span><br/>
-                            <span class="button recredit_action">Recharger mon compte</span>
-                        </div>
+                    <h1 class="page__title">Cartes enregistrées</h1>
+                    <p>Vous n&#039;avez aucune carte enregistrée</p>
+                    <div data-reveal class="reveal-modal small alias-confirm-modal" id="alias-delete-confirm-modal">
+                        <h2>Suppression de la carte</h2>
+                        <p>Êtes-vous sûr(e) de vouloir supprimer cette carte ?</p>
+                        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                        <a data-confirm-cancel class="button secondary">Annuler</a>
+                        <a data-confirm class="button alert">Confirmer</a>
                     </div>
-                    <div class="row">
-                        <div class="small-12 columns">
-                            <br /><br />
-                            Vous n&#039;avez aucun abonnement en cours
-                        </div>
-                    </div>
-                    <div id="buy_formula_modal" class="reveal-modal buy_formula_modal" data-reveal aria-hidden="true" role="dialog"></div>
-
                 </div>
             </div>
         </section>
@@ -101,40 +95,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="/js/tarot.js"></script>
         <script type="text/javascript">
-            var buy_formula_modal_id = 'buy_formula_modal';
-            var cancel_subscription_modal_id = 'cancelSubscriptionModal';
-            $(window).load(function () {
-                $('.recredit_action').on('click', function () {
-                    $('#' + buy_formula_modal_id).foundation('reveal', 'open', '/tarot-en-direct/recherche-formules', {multiple_opened: true});
+            jQuery(function ($) {
+                var modal = $('#alias-delete-confirm-modal');
+                modal.find('a[data-confirm-cancel]').click(function () {
+                    modal.foundation('reveal', 'close');
                 });
-                $('.open_cancel_subscription_modal').on('click', function () {
-                    var modal = $('#' + cancel_subscription_modal_id), p = modal.find('p.subscriptionUntil'), jLink = $(this);
-
-                    p.html(p.html().replace('%xx/xx%', jLink.data('committed_until')));
-
-                    modal
-                            .find('.chat_subscription_id_receiver')
-                            .val(jLink.data('subscription_id'))
-                            .end()
-                            .foundation('reveal', 'open');
-                });
-                initBuyFormulaModal('#' + buy_formula_modal_id, function (data) {
-                    $('#buyFormulaSuccessModal').remove();
-
-                    $('<div class="reveal-modal success tiny" id="buyFormulaSuccessModal" data-reveal role="dialog">'
-                            + '<div class="content">'
-                            + data.message
-                            + '<a class="close-reveal-modal" aria-label="Close">&#215;</a>'
-                            + '</div>'
-                            + '</div>')
-                            .appendTo('body')
-                            .foundation('reveal', 'open');
-
-                    $.get(document.location.href, function (response) {
-                        $('.remaining_credit').html(
-                                $(response).find('.remaining_credit').html()
-                                );
-                    });
+                $('ul.aliases li a').click(function () {
+                    modal.find('a[data-confirm]').attr('href', this.href);
+                    modal.foundation('reveal', 'open');
+                    return false;
                 });
             });
         </script>
@@ -163,7 +132,6 @@
                 a.src = g;
                 m.parentNode.insertBefore(a, m)
             })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
             ga('create', 'UA-16975536-8', 'auto');
             ga('send', 'pageview');
         </script>
