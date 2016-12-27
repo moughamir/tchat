@@ -3,7 +3,17 @@
 @import "foundation";
 @import "sprite";
 @import "front";
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('../fonts/CaviarDreams/CaviarDreams-webfont.eot');
+    src: url('../fonts/CaviarDreams/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/CaviarDreams/CaviarDreams-webfont.woff') format('woff'),
+         url('../fonts/CaviarDreams/CaviarDreams-webfont.ttf') format('truetype'),
+         url('./fonts/CaviarDreams/CaviarDreams-webfont.svg#caviar_dreamsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
 // Table of Contents
 // Chat
 // General
@@ -18,6 +28,7 @@ $color_chat_message_client_background: #e5f2fa;
 
 body {
     background: $lightGrey $body-bg;
+    background-size: cover;
 }
 
 // General
@@ -58,7 +69,7 @@ $icons:
 ;
 
 .icon {
-    background-image: url('/img/tarot/sprite.png');
+    background-image: url('../img/tarot/sprite.png');
 
     @each $icon-name, $icon-sprite in $icons {
         &.icon-#{$icon-name} {
@@ -74,29 +85,35 @@ $icons:
 }
 
 .button {
-    background: $cyan-color;
+    background: #71efc4;
     margin: 0;
     font-size: 1rem;
 
     &:focus, &:hover {
-        background: $darkBlue;
+        background: linear-gradient(35deg, rgba(113,239,196,1) 0%, rgba(17,194,180,1) 100%);
     }
 }
 
 // Header
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 .header {
-    background: $primary-color;
+    background: $white;
 
     &__content {
         @include grid-row();
         position: relative;
         line-height: 120px;
-
+        & > a {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
         span {
             color: $lightBlue;
             display: inline-block;
-            font-family: Indie Flower;
+            font-family: $indie-flower;
             font-size: 28px;
             max-width: 320px;
             line-height: 35px;
@@ -116,6 +133,12 @@ $icons:
         @media #{$small-only} {
             display: block;
             padding: 0 rem-calc(10);
+            position: static;
+            margin: 0 auto;
+            padding: 10px 0 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -211,7 +234,7 @@ $icons:
 
         a {
             color: $white;
-
+            margin: 0 5px;
             &:hover {
                 text-decoration: underline;
             }
@@ -236,24 +259,28 @@ $icons:
 // Headline
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 .headline {
-    background: white;
+    background: $grey;
     box-shadow: 0 3px 10px -5px black;
     line-height: 108px;
     text-align: center;
 
     &__content {
-        font-family: Raleway Black;
-        font-size: 32px;
-
+        font-family: $CaviarDreams;
+        font-size: 40px;
+        color: white;
+        text-transform: capitalize;
         &::before, &::after {
-            content: '-';
-            margin: 0 5px;
+            content: '';
+            display: inline-block;
+            background: #fff;
+            width: 19px;
+            height: 19px;
+            transform: rotate(45deg);
+            margin:0 2.5rem;
         }
 
         span {
-            color: $lightBlue;
-            font-family: Lobster;
-            font-size: 45px;
+            font-family: $CaviarDreams;
         }
     }
 
@@ -440,6 +467,8 @@ $icons:
 
         &--user {
             font-size: rem-calc(20);
+            text-decoration: underline;
+            text-align: left;
         }
 
         &--opening, &--service {
@@ -472,7 +501,7 @@ $icons:
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            background-image: url('/img/tarot/sprite.png');
+            background-image: url('../img/tarot/sprite.png');
             @include sprite($clock);
         }
     }
@@ -490,7 +519,7 @@ $icons:
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            background-image: url('/img/tarot/sprite.png');
+            background-image: url('../img/tarot/sprite.png');
             @include sprite($phone);
         }
 
@@ -538,7 +567,7 @@ $icons:
         font-size: 1rem;
         display: block;
         color: $white;
-        background: $primary-color;
+        background: $grey;
         margin: {
             top: $column-gutter/2;
             bottom: 0;
@@ -547,10 +576,16 @@ $icons:
         &:hover,
         &:focus,
         &--active {
-            background: darken($primary-color, 10);
+            background:  linear-gradient(22deg, $grey 0%, darken($grey, 10) 50%);
             color: $white;
         }
     }
+    &__credit {
+        border: 1px solid;
+        border-left: 4px solid;
+        border-right: 4px solid;
+        padding: 2px 5px;
+}
 }
 
 .psychics {
@@ -656,7 +691,7 @@ $icons:
         }
 
         &--more {
-            background-color: $oil;
+            background-color: $light-grey;
             color: $white;
 
             &:focus, &:hover {
@@ -666,13 +701,14 @@ $icons:
         }
 
         &--chat {
-            background: $cyan-color;
+            
+            background: #71efc4;
             font-weight: bold;
-            color: $primary-color;
+            color: $grey;
             margin: 0;
 
             &:focus, &:hover {
-                background: darken($cyan-color, 10);
+                background: linear-gradient(25deg, #71efc4 0%, darken(#71efc4, 25) 100%);
                 color: $primary-color;
             }
         }
@@ -839,13 +875,13 @@ body.account {
 
         span {
             display: inline-block;
-            background: url(/img/tarot/hexagone_bleu.png);
+            background: url(../img/tarot/hexagone_bleu.png);
         }
     }
 
     .content {
         color: #454545;
-        font-family: Indie Flower;
+        font-family: $indie-flower;
         font-size: 22px;
         padding-top: 15px;
         text-align: center;
@@ -893,7 +929,7 @@ body.account {
 
                 i {
                     font-size: 40px;
-                    font-family: Lobster;
+                    font-family: $lobster;
                 }
             }
 
@@ -912,7 +948,7 @@ body.account {
     .tunnel-cb-headline {
         background: $primary-color;
         color: white;
-        font-family: Indie Flower;
+        font-family: $indie-flower;
         font-size: 22px;
         line-height: 60px;
 
@@ -1001,7 +1037,7 @@ body.account {
 
                 &::after {
                     content: ' ';
-                    background: url(/img/tchat/securityCode.png);
+                    background: url(../img/tchat/securityCode.png);
                     position: absolute;
                     top: -14px;
                     width: 90px;
@@ -1143,4 +1179,13 @@ body.account {
             display: none;
         }
     }
+}
+// Aggregate Rating To be removed
+.rating {
+    display: inline-block;
+}
+.star {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
 }

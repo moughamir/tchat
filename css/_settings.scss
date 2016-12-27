@@ -35,11 +35,17 @@ $column-gutter: rem-calc(20);
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+// Fonts
+$CaviarDreams : CaviarDreams;
 
+$lato: 'Lato', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+$lobster: 'Lobster', cursive;
+$indie-flower: 'Indie Flower', cursive;
 
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Lato", sans-serif;
+$font-family-sans-serif: $lato;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
@@ -69,12 +75,16 @@ $oil         : #333333;
 $black       : #000;
 
 // We use these as default colors throughout
-$primary-color: #2e4980;
+$grey         : #454545;
+$light-grey   : #bfbfbe;
+$primary-color: $grey;
 $cyan-color   : #1bebda;
 $lightBlue    : #1BEBDA;
 $lightGrey    : #EAEEF4;
 $darkGrey     : #616161;
 $darkBlue     : darken($cyan-color, 10);
+$white        :  #fff;
+
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
