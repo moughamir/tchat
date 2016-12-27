@@ -3575,9 +3575,12 @@ label {
     right: 1.15385rem;
     top: 1.15385rem;
     z-index: 99;
-    color: #fff;
+    color: #454545;
     text-align: center;
     max-width: 535px; }
+    @media only screen and (max-width: 49.23077em) {
+      .header__login span {
+        display: none; } }
     .header__login label span {
       display: none; }
     .header__login input[type=text],
@@ -4120,8 +4123,12 @@ body.account div.conversations .conversation {
   max-width: 75.38462rem;
   width: 100%;
   margin-top: 1.53846rem;
-  margin-bottom: 1.53846rem;
-  color: #aaadb1; }
+  margin-bottom: -2rem;
+  color: #aaadb1;
+  background: #454545;
+  padding: 1rem;
+  bottom: 0;
+  max-width: 100%; }
   .footer:before, .footer:after {
     content: " ";
     display: table; }
@@ -4601,6 +4608,9 @@ body.account div.conversations .conversation {
     font-size: 17px; }
   body.chat .page__sidebar {
     display: none; } }
+iframe[name="google_conversion_frame"] {
+  display: none; }
+
 .rating {
   display: inline-block; }
 
