@@ -16,28 +16,27 @@
     <body class="default">
         <section class="header header-default">
             <div class="header__content">
-                <span>Tirage de tarot gratuit avec interprétation en live !</span>
                 <a href="voyants.html">
                     <img src="img/tarot/logo.png" alt="Tarot Direct" class="header__logo" />
                 </a>
             </div>
             <div class="header__login">
-                Amine&nbsp;&nbsp;
+               {{USER}}&nbsp;&nbsp;
                 <a href="informations-personnelles.html" class="button">Mon compte</a>&nbsp;&nbsp;
                 <a href="logout" class="button">Me déconnecter</a>
             </div>
         </section>
         <div class="headline">
-            <span class="headline__content">            liste <span>des voyants</span>
+            <span class="headline__content">liste <span>des voyants</span>
             </span>
         </div>
         <section class="page">
             <div class="page__sidebar">
                 <div class="sidebar__block sidebar__block--user">
-                    <p class="sidebar__title sidebar__title--user">Amine</p>
+                    <p class="sidebar__title sidebar__title--user">{{USER}}</p>
                     <div class="sidebar__credit">
                         Voici le solde de votre compte :<br/>
-                        Il vous reste : 0 seconde
+                        Il vous reste : {{X}} seconde
                     </div>
                     <a href="compte.html" class="sidebar__button">Accéder à mon compte</a>
                     <a href="logout" class="sidebar__button">Me déconnecter</a>

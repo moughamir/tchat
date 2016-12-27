@@ -74,7 +74,6 @@ body {
 }
 .star {
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: #FFC20E;
+    width: 18px;
+    height: 18px;
 }
