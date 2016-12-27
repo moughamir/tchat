@@ -1,0 +1,632 @@
+.marquee {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    .loop {
+        display: inline-block;
+        padding-left: 100%;
+        text-indent: 0;
+        animation: marquee 0s linear infinite;
+
+        &.paused, &:hover{
+            animation-play-state: paused;
+        }
+    }
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+@function _gradientGetTo($from) {
+    $to: right;
+
+    @if $from == top {
+      $to: bottom;
+    } @else if $from == right {
+      $to: left;
+    } @else if $from == bottom {
+      $to: top;
+    }
+
+    @return $to;
+}
+
+@function _gradientGetWebkitFrom($from) {
+    $webkit-from: left top;
+
+    @if $from == top {
+      $webkit-from: left top;
+    } @else if $from == right {
+      $webkit-from: right top;
+    } @else if $from == bottom {
+      $webkit-from: left bottom;
+    }
+
+    @return $webkit-from;
+}
+
+@function _gradientGetWebkitTo($from) {
+    $webkit-to: right top;
+
+    @if $from == top {
+      $webkit-to: left bottom;
+    } @else if $from == right {
+      $webkit-to: left top;
+    } @else if $from == bottom {
+      $webkit-to: left top;
+    }
+
+    @return $webkit-to;
+}
+
+@mixin simple-linear-gradient($from, $startColor, $endColor) {
+    $to: _gradientGetTo($from);
+    $webkit-from: _gradientGetWebkitFrom($from);
+    $webkit-to: _gradientGetWebkitTo($to);
+
+    background: $startColor; /* Old browsers */
+    background: -moz-linear-gradient($from, $startColor 0%, $endColor 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, $webkit-from, $webkit-to, color-stop(0%,$startColor), color-stop(100%,$endColor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient($from, $startColor 0%,$endColor 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient($from, $startColor 0%,$endColor 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient($from, $startColor 0%,$endColor 100%); /* IE10+ */
+    background: linear-gradient(to $to, $startColor 0%,$endColor 100%);
+}
+
+@mixin middle-linear-gradient($from, $startColor, $middleColor, $endColor) {
+    $to: _gradientGetTo($from);
+    $webkit-from: _gradientGetWebkitFrom($from);
+    $webkit-to: _gradientGetWebkitTo($to);
+
+    background: $startColor; /* Old browsers */
+    background: -moz-linear-gradient($from, $startColor 0%, $middleColor 50%, $endColor 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, $webkit-from, $webkit-to, color-stop(0%,$startColor), color-stop(50%,$middleColor), color-stop(100%,$endColor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient($from, $startColor 0%, $middleColor 50%,$endColor 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient($from, $startColor 0%, $middleColor 50%,$endColor 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient($from, $startColor 0%, $middleColor 50%,$endColor 100%); /* IE10+ */
+    background: linear-gradient(to $to, $startColor 0%, $middleColor 50%,$endColor 100%);
+}
+
+@mixin symetric-linear-gradient($startColor, $midColor) {
+    background: $startColor; /* Old browsers */
+    background: -moz-linear-gradient(left, $startColor 0%, $midColor 50%, $startColor 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,$startColor), color-stop(50%,$midColor), color-stop(100%,$startColor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, $startColor 0%,$midColor 50%,$startColor 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, $startColor 0%,$midColor 50%,$startColor 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, $startColor 0%,$midColor 50%,$startColor 100%); /* IE10+ */
+    background: linear-gradient(to right, $startColor 0%,$midColor 50%,$startColor 100%);
+}
+
+@mixin no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+// old registration popin style
+@mixin registrationPopin($mainColor, $secondaryColor) {
+    h2 {
+        color: $mainColor;
+    }
+
+    .connection-block {
+        color: white;
+
+        background-color: $mainColor;
+        padding: 0.75rem;
+
+        label {
+            font-size: rem-calc(19);
+            color: white;
+            margin-bottom: 0.25rem;
+
+            &.nowrap {
+                white-space: nowrap;
+            }
+        }
+
+        h3 {
+            color: white;
+            text-align: center;
+        }
+
+        form {
+            input[type="submit"] {
+                margin: 0 auto;
+                width: 50%;
+            }
+        }
+
+        .button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &.login {
+            input[type="password"] {
+                margin-bottom: 0;
+            }
+
+            .error {
+                margin-bottom: 0;
+            }
+
+            input[type="submit"] {
+                margin-top: 0.75rem;
+            }
+
+            a {
+                display: inline-block;
+                color: white;
+                margin-top: 0.75rem;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &.info {
+            margin-top: 1rem;
+            @media #{$medium-down} {
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+
+            .block {
+                position: relative;
+                margin: 0 4rem 1rem;
+                height: rem-calc(80);
+                line-height: rem-calc(80);
+                padding-left: rem-calc(80) + 0.75rem;
+
+                .icon {
+                    position: absolute;
+                    left: 0;
+                    background: white no-repeat center center;
+                    background-size: rem-calc(60);
+                    border: 2px solid $secondaryColor;
+                    border-radius: 5px;
+                    width: rem-calc(80);
+                    height: rem-calc(80);
+                    line-height: rem-calc(72);
+                    text-align: center;
+
+                    &.icon-1 {
+                        background-image: url(/img/common/registration-info-block1.png);
+                    }
+                    &.icon-2 {
+                        background-image: url(/img/common/registration-info-block2.png);
+                    }
+                    &.icon-3 {
+                        background-image: url(/img/common/registration-info-block3.png);
+                    }
+
+                    margin-right: 1rem;
+                }
+
+                .description {
+                    display: inline-block;
+                    font-weight: bold;
+                    font-size: rem-calc(19);
+                    line-height: 1.5;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        &.register {
+            $field-height: ($input-font-size + ($form-spacing * 1.5) - rem-calc(1));
+            $label-margin-bottom: 0.75rem;
+
+            label {
+                padding: 0;
+                height: $field-height;
+                margin-bottom: $label-margin-bottom;
+            }
+
+            .inline-radio label {
+                height: auto;
+                margin-bottom: 0;
+            }
+
+            input[type="text"], input[type="email"], input[type="password"], select {
+                margin-bottom: 0;
+            }
+
+            .error {
+                ul {
+                    margin: 0;
+                    list-style-type: none;
+                    line-height: 1rem;
+                    font-size: inherit;
+                    font-style: inherit;
+                }
+            }
+
+            .middle-label {
+                position: relative;
+                display: inline-block;
+                padding: 0;
+                height: $field-height;
+                line-height: $field-height;
+                margin-bottom: $label-margin-bottom;
+                text-align: right;
+
+                label {
+                    display: inline-block;
+                    line-height: 1;
+                    vertical-align: middle;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@mixin globalPopinStyle($titleColor)
+{
+    $fontColor: #a09c9c;
+
+    border-radius: 15px;
+    color: $fontColor;
+    padding: 30px;
+
+    @media #{$medium-only} {
+        max-width: 570px;
+    }
+
+    @media #{$large-up} {
+        width: 570px;
+    }
+
+    &.error {
+        border-radius: none;
+        border: 2px solid red;
+        padding: 45px 20px 20px;
+
+        span {
+            color: $white;
+        }
+    }
+}
+
+@mixin doubleRoundedPopinStyle($titleColor)
+{
+    $borderColor: #606060;
+
+    padding: 15px;
+
+    .content {
+        position: relative;
+        border: 3px solid $borderColor;
+        border-radius: 15px;
+        padding: 15px 30px;
+        margin-bottom: 0;
+
+        @media #{$medium-only} {
+            padding: 15px;
+        }
+
+        h2 {
+            color: $titleColor;
+            font-size: rem-calc(23);
+            text-transform: uppercase;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        .button {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    @media #{$small-only} {
+        padding: 0;
+
+        .content {
+            border: none;
+        }
+    }
+
+    @media #{$medium-only} {
+        width: 60%;
+        min-width: 550px;
+    }
+
+    @media #{$large-up} {
+        width: 40%;
+        min-width: 620px;
+    }
+}
+
+// new registration popin style
+@mixin registerPopinStyle($titleColor) {
+    @include doubleRoundedPopinStyle($titleColor);
+
+    .content {
+        $field-height: ($input-font-size + ($form-spacing * 1.5) - rem-calc(1));
+        $registration-select-width: 5rem !default;
+
+        h2 {
+            background: url("/img/common/popin-user-add.png") no-repeat center top;
+            background-size: 60px;
+            font-size: 20px;
+            margin: 15px 0 10px;
+            padding-top: 62px;
+            text-align: center;
+        }
+
+        h3 {
+            background: url("/img/common/triangle-right.png") no-repeat center left;
+            color: $titleColor;
+            cursor: pointer;
+            display: none;
+            font-size: 20px;
+            display: inline-block;
+            margin: 20px 0 5px 10px;
+            padding-left: 25px;
+            max-width: none;
+            width: 100%;
+            text-transform: none;
+
+            + br + form {
+                display: none;
+            }
+
+            &.active {
+                cursor: inherit;
+
+                + br + form {
+                    display: block;
+                }
+            }
+        }
+
+        label {
+            padding: 0;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .inline-radio {
+            @media #{$medium-up} {
+                line-height: $field-height;
+            }
+
+            label {
+                height: auto;
+                margin: 0 0.5rem 0 0.25rem;
+            }
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], select {
+            margin-bottom: 0;
+            padding: 3px 7px;
+            height: 29px;
+        }
+
+        input[type="radio"] {
+            margin-bottom: 0;
+        }
+
+        select {
+            display: inline-block;
+            width: $registration-select-width;
+
+            @media #{$medium-only} {
+                &:first-child {
+                    width: 3.5rem;
+                }
+            }
+        }
+
+        .button {
+            background: #4ab354;
+            border: 2px solid #0f910b;
+            box-shadow: none;
+            color: $white;
+            font-size: 16px;
+            line-height: 30px;
+            padding: 0 20px;
+            margin-top: 1rem;
+            text-transform: uppercase;
+        }
+
+        .error {
+            margin-bottom: 0;
+
+            ul {
+                margin: 0;
+                list-style-type: none;
+                line-height: 1rem;
+                font-size: inherit;
+                font-style: inherit;
+            }
+        }
+
+        .column-login {
+            @include grid-column(6);
+        }
+
+        .column-password {
+            @include grid-column(6);
+        }
+
+        .column-submit {
+            @include grid-column(12);
+
+            .button {
+                width: auto;
+            }
+        }
+
+        @media #{$small-only} {
+            .column-login {
+                @include grid-column(12);
+
+                span.error {
+                    display: none;
+                }
+            }
+
+            .column-password {
+                @include grid-column(12);
+            }
+        }
+
+        @media #{$medium-up} {
+            .column-login {
+                span.error {
+                    // small hack to give impression error message use both columns
+                    width: 200%;
+                }
+            }
+
+            .column-password {
+                span.error {
+                    span {
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin checkEmailPopinStyle($titleColor: #606060) {
+    @include doubleRoundedPopinStyle($titleColor);
+
+    .content {
+        h2 {
+            background: url("/img/common/popin-user-add.png") no-repeat center top;
+            padding-top: rem-calc(140);
+            text-align: center;
+        }
+
+        span, p {
+            font-size: rem-calc(19);
+        }
+
+        span {
+            display: inline-block;
+            background: url("/img/common/popin-notice.png") no-repeat left center;
+            line-height: rem-calc(46);
+            padding-left: rem-calc(60);
+        }
+    }
+}
+
+@mixin resettingPasswordPopinStyle($titleColor: #606060) {
+    @include doubleRoundedPopinStyle($titleColor);
+
+    .content {
+        h2 {
+            background: url("/img/common/popin-user-question.png") no-repeat center top;
+            padding-top: rem-calc(140);
+            text-align: center;
+        }
+
+        p {
+            font-size: rem-calc(16);
+            margin-bottom: 0.75rem;
+        }
+
+        .error {
+            margin-top: -1rem;
+
+            ul {
+                margin: 0;
+                list-style-type: none;
+                line-height: 1rem;
+                font-size: inherit;
+                font-style: inherit;
+            }
+        }
+    }
+}
+
+@mixin column-gap($gap){
+    -webkit-column-gap: $gap; // Chrome, Safari, Opera
+    -moz-column-gap: $gap; // Firefox
+    column-gap: $gap;// IE10+
+}
+
+@mixin column-count($count){
+    -webkit-column-count: $count; // Chrome, Safari, Opera
+    -moz-column-count: $count; // Firefox
+    column-count: $count; // IE10+
+}
+
+.flash-success {
+    color: green;
+}
+
+.flash-danger {
+    color: red;
+}
+
+@font-face {
+  font-family: "Raleway Black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Raleway Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Raleway Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Raleway Regular.ttf") format("truetype");
+}
+
+#user_personnal_informations {
+    .error {
+        margin-top: -1rem;
+
+        ul {
+            margin: 0;
+            list-style-type: none;
+            line-height: 1rem;
+            font-size: inherit;
+            font-style: inherit;
+        }
+    }
+}

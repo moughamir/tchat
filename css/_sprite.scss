@@ -1,0 +1,100 @@
+$advantage1: -0px -0px 69px 67px;
+$advantage2: -0px -67px 69px 67px;
+$advantage3: -0px -134px 69px 67px;
+$advantage1: -0px -0px 69px 67px;
+$advantage2: -0px -67px 69px 67px;
+$advantage3: -0px -134px 69px 67px;
+$clock: -0px -0px 38px 38px;
+$sidebar-reinsurance3: -0px -38px 54px 54px;
+$sidebar-reinsurance1: -0px -92px 54px 54px;
+$sidebar-reinsurance2: -0px -146px 54px 54px;
+$sign-scorpio: -0px -200px 76px 68px;
+$sign-sagittarius: -0px -268px 76px 68px;
+$sign-pisces: -0px -336px 76px 68px;
+$sign-libra: -0px -404px 76px 68px;
+$sign-leo: -0px -472px 76px 68px;
+$sign-gemini: -0px -540px 76px 68px;
+$sign-capricorn: -0px -608px 76px 68px;
+$sign-taurus: -0px -676px 76px 68px;
+$sign-virgo: -0px -744px 76px 68px;
+$sign-cancer: -0px -812px 76px 68px;
+$sign-aquarius: -0px -880px 76px 68px;
+$sign-aries: -0px -948px 76px 68px;
+$chat-quality2: -0px -1016px 98px 74px;
+$reinsurance-security: -0px -1090px 98px 74px;
+$reinsurance-plan: -0px -1164px 98px 74px;
+$reinsurance-payment: -0px -1238px 98px 74px;
+$reinsurance-expertise: -0px -1312px 98px 74px;
+$register-step3: -0px -1386px 98px 74px;
+$register-step2: -0px -1460px 98px 74px;
+$register-step1: -0px -1534px 98px 74px;
+$chat-quality3: -0px -1608px 98px 74px;
+$chat-quality1: -0px -1682px 98px 74px;
+$clock: -0px -0px 38px 38px;
+$phone: -0px -38px 39px 39px;
+$sidebar-reinsurance2: -0px -77px 54px 54px;
+$sidebar-reinsurance1: -0px -131px 54px 54px;
+$sidebar-reinsurance3: -0px -185px 54px 54px;
+$sign-scorpio: -0px -239px 76px 68px;
+$sign-sagittarius: -0px -307px 76px 68px;
+$sign-pisces: -0px -375px 76px 68px;
+$sign-libra: -0px -443px 76px 68px;
+$sign-leo: -0px -511px 76px 68px;
+$sign-gemini: -0px -579px 76px 68px;
+$sign-capricorn: -0px -647px 76px 68px;
+$sign-virgo: -0px -715px 76px 68px;
+$sign-cancer: -0px -783px 76px 68px;
+$sign-taurus: -0px -851px 76px 68px;
+$sign-aquarius: -0px -919px 76px 68px;
+$sign-aries: -0px -987px 76px 68px;
+$chat-quality2: -0px -1055px 98px 74px;
+$reinsurance-security: -0px -1129px 98px 74px;
+$reinsurance-plan: -0px -1203px 98px 74px;
+$reinsurance-payment: -0px -1277px 98px 74px;
+$reinsurance-expertise: -0px -1351px 98px 74px;
+$register-step3: -0px -1425px 98px 74px;
+$register-step2: -0px -1499px 98px 74px;
+$register-step1: -0px -1573px 98px 74px;
+$chat-quality3: -0px -1647px 98px 74px;
+$chat-quality1: -0px -1721px 98px 74px;
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+@function sprite-width($sprite) {
+   @return nth($sprite, 3);
+}
+@function sprite-height($sprite) {
+   @return nth($sprite, 4);
+}
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+@mixin sprite($sprite, $display: block) {
+   @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: $display;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+.icon {
+  background-image: url('img/love/sprite.png');
+}
+
+.icon {
+  background-image: url('img/island/sprite.png');
+}
+
+.icon {
+  background-image: url('img/tchat/sprite.png');
+}
+
+.icon {
+  background-image: url('img/tarot/sprite.png');
+}

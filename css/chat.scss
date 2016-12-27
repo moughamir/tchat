@@ -1,0 +1,1010 @@
+$color_chat_background: white !default;
+$color_chat_actions: pink !default;
+$color_chat_title: #009BC9 !default;
+$font_size_chat_title: 25px !default;
+$color_chat_informations: black !default;
+$color_chat_duration: orange !default;
+$color_chat_messages_border: gray !default;
+$color_chat_message_text: gray !default;
+$color_chat_psychic_pseudo: orange !default;
+$color_chat_sending_action_text: white !default;
+$color_chat_sending_action_background: #1EBBE8 !default;
+$color_chat_message_client_background: #FFEDF3 !default;
+$color_chat_message_psychic_background: #FCFBF9 !default;
+$width_chat_icon_img: 50px !default;
+$width_chat_message_avatar: 40px !default;
+$width_chat_send_action: 100px !default;
+$padding_horizontal_chat_headers: 20px !default;
+$height_chat_messages: 400px !default;
+$min_height_chat_messages: 50px !default;
+$width_chat_container: 750px !default;
+$color_offer_header: #8F8F8F !default;
+$color_offer_title: green !default;
+$width_offer_input_box: 12px !default;
+$color_offer_bronze: #E4D28B !default;
+$color_offer_silver: #8A8C8B !default;
+$color_offer_gold: #EAB801 !default;
+$color_offer_premium: #9F8305 !default;
+$color_offer_description: black !default;
+$color_offer_pay_text: white !default;
+$color_offer_pay_background: #009BC7 !default;
+$color_offer_pay_shadow: grey !default;
+$color_offer_validate_text: white !default;
+$color_offer_validate_background: #4ab354 !default;
+$color_offer_validate_shadow: grey !default;
+$color_offer_free_validate_background: #009BC7 !default;
+$width_offer: 120px !default;
+$height_loader_spinner: 20px !default;
+$background_color_progress_meter_default: #008CBA !default;
+$color_max_chars_acceptable: green !default;
+$color_max_chars_unacceptable: red !default;
+
+@mixin chatHeaderStyle()
+{
+    h2 {
+        color: $color_offer_pay_background;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: normal;
+        letter-spacing: 0;
+        margin: 10px 0 0 10px;
+    }
+}
+
+//////////////////////////////////////////////////////
+// CHAT DEFAULT HTML STRUCTURE
+//////////////////////////////////////////////////////
+$psychic_img_width: $width_chat_icon_img * 3;
+
+.chat_container {
+    background-color: $color_chat_background;
+    max-width: $width_chat_container;
+    margin: auto;
+
+    .clear {
+        clear: both;
+    }
+
+    & > .error {
+        margin: 5px;
+    }
+
+    .error {
+        color: red;
+    }
+
+    .chat_header {
+        padding: 0px $padding_horizontal_chat_headers;
+
+        .chat_actions {
+            text-transform: uppercase;
+            padding: 5px 0px;
+
+            div {
+                cursor: pointer;
+            }
+
+            .chat_action {
+                float:right;
+                color: $color_chat_actions;
+            }
+        }
+
+        .chat_title {
+            color: $color_chat_title;
+            padding: 0px;
+            font-size: 25px;
+
+            img {
+                width: $width_chat_icon_img;
+                vertical-align: top;
+                margin-right: 5px;
+            }
+        }
+
+        .chat_informations {
+            color: $color_chat_informations;
+            padding-left: $width_chat_icon_img;
+            position: relative;
+            margin-bottom: 10px;
+
+            .psychic_img {
+                width: $psychic_img_width;
+                border-radius: 10px;
+            }
+
+            .duration_container {
+                position: absolute;
+                bottom: 0;
+                left: $psychic_img_width + $width_chat_icon_img + $padding_horizontal_chat_headers;
+
+                .duration_img, .question_img {
+                    margin-left: $width_chat_icon_img / 2;
+                    width: $width_chat_icon_img;
+                    margin-right: 5px;
+                }
+
+                .conversation_duration, .remaining_question {
+                    color: $color_chat_duration;
+                    font-weight: bold;
+                }
+
+                .question_consuming {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .chat_messages {
+        border: 1px solid $color_chat_messages_border;
+        padding: 10px ($padding_horizontal_chat_headers / 2) 10px $padding_horizontal_chat_headers;
+        max-height: $height_chat_messages;
+        min-height: $min_height_chat_messages;
+        overflow: auto;
+
+        .chat_message {
+            &:first-child {
+                margin-top: 15px;
+            }
+
+            &:last-child {
+                margin-bottom: 15px;
+            }
+
+            .chat_message_content {
+                word-break: break-word;
+            }
+        }
+    }
+
+    .chat_message {
+        box-shadow: 2px 2px 2px 2px $color_chat_messages_border;
+        padding: 5px 10px;
+        color: $color_chat_message_text;
+        clear:both;
+        margin: 15px 0px;
+        border-radius: 5px;
+        margin-right: 5px;
+
+        .avatar {
+            float: left;
+            width: $width_chat_message_avatar;
+            max-width: 10%;
+        }
+
+        .content_container {
+            float: left;
+            margin-left: 1%;
+            max-width: 89%;
+            width: 89%;
+
+            .pseudo {
+                font-weight: bold;
+                line-height: 1;
+            }
+
+            .chat_message_content {
+                font-size: 0.9em;
+            }
+        }
+
+        &.psychic {
+            background-color: $color_chat_message_psychic_background;
+
+            .pseudo {
+                color: $color_chat_psychic_pseudo;
+            }
+        }
+
+        &.client {
+            background-color: $color_chat_message_client_background;
+        }
+    }
+
+    .chat_action {
+        .pseudo {
+            color: $color_chat_psychic_pseudo;
+        }
+
+        .action {
+            color: $color_chat_message_text;
+        }
+    }
+
+    .chat_footer {
+        padding: 20px 10px;
+
+        .chat_disconnect_banner {
+            display: none;
+            background: red;
+            color: white;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+
+            a {
+                color: inherit;
+
+                &:hover {
+                    color: inherit;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .sending_message {
+            float: left;
+            width: 70%;
+            margin: 0px;
+
+            .content_typing {
+                width: 100%;
+                height: 100 px;
+                resize: none;
+                margin-top: 10px;
+                @include placeholder{
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        .sending_action {
+            float: left;
+            width: 30%;
+            height: $width_chat_send_action;
+            text-align: center;
+
+            .send {
+                display: inline-block;
+                text-align: center;
+                text-transform: uppercase;
+                color: $color_chat_sending_action_text;
+                background-color: $color_chat_sending_action_background;
+                box-shadow: 0px 0px ($width_chat_send_action / 8) ($width_chat_send_action / 16) $color_chat_messages_border;
+                border-radius: 50%;
+                width: $width_chat_send_action;
+                height: $width_chat_send_action;
+                line-height: $width_chat_send_action;
+                cursor: pointer;
+                @include no-select();
+
+                &:active {
+                    width: $width_chat_send_action - (0.02 * $width_chat_send_action);
+                    height: $width_chat_send_action - (0.02 * $width_chat_send_action);
+                }
+            }
+        }
+
+        .max_chars {
+            font-weight: bold;
+
+            &.acceptable {
+                color: $color_max_chars_acceptable;
+            }
+
+            &.unacceptable {
+                color: $color_max_chars_unacceptable;
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////////////////
+// ON GOING CONNEXTION
+//////////////////////////////////////////////////////
+
+#onGoingConnexionModal {
+    h2 {
+        color: $color_chat_title;
+    }
+
+    .chat_header {
+        @include chatHeaderStyle();
+    }
+
+    .center_container {
+        //width: 89%;
+    }
+
+    .redirect {
+        display: none;
+        margin-bottom: 10px;
+    }
+
+    .on_going_action {
+        margin-bottom: 20px;
+
+        .loader {
+            margin: 0 10px;
+            display: inline-block;
+            vertical-align: middle;
+            opacity: 0.7;
+
+            .spinner {
+                width: $height_loader_spinner;
+                height: $height_loader_spinner;
+
+                position: relative;
+            }
+
+            .double-bounce1, .double-bounce2 {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: #333;
+                opacity: 0.6;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+                animation: sk-bounce 2.0s infinite ease-in-out;
+            }
+
+            .double-bounce2 {
+                -webkit-animation-delay: -1.0s;
+                animation-delay: -1.0s;
+            }
+
+            @-webkit-keyframes sk-bounce {
+                0%, 100% { -webkit-transform: scale(0.0) }
+                50% { -webkit-transform: scale(1.0) }
+            }
+
+            @keyframes sk-bounce {
+                0%, 100% {
+                    transform: scale(0.0);
+                    -webkit-transform: scale(0.0);
+                } 50% {
+                    transform: scale(1.0);
+                    -webkit-transform: scale(1.0);
+                }
+            }
+        }
+
+        &.failure {
+            color: red;
+
+            .loader {
+                display: none;
+            }
+
+            .secondary {
+                display: block;
+                color: $color_chat_informations;
+            }
+        }
+    }
+
+    .psychic_avatar_background {
+        height: 170px;
+        border-radius: 10px;
+        background-position: top center;
+        background-size: cover;
+    }
+
+    .permute_user {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .progress {
+
+        .meter {
+            color: white;
+            text-align: center;
+            position: relative;
+
+            &.default {
+                background: $background_color_progress_meter_default;
+            }
+
+            .percentage_progression {
+                position: absolute;
+                top: 1px;
+                line-height: 100%;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .cancelRelation {
+        display: none;
+        margin-bottom: 10px;
+
+        .button {
+            margin: 0;
+            font-size: 16px;
+        }
+    }
+
+    .paymentMessage {
+        display: none;
+        color: green;
+        margin-bottom: 10px;
+    }
+
+    .secondary_informations {
+        font-size: 0.9em;
+        margin-top: 20px;
+    }
+}
+
+.redirect-close-reveal-modal {
+    @include reveal-close();
+}
+
+//////////////////////////////////////////////////////
+// FORMULA DEFAULT HTML STRUCTURE
+//////////////////////////////////////////////////////
+.reveal-modal.buy_formula_modal {
+    padding: 10px;
+}
+
+.buy_formula {
+    border: 2px solid #818181;
+    border-radius: 15px;
+    color: black;
+    padding: 20px;
+
+    .chat_header {
+        @include chatHeaderStyle();
+
+        img {
+            vertical-align: top;
+        }
+    }
+
+    .offer_header {
+        color: $color_offer_header;
+        margin-bottom: 15px;
+
+        img {
+            vertical-align: top;
+        }
+    }
+
+    .chat_header, .offer_header {
+        font-size: 25px;
+        letter-spacing: -1px;
+    }
+
+    .offer_discovery {
+        text-align: center;
+
+        h2 {
+            color: inherit;
+            font-size: 25px;
+            text-transform: capitalize;
+            line-height: 25px;
+            padding: 5px 0 0 45px;
+            position: relative;
+            text-align: left;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 9px;
+            }
+        }
+
+        h3 {
+            background: url("/img/common/diamond.png") no-repeat left center, url("/img/common/diamond.png") no-repeat right center;
+            color: #F28E3D;
+            display: inline-block;
+            font-size: 20px;
+            padding: 0 35px;
+        }
+    }
+
+    & > hr {
+        border-color: #616161;
+        border-width: 1px;
+        margin-bottom: 6px;
+    }
+
+    .inner_box {
+        border-radius: 10px;
+        background-color: #F7F5F6;
+        font-size: 13px;
+        padding: 10px;
+        box-shadow: 0px 0px 4px 0px grey;
+
+        &.recredit_needed {
+            background-color: #ECE8E7;
+            margin-top: 15px;
+
+            .columns:first-child {
+                padding: 0;
+            }
+        }
+
+        &.standard {
+            background-color: #F7F5F6;
+        }
+
+        &.premium {
+            background-color: #ECE8E7;
+            margin-top: 20px;
+        }
+
+        &.subscription {
+            background-color: #F7F5F6;
+            margin-top: 20px;
+        }
+
+        .title {
+            color: $color_offer_title;
+            text-transform: uppercase;
+            margin: 0 0 5px 20px;
+        }
+    }
+
+    .offers {
+        text-align: center;
+
+        & > .column {
+            display: inline-block;
+
+            @media #{$medium-up} {
+                // slightly reduce width to ensure block won't overflow when not floating
+                &.medium-6 {
+                    width: 49%;
+                }
+                &.medium-4 {
+                    width: 33%;
+                }
+                &.medium-3 {
+                    width: 24%;
+                }
+            }
+
+            > .offer {
+                margin-bottom: 8px;
+
+                > label {
+                    line-height: 16px;
+                }
+            }
+
+            @media #{$small-only} {
+                > .offer {
+                    font-size: inherit;
+
+                    > img {
+                        width: 130px;
+                    }
+
+                    .input_box {
+                        width: 20px;
+                        height: 20px;
+
+                        img {
+                            width: 30px;
+                            max-width: 30px;
+                        }
+                    }
+
+                    .offer_title {
+                        font-size: 2em;
+                        line-height: 1.5;
+                    }
+
+                    .offer_description {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+    }
+
+    .offer {
+        display: inline-block;
+        text-align: center;
+
+        @media #{$medium-up} {
+            width: $width_offer;
+        }
+
+        label img:first-child {
+            height: 78px;
+            margin-bottom: 6px;
+        }
+
+        .offer_description {
+            font-weight: bold;
+            font-size: 12px;
+            color: $color_offer_description;
+        }
+
+        .offer_title {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        &.bronze {
+            label {
+                .offer_title {
+                    color: $color_offer_bronze;
+                }
+            }
+
+            .input_box {
+                border-color: $color_offer_bronze;
+            }
+        }
+
+        &.silver {
+            label {
+                .offer_title {
+                    color: $color_offer_silver;
+                }
+            }
+
+            .input_box {
+                border-color: $color_offer_silver;
+            }
+        }
+
+        &.gold {
+            label {
+                .offer_title {
+                    color: $color_offer_gold;
+                }
+            }
+
+            .input_box {
+                border-color: $color_offer_gold;
+            }
+        }
+
+        &.premium {
+            label {
+                .offer_title {
+                    color: $color_offer_premium;
+                }
+            }
+
+            .input_box {
+                border-color: $color_offer_premium;
+            }
+        }
+    }
+
+    .input_box {
+        display: inline-block;
+        width: $width_offer_input_box;
+        height: $width_offer_input_box;
+        border: 3px solid;
+        border-radius: $width_offer_input_box / 5;
+        position:relative;
+
+        img {
+            display:none;
+            position:absolute;
+            bottom: -2px;
+            left: -3px;
+            width: $width_offer_input_box * 1.5;
+            max-width: $width_offer_input_box * 1.5;
+        }
+
+        input {
+            display:none;
+        }
+
+        input:checked+img {
+            display: block;
+        }
+    }
+
+    .pay_action {
+        float: right;
+        margin-top: 10px;
+        padding: 5px 10px;
+        display: inline-block;
+        cursor: pointer;
+        background-color: $color_offer_pay_background;
+        color: $color_offer_pay_text;
+        font-weight: bold;
+        line-height: 22px;
+        border: 0;
+        border-radius: 16px;
+        box-shadow: 1px 1px 0px 1px $color_offer_pay_shadow;
+    }
+
+    .validate_action, .validate_free_action {
+        padding: 7px 20px 3px;
+        margin: 15px 0 15px;
+        display: inline-block;
+        font-size: 17px;
+        cursor: pointer;
+        color: $color_offer_validate_text;
+        text-transform: uppercase;
+        border: 0;
+        border-radius: 12px;
+        box-shadow: 1px 3px 2px 1px $color_offer_validate_shadow;
+    }
+
+    .validate_action {
+        background-color: $color_offer_validate_background;
+    }
+
+    .validate_free_action {
+        background-color: $color_offer_free_validate_background;
+    }
+
+    .newCard {
+        input {
+            display: none;
+        }
+    }
+
+    .creditCard {
+        background: url(/img/common/credit-card-choose.png) no-repeat top left;
+        padding: 7px 0 0;
+        margin-top: 20px;
+
+        font-size: 13px;
+        color: $color_offer_header;
+
+        label {
+            color: inherit;
+            display: inline-block;
+            font-size: inherit;
+            line-height: inherit;
+            float: left;
+            clear: left;
+        }
+
+        h3 {
+            color: inherit;
+            font-size: inherit;
+            font-weight: bold;
+            line-height: inherit;
+            margin: 0 0 7px;
+            text-decoration: underline;
+        }
+
+        &.alias {
+            padding-left: 45px;
+
+            label {
+                line-height: 20px;
+
+                .input_box {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        &.new {
+            display: none;
+
+            label {
+                line-height: 29px;
+            }
+
+            input[type="text"],input[type="email"], select {
+                margin-bottom: 7px;
+                padding: 5px 7px;
+                font-size: 13px;
+                height: 29px;
+            }
+
+
+            .row {
+                &.withLabel {
+                    margin-left: 30px;
+                }
+
+                .firstName {
+                    margin-right: -3px;
+                }
+                .lastName {
+                    margin-left: -3px;
+                }
+            }
+
+            @media #{$medium-down} {
+                > .columns {
+                    > .row {
+                        margin-left: 0;
+                    }
+
+                    &:first-child > .row {
+                        margin-left: 30px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .error {
+                margin-top: -10px;
+
+                ul {
+                    margin: 0;
+                    list-style-type: none;
+                    line-height: 1rem;
+                    font-size: inherit;
+                    font-style: inherit;
+                }
+            }
+
+            .expireAt {
+                select {
+                    display: inline-block;
+                    width: 70px;
+                    margin-right: 5px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .creditCardChoose {
+                cursor: pointer;
+            }
+        }
+
+        .row.checkbox {
+            line-height: 100%;
+            padding: 0 0 10px;
+
+            label {
+                position: relative;
+                font-size: 9px;
+                font-weight: bold;
+                line-height: 14px;
+                padding: 4px 0 0 25px;
+                text-transform: uppercase;
+
+                input {
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                }
+            }
+
+            &:first-child {
+                padding-top: 15px;
+            }
+        }
+    }
+
+    .creditCardChoose, .newCard label {
+        background: url(/img/common/arrow-right.png) no-repeat left center;
+        padding: 0 0 0 20px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .secureImages {
+        clear: right;
+        text-align: right;
+        padding: 20px 0 0;
+
+        img {
+            margin-left: 10px;
+        }
+    }
+
+    &.discovery {
+        color: #939191;
+        text-align: center;
+
+        .chat_header {
+            text-align: left;
+        }
+
+        .offer_discovery {
+            h2 {
+                margin: 20px 0 0;
+            }
+
+            h3 {
+                margin: 12px 0 0;
+            }
+        }
+
+        .creditCard {
+            background: url(/img/common/credit-card-choose-discovery.png) no-repeat 5px 7px;
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .secureImages {
+            text-align: center;
+        }
+    }
+}
+
+.reveal-modal {
+    &.success {
+        border: 2px solid #009bc9;
+
+        .content {
+            font-size: 13px;
+            padding: 20px 0 0;
+        }
+    }
+
+    &.error {
+        .content {
+            font-size: 13px;
+        }
+    }
+}
+
+
+//////////////////////////////////////////////////////
+// PAGE UPDATES FOR MOBILE
+//////////////////////////////////////////////////////
+@media #{$small-only} {
+    body.chat {
+        .row.reinsurance, .row.advantages
+        {
+            display:none;
+        }
+
+        .chat_container {
+            margin-bottom: 10px;
+
+            .chat_header {
+
+                .chat_action {
+                    float: none;
+                    text-align: center;
+                }
+
+                .chat_title {
+
+                    img {
+                        display: none;
+                    }
+                }
+            }
+
+            .chat_informations {
+                padding-left: 0px;
+
+                .psychic_img {
+                    width: $psychic_img_width / 2;
+                }
+
+                .duration_container {
+                    left: ($psychic_img_width / 2) + $padding_horizontal_chat_headers;
+
+                    img {
+                        display: none;
+                    }
+                }
+            }
+
+            .chat_footer {
+                .sending_message {
+                    width: 100%;
+                    float: none;
+                }
+
+                .sending_action {
+                    float:none;
+                    width: 100%;
+                    height: auto;
+                    margin-top: 20px;
+
+                    .send {
+                        line-height: inherit;
+                        height: auto;
+                        width: auto;
+                        display: block;
+                        border-radius: 5px;
+                        box-shadow: 0px 0px 10px 2px $color_chat_messages_border;
+                    }
+                }
+            }
+        }
+    }
+}
