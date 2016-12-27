@@ -56,7 +56,7 @@ body {
 
 body {
   background: url("../img/tarot/background.png") center fixed;
-  color: #2e4980;
+  color: #454545;
   cursor: auto;
   font-family: "Lato", sans-serif;
   font-style: normal;
@@ -1154,9 +1154,9 @@ select {
   padding: 1.07692rem 1.84615rem 1.07692rem 1.07692rem;
   position: relative;
   transition: opacity 300ms ease-out;
-  background-color: #2e4980;
-  border-color: #283f6e;
-  color: #FFFFFF; }
+  background-color: #454545;
+  border-color: #3b3b3b;
+  color: #fff; }
   .alert-box .close {
     right: 0.30769rem;
     background: inherit;
@@ -1177,11 +1177,11 @@ select {
   .alert-box.success {
     background-color: #43AC6A;
     border-color: #3a945b;
-    color: #FFFFFF; }
+    color: #fff; }
   .alert-box.alert {
     background-color: #f04124;
     border-color: #de2d0f;
-    color: #FFFFFF; }
+    color: #fff; }
   .alert-box.secondary {
     background-color: #e7e7e7;
     border-color: #c7c7c7;
@@ -1189,7 +1189,7 @@ select {
   .alert-box.warning {
     background-color: #f08a24;
     border-color: #de770f;
-    color: #FFFFFF; }
+    color: #fff; }
   .alert-box.info {
     background-color: #a0d3e8;
     border-color: #74bfdd;
@@ -1214,14 +1214,14 @@ button, .button {
   display: inline-block;
   padding: 0.61538rem 1.23077rem 0.69231rem 1.23077rem;
   font-size: 1.69231rem;
-  background-color: #2e4980;
-  border-color: #253a66;
-  color: #FFFFFF;
+  background-color: #454545;
+  border-color: #373737;
+  color: #fff;
   transition: background-color 300ms ease-out; }
   button:hover, button:focus, .button:hover, .button:focus {
-    background-color: #253a66; }
+    background-color: #373737; }
   button:hover, button:focus, .button:hover, .button:focus {
-    color: #FFFFFF; }
+    color: #fff; }
   button.secondary, .button.secondary {
     background-color: #e7e7e7;
     border-color: #b9b9b9;
@@ -1233,27 +1233,27 @@ button, .button {
   button.success, .button.success {
     background-color: #43AC6A;
     border-color: #368a55;
-    color: #FFFFFF; }
+    color: #fff; }
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       background-color: #368a55; }
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
-      color: #FFFFFF; }
+      color: #fff; }
   button.alert, .button.alert {
     background-color: #f04124;
     border-color: #cf2a0e;
-    color: #FFFFFF; }
+    color: #fff; }
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       background-color: #cf2a0e; }
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
-      color: #FFFFFF; }
+      color: #fff; }
   button.warning, .button.warning {
     background-color: #f08a24;
     border-color: #cf6e0e;
-    color: #FFFFFF; }
+    color: #fff; }
     button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
       background-color: #cf6e0e; }
     button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
-      color: #FFFFFF; }
+      color: #fff; }
   button.info, .button.info {
     background-color: #a0d3e8;
     border-color: #61b6d9;
@@ -1261,7 +1261,7 @@ button, .button {
     button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
       background-color: #61b6d9; }
     button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
-      color: #FFFFFF; }
+      color: #fff; }
   button.large, .button.large {
     padding: 1.38462rem 2.76923rem 1.46154rem 2.76923rem;
     font-size: 1.53846rem; }
@@ -1290,18 +1290,18 @@ button, .button {
   button.round, .button.round {
     border-radius: 1000px; }
   button.disabled, button[disabled], .button.disabled, .button[disabled] {
-    background-color: #2e4980;
-    border-color: #253a66;
-    color: #FFFFFF;
+    background-color: #454545;
+    border-color: #373737;
+    color: #fff;
     box-shadow: none;
     cursor: default;
     opacity: 0.7; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background-color: #253a66; }
+      background-color: #373737; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      color: #FFFFFF; }
+      color: #fff; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background-color: #2e4980; }
+      background-color: #454545; }
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
       background-color: #e7e7e7;
       border-color: #b9b9b9;
@@ -1318,40 +1318,40 @@ button, .button {
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
       background-color: #43AC6A;
       border-color: #368a55;
-      color: #FFFFFF;
+      color: #fff;
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         background-color: #368a55; }
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
-        color: #FFFFFF; }
+        color: #fff; }
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         background-color: #43AC6A; }
     button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
       background-color: #f04124;
       border-color: #cf2a0e;
-      color: #FFFFFF;
+      color: #fff;
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: #cf2a0e; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
-        color: #FFFFFF; }
+        color: #fff; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: #f04124; }
     button.disabled.warning, button[disabled].warning, .button.disabled.warning, .button[disabled].warning {
       background-color: #f08a24;
       border-color: #cf6e0e;
-      color: #FFFFFF;
+      color: #fff;
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
       button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
         background-color: #cf6e0e; }
       button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
-        color: #FFFFFF; }
+        color: #fff; }
       button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
         background-color: #f08a24; }
     button.disabled.info, button[disabled].info, .button.disabled.info, .button[disabled].info {
@@ -1364,7 +1364,7 @@ button, .button {
       button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
         background-color: #61b6d9; }
       button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
-        color: #FFFFFF; }
+        color: #fff; }
       button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
         background-color: #a0d3e8; }
 
@@ -1501,7 +1501,7 @@ input:not([type]), input[type="text"], input[type="password"], input[type="date"
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 0;
-  background-color: #FFFFFF;
+  background-color: #fff;
   border-style: solid;
   border-width: 1px;
   border-color: #cccccc;
@@ -1696,7 +1696,7 @@ fieldset {
   margin-top: -1px;
   padding: 0.46154rem 0.69231rem 0.69231rem;
   background: #f04124;
-  color: #FFFFFF; }
+  color: #fff; }
 [data-abide] span.error, [data-abide] small.error {
   display: none; }
 
@@ -1709,7 +1709,7 @@ span.error, small.error {
   margin-top: -1px;
   padding: 0.46154rem 0.69231rem 0.69231rem;
   background: #f04124;
-  color: #FFFFFF; }
+  color: #fff; }
 
 .error input,
 .error textarea,
@@ -1730,7 +1730,7 @@ span.error, small.error {
   margin-top: -1px;
   padding: 0.46154rem 0.69231rem 0.69231rem;
   background: #f04124;
-  color: #FFFFFF; }
+  color: #fff; }
 .error > label > small {
   background: transparent;
   color: #676767;
@@ -1772,7 +1772,7 @@ label.error {
   width: 100%;
   z-index: 1005;
   left: 0;
-  background-color: #FFFFFF;
+  background-color: #fff;
   padding: 2.30769rem;
   border: solid 1px #666666;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
@@ -2023,11 +2023,11 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #2e4980;
+  color: #454545;
   line-height: inherit;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #283f6e; }
+    color: #3b3b3b; }
   a img {
     border: none; }
 
@@ -2049,7 +2049,7 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  color: #2e4980;
+  color: #454545;
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2058,7 +2058,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.2rem;
   text-rendering: optimizeLegibility; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    color: #5e80c5;
+    color: #868686;
     font-size: 60%;
     line-height: 0; }
 
@@ -2082,7 +2082,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #5e80c5;
+  color: #868686;
   font-weight: 400;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem; }
@@ -2178,7 +2178,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #2e4980;
+  color: #454545;
   cursor: help; }
 
 abbr {
@@ -2194,17 +2194,17 @@ blockquote {
   blockquote cite {
     display: block;
     font-size: 1rem;
-    color: #4269b9; }
+    color: #707070; }
     blockquote cite:before {
       content: "\2014 \0020"; }
     blockquote cite a,
     blockquote cite a:visited {
-      color: #4269b9; }
+      color: #707070; }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #5e80c5; }
+  color: #868686; }
 
 /* Microformats */
 .vcard {
@@ -2727,6 +2727,12 @@ th.hide-for-touch {
     font-size: inherit;
     font-style: inherit; }
 
+@font-face {
+  font-family: 'CaviarDreams';
+  src: url("../fonts/CaviarDreams/CaviarDreams-webfont.eot");
+  src: url("../fonts/CaviarDreams/CaviarDreams-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/CaviarDreams/CaviarDreams-webfont.woff") format("woff"), url("../fonts/CaviarDreams/CaviarDreams-webfont.ttf") format("truetype"), url("./fonts/CaviarDreams/CaviarDreams-webfont.svg#caviar_dreamsregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 .chat_container {
   background-color: white;
   max-width: 750px;
@@ -3316,7 +3322,8 @@ th.hide-for-touch {
         border-radius: 5px;
         box-shadow: 0px 0px 10px 2px gray; } }
 body {
-  background: #EAEEF4 url("../img/tarot/background.png") center fixed; }
+  background: #EAEEF4 url("../img/tarot/background.png") center fixed;
+  background-size: cover; }
 
 a,
 button,
@@ -3324,7 +3331,7 @@ label {
   transition: all 0.3s ease 0s; }
 
 .icon {
-  background-image: url("/img/tarot/sprite.png"); }
+  background-image: url("../img/tarot/sprite.png"); }
   .icon.icon-clock {
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -3513,14 +3520,14 @@ label {
   color: #fcc216; }
 
 .button {
-  background: #1bebda;
+  background: #71efc4;
   margin: 0;
   font-size: 1rem; }
   .button:focus, .button:hover {
-    background: #11c2b4; }
+    background: linear-gradient(35deg, #71efc4 0%, #11c2b4 100%); }
 
 .header {
-  background: #2e4980; }
+  background: #fff; }
   .header__content {
     margin: 0 auto;
     max-width: 75.38462rem;
@@ -3532,10 +3539,16 @@ label {
       display: table; }
     .header__content:after {
       clear: both; }
+    .header__content > a {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
     .header__content span {
       color: #1BEBDA;
       display: inline-block;
-      font-family: Indie Flower;
+      font-family: "Indie Flower", cursive;
       font-size: 28px;
       max-width: 320px;
       line-height: 35px;
@@ -3550,13 +3563,19 @@ label {
     @media only screen and (max-width: 49.23077em) {
       .header__logo {
         display: block;
-        padding: 0 0.76923rem; } }
+        padding: 0 0.76923rem;
+        position: static;
+        margin: 0 auto;
+        padding: 10px 0 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
   .header__login {
     position: absolute;
     right: 1.15385rem;
     top: 1.15385rem;
     z-index: 99;
-    color: #FFFFFF;
+    color: #fff;
     text-align: center;
     max-width: 535px; }
     .header__login label span {
@@ -3565,7 +3584,7 @@ label {
     .header__login input[type=password] {
       border: none;
       background: white;
-      color: #2e4980;
+      color: #454545;
       margin: 0; }
     .header__login .column-login {
       padding-left: 0.76923rem;
@@ -3620,33 +3639,39 @@ label {
       .header__login .column-password span.error {
         display: none; } }
     .header__login a {
-      color: #FFFFFF; }
+      color: #fff;
+      margin: 0 5px; }
       .header__login a:hover {
         text-decoration: underline; }
     .header__login label {
-      color: #FFFFFF; }
+      color: #fff; }
     .header__login input[type="submit"] {
-      color: #2e4980; }
+      color: #454545; }
   .header__form-block {
     display: inline-block;
     margin: 0 0.38462rem;
     vertical-align: top; }
 
 .headline {
-  background: white;
+  background: #454545;
   box-shadow: 0 3px 10px -5px black;
   line-height: 108px;
   text-align: center; }
   .headline__content {
-    font-family: Raleway Black;
-    font-size: 32px; }
+    font-family: CaviarDreams;
+    font-size: 40px;
+    color: white;
+    text-transform: capitalize; }
     .headline__content::before, .headline__content::after {
-      content: '-';
-      margin: 0 5px; }
+      content: '';
+      display: inline-block;
+      background: #fff;
+      width: 19px;
+      height: 19px;
+      transform: rotate(45deg);
+      margin: 0 2.5rem; }
     .headline__content span {
-      color: #1BEBDA;
-      font-family: Lobster;
-      font-size: 45px; }
+      font-family: CaviarDreams; }
   @media only screen and (max-width: 49.23077em) {
     .headline {
       display: none; } }
@@ -3692,7 +3717,7 @@ label {
   .page__title {
     text-align: center;
     font-size: 1.69231rem;
-    color: #2e4980;
+    color: #454545;
     margin-bottom: 3.07692rem; }
   .page__block {
     margin: 0 auto;
@@ -3706,7 +3731,7 @@ label {
     .page__block:after {
       clear: both; }
     .page__block--white {
-      background: #FFFFFF;
+      background: #fff;
       padding-top: 0.76923rem;
       padding-bottom: 0.76923rem; }
     .page__block__reinsurance {
@@ -3755,7 +3780,7 @@ label {
   padding-right: 0.76923rem;
   width: 100%;
   float: left;
-  background: #FFFFFF;
+  background: #fff;
   margin-top: 0.76923rem;
   margin-bottom: 0.76923rem;
   padding-top: 0.76923rem;
@@ -3805,7 +3830,7 @@ label {
   padding-right: 0.76923rem;
   width: 100%;
   float: left;
-  background: #FFFFFF;
+  background: #fff;
   margin-top: 0.76923rem;
   margin-bottom: 0.76923rem;
   padding-top: 0.76923rem;
@@ -3817,7 +3842,9 @@ label {
   text-align: center;
   line-height: 1.6rem; }
   .sidebar__title--user {
-    font-size: 1.53846rem; }
+    font-size: 1.53846rem;
+    text-decoration: underline;
+    text-align: left; }
   .sidebar__title--opening, .sidebar__title--service {
     font-size: 1.23077rem;
     text-transform: uppercase;
@@ -3840,7 +3867,7 @@ label {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url("/img/tarot/sprite.png");
+    background-image: url("../img/tarot/sprite.png");
     background-position: 0px 0px;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -3859,7 +3886,7 @@ label {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url("/img/tarot/sprite.png");
+    background-image: url("../img/tarot/sprite.png");
     background-position: 0px -38px;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -3883,7 +3910,7 @@ label {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    border: solid 1px #2e4980;
+    border: solid 1px #454545;
     border-radius: 4px; }
   .sidebar__chat__item p {
     margin: 0;
@@ -3910,13 +3937,18 @@ label {
   font-size: 1.69231rem;
   font-size: 1rem;
   display: block;
-  color: #FFFFFF;
-  background: #2e4980;
+  color: #fff;
+  background: #454545;
   margin-top: 0.76923rem;
   margin-bottom: 0; }
   .sidebar__button:hover, .sidebar__button:focus, .sidebar__button--active {
-    background: #21345a;
-    color: #FFFFFF; }
+    background: linear-gradient(22deg, #454545 0%, #2c2c2c 50%);
+    color: #fff; }
+.sidebar__credit {
+  border: 1px solid;
+  border-left: 4px solid;
+  border-right: 4px solid;
+  padding: 2px 5px; }
 
 .psychics__item-container {
   padding-left: 0.76923rem;
@@ -3933,7 +3965,7 @@ label {
       width: 50%;
       float: left; } }
 .psychics__item {
-  background: #FFFFFF;
+  background: #fff;
   padding-top: 0.76923rem;
   padding-bottom: 0.76923rem;
   float: left;
@@ -3988,35 +4020,35 @@ label {
     width: 240px; }
   .psychic__button--status {
     background-color: #c2a583;
-    color: #FFFFFF; }
+    color: #fff; }
     .psychic__button--status:hover {
-      color: #FFFFFF; }
+      color: #fff; }
     .psychic__button--status-unavailable, .psychic__button--status.unavailable {
       background-color: #e60827;
-      color: #FFFFFF; }
+      color: #fff; }
     .psychic__button--status-busy, .psychic__button--status.busy {
       background-color: #fc8800;
-      color: #FFFFFF; }
+      color: #fff; }
     .psychic__button--status-available, .psychic__button--status.available {
       background-color: #00cc00;
-      color: #FFFFFF; }
+      color: #fff; }
   .psychic__button--more {
-    background-color: #333333;
-    color: #FFFFFF; }
+    background-color: #bfbfbe;
+    color: #fff; }
     .psychic__button--more:focus, .psychic__button--more:hover {
       background: #1a1a1a;
-      color: #FFFFFF; }
+      color: #fff; }
   .psychic__button--chat {
-    background: #1bebda;
+    background: #71efc4;
     font-weight: bold;
-    color: #2e4980;
+    color: #454545;
     margin: 0; }
     .psychic__button--chat:focus, .psychic__button--chat:hover {
-      background: #11c2b4;
-      color: #2e4980; }
+      background: linear-gradient(25deg, #71efc4 0%, #17ca8d 100%);
+      color: #454545; }
 .psychic__description, .psychic__reviews {
   margin: 0 0.76923rem;
-  border: solid 2px #2e4980; }
+  border: solid 2px #454545; }
   .psychic__description legend, .psychic__reviews legend {
     text-transform: uppercase;
     font-weight: 400;
@@ -4122,7 +4154,7 @@ body.account div.conversations .conversation {
     border: 2px solid red;
     padding: 45px 20px 20px; }
     .reveal-modal.error span {
-      color: #FFFFFF; }
+      color: #fff; }
   .reveal-modal.register {
     padding: 15px; }
     .reveal-modal.register .content {
@@ -4135,7 +4167,7 @@ body.account div.conversations .conversation {
         .reveal-modal.register .content {
           padding: 15px; } }
       .reveal-modal.register .content h2 {
-        color: #2e4980;
+        color: #454545;
         font-size: 1.76923rem;
         text-transform: uppercase; }
       .reveal-modal.register .content label {
@@ -4165,7 +4197,7 @@ body.account div.conversations .conversation {
       text-align: center; }
     .reveal-modal.register .content h3 {
       background: url("/img/common/triangle-right.png") no-repeat center left;
-      color: #2e4980;
+      color: #454545;
       cursor: pointer;
       display: none;
       font-size: 20px;
@@ -4206,7 +4238,7 @@ body.account div.conversations .conversation {
       background: #4ab354;
       border: 2px solid #0f910b;
       box-shadow: none;
-      color: #FFFFFF;
+      color: #fff;
       font-size: 16px;
       line-height: 30px;
       padding: 0 20px;
@@ -4276,7 +4308,7 @@ body.account div.conversations .conversation {
         .reveal-modal.checkEmail .content, .reveal-modal.confirmed .content {
           padding: 15px; } }
       .reveal-modal.checkEmail .content h2, .reveal-modal.confirmed .content h2 {
-        color: #2e4980;
+        color: #454545;
         font-size: 1.76923rem;
         text-transform: uppercase; }
       .reveal-modal.checkEmail .content label, .reveal-modal.confirmed .content label {
@@ -4320,7 +4352,7 @@ body.account div.conversations .conversation {
         .reveal-modal.resetPassword .content {
           padding: 15px; } }
       .reveal-modal.resetPassword .content h2 {
-        color: #2e4980;
+        color: #454545;
         font-size: 1.76923rem;
         text-transform: uppercase; }
       .reveal-modal.resetPassword .content label {
@@ -4363,10 +4395,10 @@ body.account div.conversations .conversation {
     margin: 0; }
     .tunnel-sidebar .photo span {
       display: inline-block;
-      background: url(/img/tarot/hexagone_bleu.png); }
+      background: url(../img/tarot/hexagone_bleu.png); }
   .tunnel-sidebar .content {
     color: #454545;
-    font-family: Indie Flower;
+    font-family: "Indie Flower", cursive;
     font-size: 22px;
     padding-top: 15px;
     text-align: center; }
@@ -4388,7 +4420,7 @@ body.account div.conversations .conversation {
   .tunnel-div .tunnel-cb-header {
     background: #1BEBDA; }
     .tunnel-div .tunnel-cb-header h1 {
-      color: #2e4980;
+      color: #454545;
       margin: 0;
       padding: 25px 0;
       font-family: Raleway Black;
@@ -4398,7 +4430,7 @@ body.account div.conversations .conversation {
         color: white; }
         .tunnel-div .tunnel-cb-header h1 .amount i {
           font-size: 40px;
-          font-family: Lobster; }
+          font-family: "Lobster", cursive; }
       @media only screen and (max-width: 49.23077em) {
         .tunnel-div .tunnel-cb-header h1 {
           font-size: 16px;
@@ -4407,9 +4439,9 @@ body.account div.conversations .conversation {
             font-size: inherit;
             font-family: inherit; } }
   .tunnel-div .tunnel-cb-headline {
-    background: #2e4980;
+    background: #454545;
     color: white;
-    font-family: Indie Flower;
+    font-family: "Indie Flower", cursive;
     font-size: 22px;
     line-height: 60px; }
     .tunnel-div .tunnel-cb-headline span {
@@ -4467,7 +4499,7 @@ body.account div.conversations .conversation {
           width: 100px; }
         .tunnel-div .tunnel-cb-main .tunnel-cb-form .securityCode::after {
           content: ' ';
-          background: url(/img/tchat/securityCode.png);
+          background: url(../img/tchat/securityCode.png);
           position: absolute;
           top: -14px;
           width: 90px;
@@ -4493,7 +4525,7 @@ body.account div.conversations .conversation {
     .tunnel-div .tunnel-email-main h2 {
       margin: 70px 0;
       background: white;
-      color: #2e4980;
+      color: #454545;
       line-height: 75px;
       font-family: Lobster; }
       @media only screen and (max-width: 49.23077em) {
@@ -4569,5 +4601,12 @@ body.account div.conversations .conversation {
     font-size: 17px; }
   body.chat .page__sidebar {
     display: none; } }
+.rating {
+  display: inline-block; }
+
+.star {
+  display: inline-block;
+  width: 18px;
+  height: 18px; }
 
 /*# sourceMappingURL=tarot.css.map */
