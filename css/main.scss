@@ -1,0 +1,1146 @@
+@charset 'UTF-8';
+@import "settings";
+@import "foundation";
+@import "sprite";
+@import "front";
+
+// Table of Contents
+// Chat
+// General
+// Header
+// Homepage
+// Footer
+
+// Chat
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$color_chat_message_client_background: #e5f2fa;
+@import "chat";
+
+body {
+    background: $lightGrey $body-bg;
+}
+
+// General
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+a,
+button,
+label {
+    transition: all 0.3s ease 0s;
+}
+
+$icons:
+    (clock, $clock),
+    (chat-quality1, $chat-quality1),
+    (chat-quality2, $chat-quality2),
+    (chat-quality3, $chat-quality3),
+    (register-step1, $register-step1),
+    (register-step2, $register-step2),
+    (register-step3, $register-step3),
+    (reinsurance-expertise, $reinsurance-expertise),
+    (reinsurance-payment, $reinsurance-payment),
+    (reinsurance-plan, $reinsurance-plan),
+    (reinsurance-security, $reinsurance-security),
+    (sidebar-reinsurance1, $sidebar-reinsurance1),
+    (sidebar-reinsurance2, $sidebar-reinsurance2),
+    (sidebar-reinsurance3, $sidebar-reinsurance3),
+    (sign-scorpio, $sign-scorpio),
+    (sign-sagittarius, $sign-sagittarius),
+    (sign-pisces, $sign-pisces),
+    (sign-libra, $sign-libra),
+    (sign-leo, $sign-leo),
+    (sign-gemini, $sign-gemini),
+    (sign-capricorn, $sign-capricorn),
+    (sign-taurus, $sign-taurus),
+    (sign-virgo, $sign-virgo),
+    (sign-cancer, $sign-cancer),
+    (sign-aquarius, $sign-aquarius),
+    (sign-aries, $sign-aries)
+;
+
+.icon {
+    background-image: url('/img/tarot/sprite.png');
+
+    @each $icon-name, $icon-sprite in $icons {
+        &.icon-#{$icon-name} {
+            @include sprite($icon-sprite);
+        }
+    }
+}
+
+
+.raty {
+    font-size: rem-calc(6);
+    color: #fcc216;
+}
+
+.button {
+    background: $cyan-color;
+    margin: 0;
+    font-size: 1rem;
+
+    &:focus, &:hover {
+        background: $darkBlue;
+    }
+}
+
+// Header
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.header {
+    background: $primary-color;
+
+    &__content {
+        @include grid-row();
+        position: relative;
+        line-height: 120px;
+
+        span {
+            color: $lightBlue;
+            display: inline-block;
+            font-family: Indie Flower;
+            font-size: 28px;
+            max-width: 320px;
+            line-height: 35px;
+            vertical-align: middle;
+
+            @media #{$small-only} {
+                display: block;
+                text-align: center;
+                margin: 10px auto 15px;
+            }
+        }
+    }
+
+    &__logo {
+        margin: rem-calc(10) auto;
+
+        @media #{$small-only} {
+            display: block;
+            padding: 0 rem-calc(10);
+        }
+    }
+
+    &__login {
+        position: absolute;
+        right: rem-calc(15);
+        top: rem-calc(15);
+        z-index: 99;
+        color: $white;
+        text-align: center;
+        max-width: 535px;
+
+        label span {
+            display: none;
+        }
+
+        input[type=text],
+        input[type=password] {
+            border: none;
+            background: white;
+            color: $primary-color;
+            margin: 0;
+        }
+
+        .column-login {
+            @include grid-column(4);
+        }
+
+        .column-password {
+            @include grid-column(4);
+        }
+
+        .column-submit {
+            @include grid-column(4);
+        }
+
+        .login-links .row {
+            padding-top: 3px;
+        }
+
+        @media #{$small-only} {
+            .column-login {
+                @include grid-column(12);
+
+                span.error {
+                    display: none;
+                }
+            }
+
+            .column-password {
+                @include grid-column(12);
+            }
+
+            .column-submit {
+                @include grid-column(12);
+            }
+
+            input {
+                &[type="text"], &[type="password"] {
+                    margin-bottom: 8px;
+                }
+            }
+
+            body.tunnelCb & {
+                display: none;
+            }
+        }
+
+        @media #{$medium-down} {
+            position: static;
+            margin: 0 auto;
+            padding: 10px 0 15px;
+        }
+
+        @media #{$medium-up} {
+            .column-login {
+                .row {
+                    position: relative;
+                }
+
+                span.error {
+                    position: absolute;
+                    margin: 0 1px 1px;
+                }
+            }
+
+            .column-password {
+                span.error {
+                    display: none;
+                }
+            }
+        }
+
+        a {
+            color: $white;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        label {
+            color: $white;
+        }
+
+        input[type="submit"] {
+            color: $primary-color;
+        }
+    }
+
+    &__form-block {
+        display: inline-block;
+        margin: 0 rem-calc(5);
+        vertical-align: top;
+    }
+}
+
+// Headline
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.headline {
+    background: white;
+    box-shadow: 0 3px 10px -5px black;
+    line-height: 108px;
+    text-align: center;
+
+    &__content {
+        font-family: Raleway Black;
+        font-size: 32px;
+
+        &::before, &::after {
+            content: '-';
+            margin: 0 5px;
+        }
+
+        span {
+            color: $lightBlue;
+            font-family: Lobster;
+            font-size: 45px;
+        }
+    }
+
+    @media #{$small-only} {
+        display: none;
+    }
+}
+
+// Page
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.page {
+    @include grid-row();
+    padding: {
+        top: $column-gutter;
+        bottom: $column-gutter;
+    }
+    position: relative;
+
+    @media #{$small-only} {
+        padding: {
+            top: 0;
+            bottom: 0;
+        }
+    }
+
+    &__sidebar {
+        @include grid-column(12);
+
+        @media #{$medium-up} {
+            @include grid-column(3);
+        }
+    }
+
+    &__content {
+        @include grid-column(12);
+
+        @media #{$medium-up} {
+            @include grid-column(9);
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: rem-calc(22);
+        color: $primary-color;
+        margin-bottom: $column-gutter*2;
+    }
+
+    &__block {
+        @include grid-row();
+        margin: {
+            top: $column-gutter/2;
+            bottom: $column-gutter;
+        }
+
+        &--white {
+            background: $white;
+            padding: {
+                top: $column-gutter/2;
+                bottom: $column-gutter/2;
+            }
+        }
+
+        &__reinsurance {
+            @include grid-column(12);
+            text-align: center;
+
+            @media #{$medium-up} {
+                @include grid-column(3);
+            }
+
+            .icon {
+                margin: 0 auto;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    &__psychics {
+        @include grid-row;
+
+        .psychic__button {
+            font-size: 13px;
+            line-height: 22px;
+
+            &--status, &--more {
+                width: auto;
+            }
+
+            &--chat {
+                font-size: 1.2rem;
+                line-height: 41px;
+            }
+        }
+    }
+
+    .tunnel-sidebar {
+        position: absolute;
+        left: -265px;
+        top: 55px;
+
+        @media #{$medium-down} {
+            display: none;
+        }
+    }
+}
+
+.page-user {
+    @include grid-column(12);
+    background: $white;
+    margin: {
+        top: $column-gutter/2;
+        bottom: $column-gutter/2;
+    }
+    padding: {
+        top: $column-gutter/2;
+        bottom: $column-gutter/2;
+    }
+
+    .birthday_container {
+        @include grid-row();
+
+        .select_wrapper {
+            @include grid-column(4);
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .recredit_action,
+    .open_cancel_subscription_modal {
+        float: right;
+    }
+}
+
+.user {
+    &__nav {
+        @include grid-row();
+
+        &__item {
+            @include grid-column(6);
+            text-align: center;
+            margin: {
+                top: $column-gutter;
+                bottom: $column-gutter;
+            }
+        }
+    }
+}
+
+.sidebar {
+    &__block {
+        @include grid-column(12);
+        background: $white;
+        margin: {
+            top: $column-gutter/2;
+            bottom: $column-gutter/2;
+        }
+
+        padding: {
+            top: $column-gutter/2;
+            bottom: $column-gutter/2;
+        }
+
+        @media #{$small-only} {
+            &--user, &--chat {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        line-height: 1.6rem;
+
+        &--user {
+            font-size: rem-calc(20);
+        }
+
+        &--opening, &--service {
+            font-size: rem-calc(16);
+            text-transform: uppercase;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        &--service {
+            text-align: left;
+        }
+
+        &--chat {
+            text-transform: uppercase;
+            font-size: rem-calc(11);
+            line-height: 1.2rem;
+        }
+    }
+
+    &__text--opening {
+        padding-left: 38px;
+        position: relative;
+        line-height: 18px;
+        margin: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url('/img/tarot/sprite.png');
+            @include sprite($clock);
+        }
+    }
+
+    &__text--service {
+        padding-left: 42px;
+        position: relative;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url('/img/tarot/sprite.png');
+            @include sprite($phone);
+        }
+
+        span {
+            white-space: nowrap;
+
+            &:last-child {
+                font-size: 13px;
+                font-weight: bold;
+                color: $lightBlue;
+            }
+        }
+    }
+
+    &__chat {
+        &__item {
+            position: relative;
+            padding-left: rem-calc(54) + $column-gutter/2;
+            line-height: 54px;
+            margin: 10px 0;
+
+            .icon {
+                margin: 0 auto;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                border: solid 1px $primary-color;
+                border-radius: 4px;
+            }
+
+            p {
+                margin: 0;
+                display: inline-block;
+                line-height: 16px;
+                font-size: 12px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &__button {
+        @include button-base;
+        @include button-size;
+        font-size: 1rem;
+        display: block;
+        color: $white;
+        background: $primary-color;
+        margin: {
+            top: $column-gutter/2;
+            bottom: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &--active {
+            background: darken($primary-color, 10);
+            color: $white;
+        }
+    }
+}
+
+.psychics {
+    &__item-container {
+        @include grid-column(12);
+        margin: {
+            top: $column-gutter/2;
+            bottom: $column-gutter/2;
+        }
+        padding: 0;
+
+        @media #{$medium-up} {
+            @include grid-column(6);
+        }
+    }
+
+    &__item {
+        background: $white;
+        padding: {
+            top: $column-gutter/2;
+            bottom: $column-gutter/2;
+        }
+        float: left;
+        min-height: 245px;
+
+        .psychic__avatar {
+            padding: {
+                left: $column-gutter/2;
+                right: $column-gutter/2;
+            }
+        }
+
+        .psychic__profile {
+            padding: {
+                left: $column-gutter/2;
+                right: $column-gutter/2;
+            }
+        }
+    }
+}
+
+.psychic {
+    &__avatar {
+        @include grid-column(4);
+    }
+
+    &__profile {
+        @include grid-column(8);
+    }
+
+    &__name {
+        color: $black;
+        font-size: rem-calc(20);
+    }
+
+    &__info {
+        color: $black;
+        line-height: 1.5rem;
+    }
+
+    &__sign {
+    }
+
+    &__button {
+        @include button-base;
+        @include button-size;
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        margin-bottom: $column-gutter/2.5;
+        padding: 0;
+        line-height: 40px;
+
+        &--status, &--more {
+            width: 240px;
+        }
+
+        &--status {
+            background-color: #c2a583;
+            color: $white;
+
+            &:hover {
+                color: $white;
+            }
+
+            &-unavailable,
+            &.unavailable {
+                background-color: #e60827;
+                color: $white;
+            }
+
+            &-busy,
+            &.busy {
+                background-color: #fc8800;
+                color: $white;
+            }
+
+            &-available,
+            &.available {
+                background-color: #00cc00;
+                color: $white;
+            }
+        }
+
+        &--more {
+            background-color: $oil;
+            color: $white;
+
+            &:focus, &:hover {
+                background: darken($oil, 10);
+                color: $white;
+            }
+        }
+
+        &--chat {
+            background: $cyan-color;
+            font-weight: bold;
+            color: $primary-color;
+            margin: 0;
+
+            &:focus, &:hover {
+                background: darken($cyan-color, 10);
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__description,
+    &__reviews {
+        margin: 0 $column-gutter/2;
+        border: solid 2px $primary-color;
+
+        legend {
+            text-transform: uppercase;
+            font-weight: $font-weight-normal;
+            font-size: rem-calc(20);
+        }
+    }
+
+    &__reviews {
+        &:not(.expanded) {
+            .review--hidden {
+                display: none;
+            }
+        }
+
+        &__expand {
+            @include button-base;
+            @include button-size;
+            font-size: 1rem;
+            background: #3f3e3e;
+            float: right;
+            margin: 0;
+
+            &:focus, &:hover {
+                background: darken(#3f3e3e, 10);
+            }
+        }
+    }
+
+    &__bottom {
+        @include grid-column(12);
+    }
+}
+
+.review {
+    &__author,
+    &__rating {
+        margin-right: 20px;
+    }
+}
+
+body.account {
+    ul.conversations {
+        margin: 0;
+
+        li {
+            list-style-type: none;
+            font-style: italic;
+            font-size: 1.2em;
+            cursor: pointer;
+
+            &.active {
+                font-weight: bold;
+            }
+
+            img {
+                width: 30px;
+                border: 1px solid white;
+            }
+        }
+    }
+
+    div.conversations {
+        .no_message {
+            text-align: center;
+            font-weight: bold;
+            color: $black;
+        }
+
+        .conversation {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            .conversation_header {
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// Chat
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.chat_container {
+    margin: {
+        top: $column-gutter/2;
+        bottom: $column-gutter/2;
+    }
+}
+
+// Footer
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.footer {
+    @include grid-row();
+    margin: {
+        top: $column-gutter;
+        bottom: $column-gutter;
+    }
+    color: #aaadb1;
+
+    &__content {
+        @include grid-column(12);
+        text-align: center;
+        margin: 0;
+    }
+
+    a {
+        color: #aaadb1;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Modal
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.reveal-modal {
+    @include globalPopinStyle($primary-color);
+
+    &.register {
+        @include registerPopinStyle($primary-color);
+
+        .button {
+            border: none;
+            border-radius: 0;
+            color: $black;
+            font-size: rem-calc(16);
+            font-weight: bold;
+            margin: 0 0 1rem 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.checkEmail, &.confirmed {
+        @include checkEmailPopinStyle($primary-color);
+    }
+
+    &.resetPassword {
+        @include resettingPasswordPopinStyle($primary-color);
+    }
+}
+
+.tunnel-sidebar {
+    width: 235px;
+
+    .photo {
+        margin: 0;
+
+        span {
+            display: inline-block;
+            background: url(/img/tarot/hexagone_bleu.png);
+        }
+    }
+
+    .content {
+        color: #454545;
+        font-family: Indie Flower;
+        font-size: 22px;
+        padding-top: 15px;
+        text-align: center;
+
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+.tunnel-div {
+    text-align: center;
+
+    .button {
+        border-radius: 0;
+        font-size: 20px;
+        color: #454545;
+        font-family: Raleway Bold;
+        padding: {
+            left: $column-gutter*2;
+            right: $column-gutter*2;
+        }
+    }
+
+    span.error {
+        ul {
+            list-style-type: none;
+            margin: 0;
+        }
+    }
+
+    .tunnel-cb-header {
+        background: $lightBlue;
+
+        h1 {
+            color: $primary-color;
+            margin: 0;
+            padding: 25px 0;
+            font-family: Raleway Black;
+            font-size: 32px;
+            text-transform: uppercase;
+
+            .amount {
+                color: white;
+
+                i {
+                    font-size: 40px;
+                    font-family: Lobster;
+                }
+            }
+
+            @media #{$small-only} {
+                font-size: 16px;
+                padding: 10px 0;
+
+                .amount i {
+                    font-size: inherit;
+                    font-family: inherit;
+                }
+            }
+        }
+    }
+
+    .tunnel-cb-headline {
+        background: $primary-color;
+        color: white;
+        font-family: Indie Flower;
+        font-size: 22px;
+        line-height: 60px;
+
+        span {
+            font-family: Lobster;
+            font-size: 23px;
+        }
+
+        @media #{$small-only} {
+            font-size: 16px;
+            padding: 8px 0;
+            line-height: 22px;
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .tunnel-cb-main {
+        background: $darkGrey;
+        padding-bottom: 20px;
+        font-family: Raleway Bold;
+        color: white;
+
+        .tunnel-cb-form {
+            width: 80%;
+            margin: 0 auto;
+
+            h2 {
+                color: inherit;
+                font-size: 22px;
+                font-weight: bold;
+                padding: 20px 0 15px;
+                margin: 0;
+                text-decoration: underline;
+            }
+
+            label {
+                color: inherit;
+                font-size: 15px;
+                text-align: right;
+                line-height: 34px;
+
+                @media #{$small-only} {
+                    text-align: left;
+                }
+
+                &::after {
+                    content: ' :';
+                }
+            }
+
+            .row {
+                .columns:nth-child(2) {
+                    text-align: left;
+                }
+            }
+
+            .expiration {
+                text-align: left;
+
+                select {
+                    width: 100px;
+                    margin-right: 10px;
+                }
+            }
+
+            input[type="text"], select {
+                font-family: Raleway Regular;
+                margin-bottom: 1rem;
+            }
+
+            span.error {
+                margin: -1rem 0 1rem;
+            }
+
+            .securityCode {
+                position: relative;
+                text-align: left;
+
+                input {
+                    display: inline-block;
+                    width: 100px;
+                }
+
+                &::after {
+                    content: ' ';
+                    background: url(/img/tchat/securityCode.png);
+                    position: absolute;
+                    top: -14px;
+                    width: 90px;
+                    height: 39px;
+                    margin-left: 5px;
+                }
+            }
+
+            .agreement {
+                margin-bottom: 0.75rem;
+                text-align: left;
+
+                * {
+                    display: inline;
+                }
+
+                input {
+                    margin-bottom: 0;
+                }
+
+                label {
+                    font-family: Raleway Regular;
+                    line-height: 20px;
+
+                    &::after {
+                        content: none;
+                    }
+                }
+            }
+            .global_error {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .tunnel-email-main {
+        background: $darkGrey;
+        overflow: hidden;
+
+        h2 {
+            margin: 70px 0;
+            background: white;
+            color: $primary-color;
+            line-height: 75px;
+            font-family: Lobster;
+
+            @media #{$small-only} {
+                margin: 0 0 20px;
+                line-height: 50px;
+            }
+        }
+
+        .tunnel-email-form form {
+            @include grid-row();
+
+            font-family: Raleway Bold;
+
+            .tunnel-email-label {
+                @include grid-column(3);
+
+                text-align: right;
+
+                @media #{$small-only} {
+                    text-align: left;
+                }
+
+                label {
+                    color: white;
+                    font-size: 15px;
+                    line-height: 34px;
+
+                    &:after {
+                        content: ' :';
+                    }
+                }
+            }
+
+            .tunnel-email-widget {
+                @include grid-column(6);
+
+                input {
+                    margin: 0;
+                }
+            }
+
+            h3 {
+                color: white;
+                clear: left;
+                font-family: inherit;
+                font-size: 20px;
+                padding: 20px 0;
+                margin: 0;
+
+                @media #{$small-only} {
+                    font-size: 15px;
+                }
+            }
+
+            .button {
+                margin-bottom: 30px;
+            }
+
+            @media #{$small-only} {
+                .tunnel-email-label {
+                    @include grid-column(8, $offset: 2);
+                }
+
+                .tunnel-email-widget {
+                    @include grid-column(8, $offset: 2);
+                }
+            }
+
+
+        }
+    }
+}
+
+@media #{$small-only} {
+    body.chat {
+        .header__content {
+            span {
+                font-size: 14px;
+                margin: 5px auto;
+            }
+
+            img {
+                width: 55%;
+                margin: 5px auto;
+            }
+        }
+
+        .chat_header {
+            .chat_title {
+                font-size: 17px;
+            }
+        }
+
+        .page__sidebar {
+            display: none;
+        }
+    }
+}
