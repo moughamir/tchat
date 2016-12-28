@@ -3695,6 +3695,9 @@ label {
     .page {
       padding-top: 0;
       padding-bottom: 0; } }
+  .page__header {
+    width: 100%;
+    padding: 2rem; }
   .page__sidebar {
     padding-left: 0.76923rem;
     padding-right: 0.76923rem;
@@ -3777,17 +3780,79 @@ label {
     @media only screen and (max-width: 78.76923em) {
       .page .tunnel-sidebar {
         display: none; } }
+  .page__menu--item {
+    background: #454545;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 5px;
+    height: 63px;
+    border: 2px solid #c1c1c1;
+    display: flex;
+    align-items: center; }
+    .page__menu--item .icon {
+      width: 58px;
+      height: 58px;
+      display: inline-block; }
+    .page__menu--item a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 2rem; }
+    .page__menu--item:hover {
+      background: transparent;
+      border: 2px solid #454545; }
+      .page__menu--item:hover a {
+        color: #454545; }
+    .page__menu--item .item__text {
+      margin-left: 1.5rem; }
+
+.item-1 {
+  background: url("../img/user/personnal_informations.png") no-repeat center; }
+
+.page__menu--item:hover .item-1 {
+  background: url("../img/user/personnal_informations-grey.png") no-repeat center; }
+
+.item-2 {
+  background: url("../img/user/my_consumption.png") no-repeat center; }
+
+.page__menu--item:hover .item-2 {
+  background: url("../img/user/my_consumption-grey.png") no-repeat center; }
+
+.item-3 {
+  background: url("../img/user/registered_cards.png") no-repeat center; }
+
+.page__menu--item:hover .item-3 {
+  background: url("../img/user/registered_cards-grey.png") no-repeat center; }
+
+.item-4 {
+  background: url("../img/user/messages.png") no-repeat center; }
+
+.page__menu--item:hover .item-4 {
+  background: url("../img/user/messages-grey.png") no-repeat center; }
+
+.item-5 {
+  background: url("../img/user/chat_history.png") no-repeat center; }
+
+.page__menu--item:hover .item-5 {
+  background: url("../img/user/chat_history-grey.png") no-repeat center; }
+
+.item-6 {
+  background: url("../img/user/bill.png") no-repeat center; }
+
+.page__menu--item:hover .item-6 {
+  background: url("../img/user/bill-grey.png") no-repeat center; }
 
 .page-user {
   padding-left: 0.76923rem;
   padding-right: 0.76923rem;
   width: 100%;
   float: left;
-  background: #fff;
+  background: transparent;
   margin-top: 0.76923rem;
   margin-bottom: 0.76923rem;
-  padding-top: 0.76923rem;
-  padding-bottom: 0.76923rem; }
+  padding: 0; }
   .page-user .birthday_container {
     margin: 0 auto;
     max-width: 75.38462rem;
@@ -3841,6 +3906,46 @@ label {
   @media only screen and (max-width: 49.23077em) {
     .sidebar__block--user, .sidebar__block--chat {
       display: none; } }
+  .sidebar__block--menu {
+    background: transparent;
+    border: 3px solid; }
+    .sidebar__block--menu .sidebar__button {
+      background: transparent;
+      color: #454545;
+      font-size: 2rem;
+      padding: 0;
+      margin: 0; }
+    .sidebar__block--menu:hover {
+      background: #454545; }
+      .sidebar__block--menu:hover .sidebar__button {
+        color: #fff;
+        background: transparent; }
+  .sidebar__block--nav {
+    background: transparent;
+    padding: 0; }
+    .sidebar__block--nav .sidebar__button {
+      background: transparent;
+      color: #454545;
+      border: 2px solid;
+      font-weight: 600; }
+      .sidebar__block--nav .sidebar__button:hover, .sidebar__block--nav .sidebar__button--active {
+        color: #454545;
+        border: 2px solid #71efc4;
+        background: transparent; }
+        .sidebar__block--nav .sidebar__button:hover::after, .sidebar__block--nav .sidebar__button--active::after {
+          background: #71efc4 url("../img/tarot/triangle.png") no-repeat center; }
+      .sidebar__block--nav .sidebar__button::after {
+        content: '';
+        display: inline-block;
+        right: 0;
+        top: 0;
+        background: #454545 url("../img/tarot/triangle.png") no-repeat center;
+        color: #fff;
+        position: absolute;
+        height: 100%;
+        width: 32px; }
+      .sidebar__block--nav .sidebar__button--active::after {
+        background: #71efc4 url("../img/tarot/triangle.png") no-repeat center; }
 .sidebar__title {
   text-align: center;
   line-height: 1.6rem; }

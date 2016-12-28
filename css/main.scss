@@ -307,7 +307,10 @@ $icons:
             bottom: 0;
         }
     }
-
+    &__header{
+        width: 100%;
+        padding: 2rem;
+    }
     &__sidebar {
         @include grid-column(12);
 
@@ -391,20 +394,69 @@ $icons:
             display: none;
         }
     }
+    
+    &__menu--item {
+        background: #454545;
+        color: #fff;
+        padding: 1rem;
+        margin-bottom: 5px;
+        height: 63px;
+        border: 2px solid #c1c1c1;
+        display: flex;
+        align-items: center;
+        .icon{
+            width: 58px;
+            height: 58px;
+            display: inline-block;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 2rem
+        }
+        &:hover{
+            background: transparent;
+            border: 2px solid $grey;
+            a{
+                color: $grey;
+            }
+                
+        }
+        .item__text {
+            margin-left: 1.5rem;
+        }
+    }
 }
+
+$items:(
+1: "personnal_informations",
+2: "my_consumption",
+3: "registered_cards",
+4: "messages",
+5: "chat_history",
+6: "bill"
+);
+@each $item, $bg in $items{
+.item-#{$item}{
+background: url('../img/user/' + $bg +'.png') no-repeat center;
+}
+.page__menu--item:hover .item-#{$item}{
+background: url('../img/user/' + $bg +'-grey.png') no-repeat center;
+}
+}
+            
 
 .page-user {
     @include grid-column(12);
-    background: $white;
+    background: transparent;
     margin: {
         top: $column-gutter/2;
         bottom: $column-gutter/2;
     }
-    padding: {
-        top: $column-gutter/2;
-        bottom: $column-gutter/2;
-    }
-
+    padding: 0;
     .birthday_container {
         @include grid-row();
 
@@ -459,6 +511,57 @@ $icons:
         @media #{$small-only} {
             &--user, &--chat {
                 display: none;
+            }
+        }
+        &--menu{
+            background: transparent;
+            border: 3px solid;
+            .sidebar__button{
+                background: transparent;
+                color: $grey;
+                font-size: 2rem;
+                padding: 0;
+                margin: 0;
+            }
+            &:hover{
+                background: $grey;
+                .sidebar__button{
+                    color: #fff;
+                    background: transparent;
+                }
+            }
+        }
+        &--nav{
+            background: transparent;
+            padding: 0;
+            .sidebar__button {
+                background: transparent;
+                color: #454545;
+                border: 2px solid;
+                font-weight: 600;
+                &:hover, &--active {
+                    color: #454545;
+                    border: 2px solid #71efc4;
+                    background: transparent;
+                    &::after {
+                        background: #71efc4 url('../img/tarot/triangle.png') no-repeat center;
+                    }
+                }
+                
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    right: 0;
+                    top: 0;
+                    background: #454545 url('../img/tarot/triangle.png') no-repeat center;
+                    color: #fff;
+                    position: absolute;
+                    height: 100%;
+                    width: 32px;
+                }
+                &--active::after {
+                    background: #71efc4 url('../img/tarot/triangle.png') no-repeat center;
+                }
             }
         }
     }
