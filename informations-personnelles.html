@@ -10,7 +10,7 @@
         <link rel="icon" type="image/x-icon" href="/tarot-favicon.png" />
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato|Lobster|Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet">
     </head>
-    <body class="account personnal_informations">
+    <body class="account personnal_informations pi">
         <section class="header header-default">
             <div class="header__content">
                 <a href="voyants.html">
@@ -24,32 +24,29 @@
             </div>
         </section>
         <section class="page">
+            <header class="page__header">
+                <div class="page__header--content">
+                    <div class="page__header--logo">
+                        <img src="img/user/personnal_informations-grey.png" alt="Informations Personnelles">
+                        <h1 class="page__title">Informations personnelles</h1>
+                    </div>
+                </div>
+            </header>
             <div class="page__sidebar">
-                <div class="sidebar__block sidebar__block--user">
-                    <p class="sidebar__title sidebar__title--user">Amine</p>
-                    <a href="logout" class="sidebar__button">Me déconnecter</a>
+                <div class="sidebar__block sidebar__block--menu">
+                    <a href="" class="sidebar__button">Menu</a>
                 </div>
                 <div class="sidebar__block sidebar__block--nav">
-                    <a href="compte.html" class="sidebar__button">
-                        Menu
-                    </a>
-                    <a href="informations-personnelles.html" class="sidebar__button sidebar__button--active">
-                        Infos perso
-                    </a>
-                    <a href="ma-consommation.html" class="sidebar__button">
-                        Ma consommation
-                    </a>
-                    <a href="cartes-enregistrees.html" class="sidebar__button">
-                        Cartes enregistrées
-                    </a>
-                    <a href="historique-chat.html" class="sidebar__button">
-                        Historique tchat
-                    </a>
+                    <a href="informations-personnelles.html" class="sidebar__button sidebar__button--active">Informations personnelles</a>
+                    <a href="ma-consommation.html" class="sidebar__button">Ma consommation</a>
+                    <a href="cartes-enregistrees.html" class="sidebar__button">Cartes enregistrées</a>
+                    <a href="mes-messages.html" class="sidebar__button">Messages</a>
+                    <a href="historique-chat.html" class="sidebar__button">Historique Tchats</a>
+                    <a href="factures.html" class="sidebar__button">Factures</a>
                 </div>
             </div>
             <div class="page__content">
                 <div class="page-user">
-                    <h1 class="page__title">Informations personnelles</h1>
                     <form name="user_personnal_informations" method="post" action="">
                         <div id="user_personnal_informations">
                             <div>
@@ -283,6 +280,13 @@
                     </form>
 
                 </div>
+                <div class="page__menu">
+                    <div class="page__menu--item"><a href="ma-consommation.html"><i class="icon item-2"></i><span class="item__text">Ma consommation</span></a></div>
+                    <div class="page__menu--item"><a href="cartes-enregistrees.html"><i class="icon item-3"></i><span class="item__text">Cartes enregistrées</span></a></div>
+                    <div class="page__menu--item"><a href="mes-messages.html"><i class="icon item-4"></i><span class="item__text">Mes messages (3)</span></a></div>
+                    <div class="page__menu--item"><a href="historique-chat.html"><i class="icon item-5"></i><span class="item__text">Historique des conversations</span></a></div>
+                    <div class="page__menu--item"><a href="factures.html"><i class="icon item-6"></i><span class="item__text">Factures</span></a></div>
+                </div>
             </div>
         </section>
         <div class="page">
@@ -315,50 +319,5 @@
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="js/tarot.js"></script>
-        <script type="text/javascript">
-            $(window).load(function () {
-                var dynamicForm = new DynamicForm({
-                    container_id: 'user_personnal_informations_adresses',
-                    remove_element_content: '-',
-                    append_add_button: false,
-                    append_label_index: false,
-                    translation: {
-                        element_num: 'Adresse'
-                    }
-                });
-                $('.account.personnal_informations form button.add_element').on('click', function () {
-                    dynamicForm.add();
-                });
-            });
-        </script>
-        <script type="text/javascript">
-            /* <![CDATA[ */
-            var google_conversion_id = 933151112;
-            var google_custom_params = window.google_tag_params;
-            var google_remarketing_only = true;
-            /* ]]> */
-        </script>
-        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
-        <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/933151112/?value=0&amp;guid=ON&amp;script=0"/>
-        </div>
-        </noscript>
-        <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                        m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', 'UA-16975536-8', 'auto');
-            ga('send', 'pageview');
-        </script>
     </body>
 </html>

@@ -3679,6 +3679,21 @@ label {
     .headline {
       display: none; } }
 
+.pi .page__header--logo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0; }
+  .pi .page__header--logo img {
+    width: 47px;
+    height: 47px;
+    display: block;
+    margin: 0 auto 15px; }
+.pi .page-user {
+  background: #fff;
+  padding: 1rem; }
+
 .page {
   margin: 0 auto;
   max-width: 75.38462rem;
