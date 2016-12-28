@@ -355,3 +355,5 @@ GitHub.sublime-settings
 # *.ipr
 
 # End of https://www.gitignore.io/api/netbeans,sublimetext,sass,node,windows,linux,macos,phpstorm,webstorm,cloud9,notepadpp,webstorm,webstorm,jetbrains
+css/main.css
+
