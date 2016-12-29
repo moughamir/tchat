@@ -30,7 +30,7 @@ $input-focus-bg-color: scale-color($white, $lightness: -2%) !default;
 $input-border-color: scale-color($white, $lightness: -20%) !default;
 $input-focus-border-color: scale-color($white, $lightness: -40%) !default;
 $input-border-style: solid !default;
-$input-border-width: 1px !default;
+$input-border-width: 2px !default;
 $input-border-radius: $global-radius !default;
 $input-disabled-bg: $gainsboro !default;
 $input-disabled-cursor: $cursor-default-value !default;
@@ -120,7 +120,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
     width: $input-border-width;
     color: $input-border-color;
   }
-  box-shadow: $input-box-shadow;
+ // box-shadow: $input-box-shadow;
   color: $input-font-color;
   display: block;
   font-family: $input-font-family;
