@@ -51,12 +51,16 @@
                         <div id="user_personnal_informations">
                             <div>
                                 <label for="user_personnal_informations_username" class="required">Pseudo</label>
-                                <input type="text" id="user_personnal_informations_username" name="user_personnal_informations[username]" required="required" value="CompteTest" />
-                            </div>
+                                <input type="text" id="user_personnal_informations_username" name="user_personnal_informations[username]" required="required" value="" placeholder="pseudo"/>
+                            </div> <!-- UserName-->
+                            <div>                
+                                <label for="user_personnal_informations_prenom" class="required">Prénom</label>
+                                <input type="text" id="user_personnal_informations_prenom" name="user_personnal_informations[prenom]" required="required" value="" placeholder="Prénom"/>
+                            </div> <!-- Name -->
                             <div>
                                 <label for="user_personnal_informations_mail" class="required">Mail</label>
-                                <input type="email" id="user_personnal_informations_mail" name="user_personnal_informations[mail]" required="required" value="amineherradi@gmail.com" />
-                            </div>
+                                <input type="email" id="user_personnal_informations_mail" name="user_personnal_informations[mail]" required="required" value="" placeholder="Adresse email"/>
+                            </div> <!-- EMail -->
                             <div>
                                 <label class="required">Date de naissance</label>
                                 <div id="user_personnal_informations_dateNaissance" class="birthday_container">
@@ -240,7 +244,7 @@
                                         <span class="arrow"></span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> <!-- BirthDay -->
                             <div>
                                 <label for="user_personnal_informations_genre" class="required">Sexe</label>
                                 <div class="select_wrapper">
@@ -250,31 +254,42 @@
                                     </select>
                                     <span class="arrow"></span>
                                 </div>
-                            </div>
+                            </div> <!-- Gender -->
                             <div>
-                                <h4>Vos adresses <button type="button" class="add_element">+</button></h4>
-                                <div id="user_personnal_informations_adresses" data-prototype="    &lt;div&gt;                &lt;label class=&quot;address_title required&quot;&gt;__name__label__&lt;/label&gt;&lt;div&gt;                &lt;label for=&quot;user_personnal_informations_adresses___name___voie&quot; class=&quot;required&quot;&gt;Adresse&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;user_personnal_informations_adresses___name___voie&quot; name=&quot;user_personnal_informations[adresses][__name__][voie]&quot; required=&quot;required&quot; /&gt;&lt;/div&gt;
-                                     &lt;div&gt;                &lt;label for=&quot;user_personnal_informations_adresses___name___complement&quot;&gt;Complément d&amp;#039;adresse&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;user_personnal_informations_adresses___name___complement&quot; name=&quot;user_personnal_informations[adresses][__name__][complement]&quot; /&gt;&lt;/div&gt;
-
-                                     &lt;div class=&quot;row&quot;&gt;
-                                     &lt;div class=&quot;small-6 columns&quot;&gt;
-                                     &lt;div&gt;                &lt;label for=&quot;user_personnal_informations_adresses___name___codepostal&quot; class=&quot;required&quot;&gt;Code postal&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;user_personnal_informations_adresses___name___codepostal&quot; name=&quot;user_personnal_informations[adresses][__name__][codepostal]&quot; required=&quot;required&quot; /&gt;&lt;/div&gt;
-                                     &lt;/div&gt;
-                                     &lt;div class=&quot;small-6 columns&quot;&gt;
-                                     &lt;div&gt;                &lt;label for=&quot;user_personnal_informations_adresses___name___ville&quot; class=&quot;required&quot;&gt;Ville&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;user_personnal_informations_adresses___name___ville&quot; name=&quot;user_personnal_informations[adresses][__name__][ville]&quot; required=&quot;required&quot; /&gt;&lt;/div&gt;
-                                     &lt;/div&gt;
-                                     &lt;/div&gt;
-                                     &lt;/div&gt;
+                                <h4>Vos adresses <button type="button" class="add_element button">+</button></h4>
+                                <div id="user_personnal_informations_adresses" data-prototype="
+                                <div>
+                                    <label class='address_title required'>__name__label__</label>
+                                <div>
+                                    <label for='user_personnal_informations_adresses___name___voie' class='required'>Adresse</label>
+                                    <input type='text' id='user_personnal_informations_adresses___name___voie' name='user_personnal_informations[adresses][__name__][voie]' required='required' />
+                                </div>
+                                <div>
+                                    <label for='user_personnal_informations_adresses___name___complement'>Complément d&amp;#039;adresse</label>
+                                    <input type='text' id='user_personnal_informations_adresses___name___complement' name='user_personnal_informations[adresses][__name__][complement]' />
+                                </div>
+                                <div class='row'>
+                                    <div class='small-6 columns'>
+                                        <div>
+                                            <label for='user_personnal_informations_adresses___name___codepostal' class='required'>Code postal</label>
+                                            <input type='text' id='user_personnal_informations_adresses___name___codepostal' name='user_personnal_informations[adresses][__name__][codepostal]' required='required' />
+                                        </div>
+                                    </div>
+                                    <div class='small-6 columns'>
+                                        <div>
+                                            <label for='user_personnal_informations_adresses___name___ville' class='required'>Ville</label>
+                                            <input type='text' id='user_personnal_informations_adresses___name___ville' name='user_personnal_informations[adresses][__name__][ville]' required='required' />
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                                      ">
                                 </div>
-                            </div>
-                            <div>                
-                                <label for="user_personnal_informations_prenom" class="required">Prénom</label>
-                                <input type="text" id="user_personnal_informations_prenom" name="user_personnal_informations[prenom]" required="required" value="Amine" />
-                            </div>
+                            </div> <!-- Adresse -->
+                            
                             <div>
-                                <button type="submit" id="user_personnal_informations_save" name="user_personnal_informations[save]">Enregistrer</button>
-                            </div>
+                                <button type="submit" class="button" id="user_personnal_informations_save" name="user_personnal_informations[save]">Enregistrer</button>
+                            </div> <!-- Submit -->
                             <input type="hidden" id="user_personnal_informations__token" name="user_personnal_informations[_token]" value="sSbvPnCKSvIuE3uADFbmhfcXMlCSGnol6WuK3axPQoI" />
                         </div>
                     </form>
@@ -319,5 +334,21 @@
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="js/tarot.js"></script>
+        <script type="text/javascript">
+        $(window).load(function () {
+            var dynamicForm = new DynamicForm({
+                container_id: 'user_personnal_informations_adresses',
+                remove_element_content: '-',
+                append_add_button: false,
+                append_label_index: false,
+                translation: {
+                    element_num: 'Adresse'
+                }
+            });
+            $('.account.personnal_informations form button.add_element').on('click', function () {
+                dynamicForm.add();
+            });
+        });
+        </script>
     </body>
 </html>
