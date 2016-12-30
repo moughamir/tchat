@@ -4797,4 +4797,39 @@ iframe[name="google_conversion_frame"] {
     align-items: center;
     font-size: 12px; }
 
+.cards {
+  list-style: none;
+  margin: 0; }
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem;
+    border-bottom: 1px solid rgba(191, 191, 190, 0.5); }
+    .cards .card:hover {
+      background: rgba(191, 191, 190, 0.2);
+      cursor: pointer; }
+    .cards .card-number {
+      font-size: 1.6rem;
+      line-height: 1.6rem; }
+
+.delete-card, .add-card {
+  background: transparent;
+  color: #454545;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0; }
+  .delete-card:hover, .add-card:hover {
+    background: transparent;
+    color: #454545; }
+
+.bottom-btns {
+  margin-top: 10px; }
+  .bottom-btns > div {
+    display: inline-flex;
+    align-items: center;
+    height: 50px; }
+    .bottom-btns > div:last-child {
+      justify-content: flex-end; }
+
 /*# sourceMappingURL=tarot.css.map */
