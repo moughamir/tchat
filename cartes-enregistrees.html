@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="default">
+<html lang="fr" class="default pi">
     <head>
         <meta charset="UTF-8" />
         <title>Cartes enregistrées</title>
@@ -24,32 +24,33 @@
             </div>
         </section>
         <section class="page">
+            <header class="page__header">
+                <div class="page__header--content">
+                  <div class="page__header--logo">
+                  <img src="img/user/registered_cards-grey.png" alt="Ma consommation">
+                  <h1 class="page__title">Cartes enregistrées</h1>
+                </div>
+                <div class="page__header--menu">
+              <a href="#" class="button">Rejoindre le chat</a>
+              <a href="#" class="button">Voir les voyants</a>
+            </div>
+            </div>
+            </header>
             <div class="page__sidebar">
-                <div class="sidebar__block sidebar__block--user">
-                    <p class="sidebar__title sidebar__title--user">Amine</p>
-                    <a href="logout" class="sidebar__button">Me déconnecter</a>
+                <div class="sidebar__block sidebar__block--menu">
+                  <a href="" class="sidebar__button">Menu</a>
                 </div>
                 <div class="sidebar__block sidebar__block--nav">
-                    <a href="compte.html" class="sidebar__button">
-                        Menu
-                    </a>
-                    <a href="informations-personnelles.html" class="sidebar__button">
-                        Infos perso
-                    </a>
-                    <a href="ma-consommation.html" class="sidebar__button">
-                        Ma consommation
-                    </a>
-                    <a href="cartes-enregistrees.html" class="sidebar__button sidebar__button--active">
-                        Cartes enregistrées
-                    </a>
-                    <a href="historique-chat.html" class="sidebar__button">
-                        Historique tchat
-                    </a>
+                  <a href="informations-personnelles.html" class="sidebar__button">Informations personnelles</a>
+                  <a href="ma-consommation.html" class="sidebar__button">Ma consommation</a>
+                  <a href="cartes-enregistrees.html" class="sidebar__button sidebar__button--active">Cartes enregistrées</a>
+                  <a href="mes-messages.html" class="sidebar__button">Messages</a>
+                  <a href="historique-chat.html" class="sidebar__button">Historique Tchats</a>
+                  <a href="factures.html" class="sidebar__button">Factures</a>
                 </div>
             </div>
             <div class="page__content">
                 <div class="page-user">
-                    <h1 class="page__title">Cartes enregistrées</h1>
                     <p>Vous n&#039;avez aucune carte enregistrée</p>
                     <div data-reveal class="reveal-modal small alias-confirm-modal" id="alias-delete-confirm-modal">
                         <h2>Suppression de la carte</h2>
@@ -58,6 +59,13 @@
                         <a data-confirm-cancel class="button secondary">Annuler</a>
                         <a data-confirm class="button alert">Confirmer</a>
                     </div>
+                </div>
+                <div class="page__menu">
+                    <div class="page__menu--item"><a href="informations-personnelles.html"><i class="icon item-1"></i><span class="item__text">Informations personnelles</span></a></div>
+                    <div class="page__menu--item"><a href="ma-consommation.html"><i class="icon item-2"></i><span class="item__text">Ma consommation</span></a></div>
+                    <div class="page__menu--item"><a href="mes-messages.html"><i class="icon item-4"></i><span class="item__text">Mes messages (3)</span></a></div>
+                    <div class="page__menu--item"><a href="historique-chat.html"><i class="icon item-5"></i><span class="item__text">Historique des conversations</span></a></div>
+                    <div class="page__menu--item"><a href="factures.html"><i class="icon item-6"></i><span class="item__text">Factures</span></a></div>
                 </div>
             </div>
         </section>

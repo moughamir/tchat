@@ -1416,7 +1416,7 @@ label {
     text-align: right; }
   label.inline {
     margin: 0 0 1.07692rem 0;
-    padding: 0.61538rem 0; }
+    padding: 0.69231rem 0; }
   label small {
     text-transform: capitalize;
     color: #676767; }
@@ -1503,9 +1503,8 @@ input:not([type]), input[type="text"], input[type="password"], input[type="date"
   border-radius: 0;
   background-color: #fff;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-color: #cccccc;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.75);
   display: block;
   font-family: inherit;
@@ -1633,7 +1632,7 @@ select {
   background-position: 100% center;
   background-repeat: no-repeat;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-color: #cccccc;
   color: rgba(0, 0, 0, 0.75);
   font-family: inherit;
@@ -3330,6 +3329,15 @@ button,
 label {
   transition: all 0.3s ease 0s; }
 
+button.button {
+  font-size: 1.6rem;
+  color: #454545;
+  border: 2px solid #bfbfbe;
+  float: right; }
+
+button.add_element.button {
+  float: inherit; }
+
 .icon {
   background-image: url("../img/tarot/sprite.png"); }
   .icon.icon-clock {
@@ -3522,7 +3530,8 @@ label {
 .button {
   background: #71efc4;
   margin: 0;
-  font-size: 1rem; }
+  font-size: 1rem;
+  outline: none; }
   .button:focus, .button:hover {
     background: linear-gradient(35deg, #71efc4 0%, #11c2b4 100%); }
 
@@ -3686,13 +3695,13 @@ label {
   padding: 0;
   margin: 0; }
   .pi .page__header--logo img {
-    width: 47px;
     height: 47px;
     display: block;
     margin: 0 auto 15px; }
 .pi .page-user {
   background: #fff;
-  padding: 1rem; }
+  padding: 1rem;
+  border: 2px solid #bfbfbe; }
 
 .page {
   margin: 0 auto;
@@ -3886,7 +3895,16 @@ label {
         padding-left: 0; }
       .page-user .birthday_container .select_wrapper:last-child {
         padding-right: 0; }
-  .page-user .recredit_action,
+  .page-user .recredit_action {
+    float: none;
+    margin: 0 auto;
+    box-shadow: 0 0 2px 0 black;
+    display: block;
+    max-width: 180px;
+    transition: all 300ms ease-in-out; }
+    .page-user .recredit_action:hover {
+      box-shadow: 0 1px 5px 0 black;
+      transition: all 300ms ease-in-out; }
   .page-user .open_cancel_subscription_modal {
     float: right; }
 
@@ -4738,5 +4756,45 @@ iframe[name="google_conversion_frame"] {
   display: inline-block;
   width: 18px;
   height: 18px; }
+
+.hightlight {
+  color: #71efc4;
+  margin: 0 5px; }
+
+.consom-info {
+  list-style: none; }
+  .consom-info .item {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center; }
+    .consom-info .item:nth-child(1) .icon {
+      background: url("../img/user/credit.png") center no-repeat; }
+    .consom-info .item:nth-child(2) .icon {
+      background: url("../img/user/abo.png") center no-repeat; }
+    .consom-info .item:nth-child(3) .icon {
+      background: url("../img/user/duration.png") center no-repeat; }
+    .consom-info .item:nth-child(4) .icon {
+      background: url("../img/user/cal.png") center no-repeat; }
+    .consom-info .item:nth-child(5) .icon {
+      background: url("../img/user/cart.png") center no-repeat; }
+  .consom-info .icon {
+    margin-right: 1rem;
+    width: 30px;
+    height: 30px;
+    display: inline-block; }
+
+.logout {
+  float: right; }
+  .logout:hover {
+    color: #989898; }
+  .logout span {
+    border-radius: 50%;
+    border: 1px solid;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px; }
 
 /*# sourceMappingURL=tarot.css.map */
