@@ -3,15 +3,16 @@
 @import "foundation";
 @import "sprite";
 @import "front";
+@import "media-object";
 @font-face {
-    font-family: 'CaviarDreams';
-    src: url('../fonts/CaviarDreams/CaviarDreams-webfont.eot');
-    src: url('../fonts/CaviarDreams/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/CaviarDreams/CaviarDreams-webfont.woff') format('woff'),
-         url('../fonts/CaviarDreams/CaviarDreams-webfont.ttf') format('truetype'),
-         url('./fonts/CaviarDreams/CaviarDreams-webfont.svg#caviar_dreamsregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'CaviarDreams';
+	src: url('../fonts/CaviarDreams/CaviarDreams-webfont.eot');
+	src: url('../fonts/CaviarDreams/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/CaviarDreams/CaviarDreams-webfont.woff') format('woff'),
+		 url('../fonts/CaviarDreams/CaviarDreams-webfont.ttf') format('truetype'),
+		 url('./fonts/CaviarDreams/CaviarDreams-webfont.svg#caviar_dreamsregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 // Table of Contents
@@ -27,8 +28,8 @@ $color_chat_message_client_background: #e5f2fa;
 @import "chat";
 
 body {
-    background: $lightGrey $body-bg;
-    background-size: cover;
+	background: $lightGrey $body-bg;
+	background-size: cover;
 }
 
 // General
@@ -36,428 +37,441 @@ body {
 a,
 button,
 label {
-    transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
 }
 button.button {
-    font-size: 1.6rem;
-    color: $grey;
-    border: 2px solid $light-grey;
-    float: right;
+	font-size: 1.6rem;
+	color: $grey;
+	border: 2px solid $light-grey;
+	float: right;
 }
 button.add_element.button {
-    float: inherit;
+	float: inherit;
 }
 $icons:
-    (clock, $clock),
-    (chat-quality1, $chat-quality1),
-    (chat-quality2, $chat-quality2),
-    (chat-quality3, $chat-quality3),
-    (register-step1, $register-step1),
-    (register-step2, $register-step2),
-    (register-step3, $register-step3),
-    (reinsurance-expertise, $reinsurance-expertise),
-    (reinsurance-payment, $reinsurance-payment),
-    (reinsurance-plan, $reinsurance-plan),
-    (reinsurance-security, $reinsurance-security),
-    (sidebar-reinsurance1, $sidebar-reinsurance1),
-    (sidebar-reinsurance2, $sidebar-reinsurance2),
-    (sidebar-reinsurance3, $sidebar-reinsurance3),
-    (sign-scorpio, $sign-scorpio),
-    (sign-sagittarius, $sign-sagittarius),
-    (sign-pisces, $sign-pisces),
-    (sign-libra, $sign-libra),
-    (sign-leo, $sign-leo),
-    (sign-gemini, $sign-gemini),
-    (sign-capricorn, $sign-capricorn),
-    (sign-taurus, $sign-taurus),
-    (sign-virgo, $sign-virgo),
-    (sign-cancer, $sign-cancer),
-    (sign-aquarius, $sign-aquarius),
-    (sign-aries, $sign-aries)
+	(clock, $clock),
+	(chat-quality1, $chat-quality1),
+	(chat-quality2, $chat-quality2),
+	(chat-quality3, $chat-quality3),
+	(register-step1, $register-step1),
+	(register-step2, $register-step2),
+	(register-step3, $register-step3),
+	(reinsurance-expertise, $reinsurance-expertise),
+	(reinsurance-payment, $reinsurance-payment),
+	(reinsurance-plan, $reinsurance-plan),
+	(reinsurance-security, $reinsurance-security),
+	(sidebar-reinsurance1, $sidebar-reinsurance1),
+	(sidebar-reinsurance2, $sidebar-reinsurance2),
+	(sidebar-reinsurance3, $sidebar-reinsurance3),
+	(sign-scorpio, $sign-scorpio),
+	(sign-sagittarius, $sign-sagittarius),
+	(sign-pisces, $sign-pisces),
+	(sign-libra, $sign-libra),
+	(sign-leo, $sign-leo),
+	(sign-gemini, $sign-gemini),
+	(sign-capricorn, $sign-capricorn),
+	(sign-taurus, $sign-taurus),
+	(sign-virgo, $sign-virgo),
+	(sign-cancer, $sign-cancer),
+	(sign-aquarius, $sign-aquarius),
+	(sign-aries, $sign-aries)
 ;
 
 .icon {
-    background-image: url('../img/tarot/sprite.png');
+	background-image: url('../img/tarot/sprite.png');
 
-    @each $icon-name, $icon-sprite in $icons {
-        &.icon-#{$icon-name} {
-            @include sprite($icon-sprite);
-        }
-    }
+	@each $icon-name, $icon-sprite in $icons {
+		&.icon-#{$icon-name} {
+			@include sprite($icon-sprite);
+		}
+	}
 }
 
 
 .raty {
-    font-size: rem-calc(6);
-    color: #fcc216;
+	font-size: rem-calc(6);
+	color: #fcc216;
 }
 
 .button {
-    background: #71efc4;
-    margin: 0;
-    font-size: 1rem;
-    outline: none;
-    &:focus, &:hover {
-        background: linear-gradient(35deg, rgba(113,239,196,1) 0%, rgba(17,194,180,1) 100%);
-    }
+	background: #71efc4;
+	margin: 5px 0;
+	font-size: 1rem;
+	outline: none;
+    min-width: 128px;
+	&:focus, &:hover {
+		background: linear-gradient(35deg, rgba(113,239,196,1) 0%, rgba(17,194,180,1) 100%);
+	}
 }
 
 // Header
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 .header {
-    background: $white;
+	background: $white;
 
-    &__content {
-        @include grid-row();
-        position: relative;
-        line-height: 120px;
-        & > a {
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        span {
-            color: $lightBlue;
-            display: inline-block;
-            font-family: $indie-flower;
-            font-size: 28px;
-            max-width: 320px;
-            line-height: 35px;
-            vertical-align: middle;
+	&__content {
+		@include grid-row();
+		position: relative;
+		line-height: 120px;
+		& > a {
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+		span {
+			color: $lightBlue;
+			display: inline-block;
+			font-family: $indie-flower;
+			font-size: 28px;
+			max-width: 320px;
+			line-height: 35px;
+			vertical-align: middle;
 
-            @media #{$small-only} {
-                display: block;
-                text-align: center;
-                margin: 10px auto 15px;
-            }
-        }
-    }
+			@media #{$small-only} {
+				display: block;
+				text-align: center;
+				margin: 10px auto 15px;
+			}
+		}
+	}
 
-    &__logo {
-        margin: rem-calc(10) auto;
+	&__logo {
+		margin: rem-calc(10) auto;
 
-        @media #{$small-only} {
-            display: block;
-            padding: 0 rem-calc(10);
-            position: static;
-            margin: 0 auto;
-            padding: 10px 0 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
+		@media #{$small-only} {
+			display: block;
+			padding: 0 rem-calc(10);
+			position: static;
+			margin: 0 auto;
+			padding: 10px 0 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 
-    &__login {
-        position: absolute;
-        right: rem-calc(15);
-        top: rem-calc(15);
-        z-index: 99;
-        color: $grey;
-        text-align: center;
-        max-width: 535px;
-        span {
-            @media #{$small-only}{display: none;}
-        }
-        label span {
-            display: none;
-        }
+	&__login {
+		position: absolute;
+		right: rem-calc(15);
+		top: rem-calc(15);
+		z-index: 99;
+		color: $grey;
+		text-align: center;
+		max-width: 535px;
+		span {
+			@media #{$small-only}{display: none;}
+		}
+		label span {
+			display: none;
+		}
 
-        input[type=text],
-        input[type=password] {
-            border: none;
-            background: white;
-            color: $primary-color;
-            margin: 0;
-        }
+		input[type=text],
+		input[type=password] {
+			border: none;
+			background: white;
+			color: $primary-color;
+			margin: 0;
+		}
 
-        .column-login {
-            @include grid-column(4);
-        }
+		.column-login {
+			@include grid-column(4);
+		}
 
-        .column-password {
-            @include grid-column(4);
-        }
+		.column-password {
+			@include grid-column(4);
+		}
 
-        .column-submit {
-            @include grid-column(4);
-        }
+		.column-submit {
+			@include grid-column(4);
+		}
 
-        .login-links .row {
-            padding-top: 3px;
-        }
+		.login-links .row {
+			padding-top: 3px;
+		}
 
-        @media #{$small-only} {
-            .column-login {
-                @include grid-column(12);
+		@media #{$small-only} {
+			.column-login {
+				@include grid-column(12);
 
-                span.error {
-                    display: none;
-                }
-            }
+				span.error {
+					display: none;
+				}
+			}
 
-            .column-password {
-                @include grid-column(12);
-            }
+			.column-password {
+				@include grid-column(12);
+			}
 
-            .column-submit {
-                @include grid-column(12);
-            }
+			.column-submit {
+				@include grid-column(12);
+			}
 
-            input {
-                &[type="text"], &[type="password"] {
-                    margin-bottom: 8px;
-                }
-            }
+			input {
+				&[type="text"], &[type="password"] {
+					margin-bottom: 8px;
+				}
+			}
 
-            body.tunnelCb & {
-                display: none;
-            }
-        }
+			body.tunnelCb & {
+				display: none;
+			}
+		}
 
-        @media #{$medium-down} {
-            position: static;
-            margin: 0 auto;
-            padding: 10px 0 15px;
-        }
+		@media #{$medium-down} {
+			position: static;
+			margin: 0 auto;
+			padding: 10px 0 15px;
+		}
 
-        @media #{$medium-up} {
-            .column-login {
-                .row {
-                    position: relative;
-                }
+		@media #{$medium-up} {
+			.column-login {
+				.row {
+					position: relative;
+				}
 
-                span.error {
-                    position: absolute;
-                    margin: 0 1px 1px;
-                }
-            }
+				span.error {
+					position: absolute;
+					margin: 0 1px 1px;
+				}
+			}
 
-            .column-password {
-                span.error {
-                    display: none;
-                }
-            }
-        }
+			.column-password {
+				span.error {
+					display: none;
+				}
+			}
+		}
 
-        a {
-            color: $white;
-            margin: 0 5px;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+		a {
+			color: $white;
+			margin: 0 5px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 
-        label {
-            color: $white;
-        }
+		label {
+			color: $white;
+		}
 
-        input[type="submit"] {
-            color: $primary-color;
-        }
-    }
+		input[type="submit"] {
+			color: $primary-color;
+		}
+	}
 
-    &__form-block {
-        display: inline-block;
-        margin: 0 rem-calc(5);
-        vertical-align: top;
-    }
+	&__form-block {
+		display: inline-block;
+		margin: 0 rem-calc(5);
+		vertical-align: top;
+	}
 }
 
 // Headline
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 .headline {
-    background: $grey;
-    box-shadow: 0 3px 10px -5px black;
-    line-height: 108px;
-    text-align: center;
+	background: $grey;
+	box-shadow: 0 3px 10px -5px black;
+	line-height: 108px;
+	text-align: center;
 
-    &__content {
-        font-family: $CaviarDreams;
-        font-size: 40px;
-        color: white;
-        text-transform: capitalize;
-        &::before, &::after {
-            content: '';
-            display: inline-block;
-            background: #fff;
-            width: 19px;
-            height: 19px;
-            transform: rotate(45deg);
-            margin:0 2.5rem;
-        }
+	&__content {
+		font-family: $CaviarDreams;
+		font-size: 40px;
+		color: white;
+		text-transform: capitalize;
+		&::before, &::after {
+			content: '';
+			display: inline-block;
+			background: #fff;
+			width: 19px;
+			height: 19px;
+			transform: rotate(45deg);
+			margin:0 2.5rem;
+		}
 
-        span {
-            font-family: $CaviarDreams;
-        }
-    }
+		span {
+			font-family: $CaviarDreams;
+		}
+	}
 
-    @media #{$small-only} {
-        display: none;
-    }
+	@media #{$small-only} {
+		display: none;
+	}
 }
 
 // Page
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 .pi{
-    .page__header--logo {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        img {
-            height: 47px;
-            display: block;
-            margin: 0 auto 15px;
-        }
+	.page__header--logo {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding: 0;
+		margin: 0;
+		img {
+			height: 47px;
+			display: block;
+			margin: 0 auto 15px;
+		}
 
-    }
+	}
 .page-user {
-    background: #fff;
-    padding: 1rem;
-    border: 2px solid $light-grey;
+	background: #fff;
+	padding: 1rem;
+	border: 2px solid $light-grey;
 }
 }
 
 .page {
-    @include grid-row();
-    padding: {
-        top: $column-gutter;
-        bottom: $column-gutter;
-    }
-    position: relative;
+	@include grid-row();
+	padding: {
+		top: $column-gutter;
+		bottom: $column-gutter;
+	}
+	position: relative;
 
-    @media #{$small-only} {
-        padding: {
-            top: 0;
-            bottom: 0;
-        }
-    }
-    &__header{
-        width: 100%;
-        padding: 2rem;
-    }
-    &__sidebar {
-        @include grid-column(12);
+	@media #{$small-only} {
+		padding: {
+			top: 0;
+			bottom: 0;
+		}
+	}
+	&__header{
+		width: 100%;
+		padding: 2rem;
+	}
+	&__sidebar {
+		@include grid-column(12);
 
-        @media #{$medium-up} {
-            @include grid-column(3);
-        }
-    }
+		@media #{$medium-up} {
+			@include grid-column(3);
+		}
+	}
 
-    &__content {
-        @include grid-column(12);
+	&__content {
+		@include grid-column(12);
 
-        @media #{$medium-up} {
-            @include grid-column(9);
-        }
-    }
+		@media #{$medium-up} {
+			@include grid-column(9);
+		}
+	}
 
-    &__title {
-        text-align: center;
-        font-size: rem-calc(22);
-        color: $primary-color;
-        margin-bottom: $column-gutter*2;
-    }
+	&__title {
+		text-align: center;
+		font-size: rem-calc(22);
+		color: $primary-color;
+		margin-bottom: $column-gutter*2;
+	}
 
-    &__block {
-        @include grid-row();
-        margin: {
-            top: $column-gutter/2;
-            bottom: $column-gutter;
-        }
+	&__block {
+		@include grid-row();
+		margin: {
+			top: $column-gutter/2;
+			bottom: $column-gutter;
+		}
 
-        &--white {
-            background: $white;
-            padding: {
-                top: $column-gutter/2;
-                bottom: $column-gutter/2;
-            }
-        }
+		&--white {
+			background: $white;
+			padding: {
+				top: $column-gutter/2;
+				bottom: $column-gutter/2;
+			}
+		}
 
-        &__reinsurance {
-            @include grid-column(12);
-            text-align: center;
+		&__reinsurance {
+			@include grid-column(12);
+			text-align: center;
 
-            @media #{$medium-up} {
-                @include grid-column(3);
-            }
+			@media #{$medium-up} {
+				@include grid-column(3);
+			}
 
-            .icon {
-                margin: 0 auto;
-            }
+			.icon {
+				margin: 0 auto;
+			}
 
-            p {
-                margin: 0;
-            }
-        }
-    }
+			p {
+				margin: 0;
+			}
+		}
+	}
 
-    &__psychics {
-        @include grid-row;
+	&__psychics {
+		@include grid-row;
 
-        .psychic__button {
-            font-size: 13px;
-            line-height: 22px;
+		.psychic__button {
+			font-size: 13px;
+			line-height: 22px;
 
-            &--status, &--more {
-                width: auto;
-            }
+			&--status, &--more {
+				width: auto;
+			}
 
-            &--chat {
-                font-size: 1.2rem;
-                line-height: 41px;
-            }
-        }
-    }
+			&--chat {
+				font-size: 1.2rem;
+				line-height: 41px;
+			}
+		}
+	}
 
-    .tunnel-sidebar {
-        position: absolute;
-        left: -265px;
-        top: 55px;
+	.tunnel-sidebar {
+		position: absolute;
+		left: -265px;
+		top: 55px;
 
-        @media #{$medium-down} {
-            display: none;
-        }
-    }
-    
-    &__menu--item {
-        background: #454545;
-        color: #fff;
-        padding: 1rem;
-        margin-bottom: 5px;
-        height: 63px;
-        border: 2px solid #c1c1c1;
-        display: flex;
-        align-items: center;
-        .icon{
-            width: 58px;
-            height: 58px;
-            display: inline-block;
-        }
-        a {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            text-transform: uppercase;
-            color: #fff;
-            font-size: 2rem
-        }
-        &:hover{
-            background: transparent;
-            border: 2px solid $grey;
-            a{
-                color: $grey;
-            }
-                
-        }
-        .item__text {
-            margin-left: 1.5rem;
-        }
-    }
+		@media #{$medium-down} {
+			display: none;
+		}
+	}
+	
+	&__menu--item {
+		background: #454545;
+		color: #fff;
+		padding: 1rem;
+		margin-bottom: 5px;
+		height: 63px;
+		@media #{$small-only}{
+			height: 38px;
+		}
+		border: 2px solid #c1c1c1;
+		display: flex;
+		align-items: center;
+		.icon{
+			width: 58px;
+			height: 58px;
+			display: inline-block;
+			@media #{$small-only}{
+				width: 28px;
+    			height: 28px;
+    			background-size: contain;
+			}
+		}
+		a {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			text-transform: uppercase;
+			color: #fff;
+			font-size: 2rem
+		}
+		&:hover{
+			background: transparent;
+			border: 2px solid $grey;
+			a{
+				color: $grey;
+			}
+				
+		}
+		.item__text {
+			margin-left: 1.5rem;
+			@media #{$small-only}{
+				white-space: nowrap;
+				font-size: 1rem;
+				}
+		}
+	}
 }
 
 $items:(
@@ -476,965 +490,1151 @@ background: url('../img/user/' + $bg +'.png') no-repeat center;
 background: url('../img/user/' + $bg +'-grey.png') no-repeat center;
 }
 }
-            
+			
 
 .page-user {
-    @include grid-column(12);
-    background: transparent;
-    margin: {
-        top: $column-gutter/2;
-        bottom: $column-gutter/2;
-    }
-    padding: 0;
-    .birthday_container {
-        @include grid-row();
+	@include grid-column(12);
+	background: transparent;
+	margin: {
+		top: $column-gutter/2;
+		bottom: $column-gutter/2;
+	}
+	padding: 0;
+	.birthday_container {
+		@include grid-row();
 
-        .select_wrapper {
-            @include grid-column(4);
+		.select_wrapper {
+			@include grid-column(4);
 
-            &:first-child {
-                padding-left: 0;
-            }
+			&:first-child {
+				padding-left: 0;
+			}
 
-            &:last-child {
-                padding-right: 0;
-            }
-        }
-    }
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
 
  .recredit_action {
-        float: none;
-        margin: 0 auto;
-        box-shadow: 0 0 2px 0 black;
-        display: block;
-        max-width: 180px;
-        transition: all 300ms ease-in-out;
-        &:hover{
-            box-shadow: 0 1px 5px 0 black;
-            transition: all 300ms ease-in-out;
-        }
-    }   
-    .open_cancel_subscription_modal {
-        float: right;
-    }
+		float: none;
+		margin: 0 auto;
+		box-shadow: 0 0 2px 0 black;
+		display: block;
+		max-width: 180px;
+		transition: all 300ms ease-in-out;
+		&:hover{
+			box-shadow: 0 1px 5px 0 black;
+			transition: all 300ms ease-in-out;
+		}
+	}   
+	.open_cancel_subscription_modal {
+		float: right;
+	}
 }
 
 .user {
-    &__nav {
-        @include grid-row();
+	&__nav {
+		@include grid-row();
 
-        &__item {
-            @include grid-column(6);
-            text-align: center;
-            margin: {
-                top: $column-gutter;
-                bottom: $column-gutter;
-            }
-        }
-    }
+		&__item {
+			@include grid-column(6);
+			text-align: center;
+			margin: {
+				top: $column-gutter;
+				bottom: $column-gutter;
+			}
+		}
+	}
 }
 
 .sidebar {
-    &__block {
-        @include grid-column(12);
-        background: $white;
-        margin: {
-            top: $column-gutter/2;
-            bottom: $column-gutter/2;
-        }
+	&__block {
+		@include grid-column(12);
+		background: $white;
+		margin: {
+			top: $column-gutter/2;
+			bottom: $column-gutter/2;
+		}
 
-        padding: {
-            top: $column-gutter/2;
-            bottom: $column-gutter/2;
-        }
+		padding: {
+			top: $column-gutter/2;
+			bottom: $column-gutter/2;
+		}
 
-        @media #{$small-only} {
-            &--user, &--chat {
-                display: none;
-            }
-        }
-        &--menu{
-            background: transparent;
-            border: 3px solid;
-            .sidebar__button{
-                background: transparent;
-                color: $grey;
-                font-size: 2rem;
-                padding: 0;
-                margin: 0;
-            }
-            &:hover{
-                background: $grey;
-                .sidebar__button{
-                    color: #fff;
-                    background: transparent;
-                }
-            }
-        }
-        &--nav{
-            background: transparent;
-            padding: 0;
-            .sidebar__button {
-                background: transparent;
-                color: #454545;
-                border: 2px solid;
-                font-weight: 600;
-                &:hover, &--active {
-                    color: #454545;
-                    border: 2px solid #71efc4;
-                    background: transparent;
-                    &::after {
-                        background: #71efc4 url('../img/tarot/triangle.png') no-repeat center;
-                    }
-                }
-                
-                &::after {
-                    content: '';
-                    display: inline-block;
-                    right: 0;
-                    top: 0;
-                    background: #454545 url('../img/tarot/triangle.png') no-repeat center;
-                    color: #fff;
-                    position: absolute;
-                    height: 100%;
-                    width: 32px;
-                }
-                &--active::after {
-                    background: #71efc4 url('../img/tarot/triangle.png') no-repeat center;
-                }
-            }
-        }
-    }
+		@media #{$small-only} {
+			&--user, &--chat {
+				display: none;
+			}
+		}
+		&--menu{
+			background: transparent;
+			border: 3px solid;
+			.sidebar__button{
+				background: transparent;
+				color: $grey;
+				font-size: 2rem;
+				padding: 0;
+				margin: 0;
+			}
+			&:hover{
+				background: $grey;
+				.sidebar__button{
+					color: #fff;
+					background: transparent;
+				}
+			}
+		}
+		&--nav{
+			background: transparent;
+			padding: 0;
+			.sidebar__button {
+				background: transparent;
+				color: #454545;
+				border: 2px solid;
+				font-weight: 600;
+				&:hover, &--active {
+					color: #454545;
+					border: 2px solid #71efc4;
+					background: transparent;
+					&::after {
+						background: #71efc4 url('../img/tarot/triangle.png') no-repeat center;
+					}
+				}
+				
+				&::after {
+					content: '';
+					display: inline-block;
+					right: 0;
+					top: 0;
+					background: #454545 url('../img/tarot/triangle.png') no-repeat center;
+					color: #fff;
+					position: absolute;
+					height: 100%;
+					width: 32px;
+				}
+				&--active::after {
+					background: #71efc4 url('../img/tarot/triangle.png') no-repeat center;
+				}
+			}
+		}
+	}
 
-    &__title {
-        text-align: center;
-        line-height: 1.6rem;
+	&__title {
+		text-align: center;
+		line-height: 1.6rem;
 
-        &--user {
-            font-size: rem-calc(20);
-            text-decoration: underline;
-            text-align: left;
-        }
+		&--user {
+			font-size: rem-calc(20);
+			text-decoration: underline;
+			text-align: left;
+		}
 
-        &--opening, &--service {
-            font-size: rem-calc(16);
-            text-transform: uppercase;
-            text-decoration: underline;
-            margin-bottom: 10px;
-        }
+		&--opening, &--service {
+			font-size: rem-calc(16);
+			text-transform: uppercase;
+			text-decoration: underline;
+			margin-bottom: 10px;
+		}
 
-        &--service {
-            text-align: left;
-        }
+		&--service {
+			text-align: left;
+		}
 
-        &--chat {
-            text-transform: uppercase;
-            font-size: rem-calc(11);
-            line-height: 1.2rem;
-        }
-    }
+		&--chat {
+			text-transform: uppercase;
+			font-size: rem-calc(11);
+			line-height: 1.2rem;
+		}
+	}
 
-    &__text--opening {
-        padding-left: 38px;
-        position: relative;
-        line-height: 18px;
-        margin: 0;
+	&__text--opening {
+		padding-left: 38px;
+		position: relative;
+		line-height: 18px;
+		margin: 0;
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background-image: url('../img/tarot/sprite.png');
-            @include sprite($clock);
-        }
-    }
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-image: url('../img/tarot/sprite.png');
+			@include sprite($clock);
+		}
+	}
 
-    &__text--service {
-        padding-left: 42px;
-        position: relative;
-        font-size: 12px;
-        line-height: 16px;
-        margin: 0;
+	&__text--service {
+		padding-left: 42px;
+		position: relative;
+		font-size: 12px;
+		line-height: 16px;
+		margin: 0;
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background-image: url('../img/tarot/sprite.png');
-            @include sprite($phone);
-        }
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-image: url('../img/tarot/sprite.png');
+			@include sprite($phone);
+		}
 
-        span {
-            white-space: nowrap;
+		span {
+			white-space: nowrap;
 
-            &:last-child {
-                font-size: 13px;
-                font-weight: bold;
-                color: $lightBlue;
-            }
-        }
-    }
+			&:last-child {
+				font-size: 13px;
+				font-weight: bold;
+				color: $lightBlue;
+			}
+		}
+	}
 
-    &__chat {
-        &__item {
-            position: relative;
-            padding-left: rem-calc(54) + $column-gutter/2;
-            line-height: 54px;
-            margin: 10px 0;
+	&__chat {
+		&__item {
+			position: relative;
+			padding-left: rem-calc(54) + $column-gutter/2;
+			line-height: 54px;
+			margin: 10px 0;
 
-            .icon {
-                margin: 0 auto;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                border: solid 1px $primary-color;
-                border-radius: 4px;
-            }
+			.icon {
+				margin: 0 auto;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				border: solid 1px $primary-color;
+				border-radius: 4px;
+			}
 
-            p {
-                margin: 0;
-                display: inline-block;
-                line-height: 16px;
-                font-size: 12px;
-                vertical-align: middle;
-            }
-        }
-    }
+			p {
+				margin: 0;
+				display: inline-block;
+				line-height: 16px;
+				font-size: 12px;
+				vertical-align: middle;
+			}
+		}
+	}
 
-    &__button {
-        @include button-base;
-        @include button-size;
-        font-size: 1rem;
-        display: block;
-        color: $white;
-        background: $grey;
-        margin: {
-            top: $column-gutter/2;
-            bottom: 0;
-        }
+	&__button {
+		@include button-base;
+		@include button-size;
+		font-size: 1rem;
+		display: block;
+		color: $white;
+		background: $grey;
+		margin: {
+			top: $column-gutter/2;
+			bottom: 0;
+		}
 
-        &:hover,
-        &:focus,
-        &--active {
-            background:  linear-gradient(22deg, $grey 0%, darken($grey, 10) 50%);
-            color: $white;
-        }
-    }
-    &__credit {
-        border: 1px solid;
-        border-left: 4px solid;
-        border-right: 4px solid;
-        padding: 2px 5px;
+		&:hover,
+		&:focus,
+		&--active {
+			background:  linear-gradient(22deg, $grey 0%, darken($grey, 10) 50%);
+			color: $white;
+		}
+	}
+	&__credit {
+		border: 1px solid;
+		border-left: 4px solid;
+		border-right: 4px solid;
+		padding: 2px 5px;
 }
 }
 
 .psychics {
-    &__item-container {
-        @include grid-column(12);
-        margin: {
-            top: $column-gutter/2;
-            bottom: $column-gutter/2;
-        }
-        padding: 0;
+	&__item-container {
+		@include grid-column(12);
+		margin: {
+			top: $column-gutter/2;
+			bottom: $column-gutter/2;
+		}
+		padding: 0;
 
-        @media #{$medium-up} {
-            @include grid-column(6);
-        }
-    }
+		@media #{$medium-up} {
+			@include grid-column(6);
+		}
+	}
 
-    &__item {
-        background: $white;
-        padding: {
-            top: $column-gutter/2;
-            bottom: $column-gutter/2;
-        }
-        float: left;
-        min-height: 245px;
+	&__item {
+		background: $white;
+		padding: {
+			top: $column-gutter/2;
+			bottom: $column-gutter/2;
+		}
+		float: left;
+		min-height: 245px;
 
-        .psychic__avatar {
-            padding: {
-                left: $column-gutter/2;
-                right: $column-gutter/2;
-            }
-        }
+		.psychic__avatar {
+			padding: {
+				left: $column-gutter/2;
+				right: $column-gutter/2;
+			}
+		}
 
-        .psychic__profile {
-            padding: {
-                left: $column-gutter/2;
-                right: $column-gutter/2;
-            }
-        }
-    }
+		.psychic__profile {
+			padding: {
+				left: $column-gutter/2;
+				right: $column-gutter/2;
+			}
+		}
+	}
 }
 
 .psychic {
-    &__avatar {
-        @include grid-column(4);
-    }
+	&__avatar {
+		@include grid-column(4);
+	}
 
-    &__profile {
-        @include grid-column(8);
-    }
+	&__profile {
+		@include grid-column(8);
+	}
 
-    &__name {
-        color: $black;
-        font-size: rem-calc(20);
-    }
+	&__name {
+		color: $black;
+		font-size: rem-calc(20);
+	}
 
-    &__info {
-        color: $black;
-        line-height: 1.5rem;
-    }
+	&__info {
+		color: $black;
+		line-height: 1.5rem;
+	}
 
-    &__sign {
-    }
+	&__sign {
+	}
 
-    &__button {
-        @include button-base;
-        @include button-size;
-        font-size: 16px;
-        display: block;
-        width: 100%;
-        margin-bottom: $column-gutter/2.5;
-        padding: 0;
-        line-height: 40px;
+	&__button {
+		@include button-base;
+		@include button-size;
+		font-size: 16px;
+		display: block;
+		width: 100%;
+		margin-bottom: $column-gutter/2.5;
+		padding: 0;
+		line-height: 40px;
 
-        &--status, &--more {
-            width: 240px;
-        }
+		&--status, &--more {
+			width: 240px;
+		}
 
-        &--status {
-            background-color: #c2a583;
-            color: $white;
+		&--status {
+			background-color: #c2a583;
+			color: $white;
 
-            &:hover {
-                color: $white;
-            }
+			&:hover {
+				color: $white;
+			}
 
-            &-unavailable,
-            &.unavailable {
-                background-color: #e60827;
-                color: $white;
-            }
+			&-unavailable,
+			&.unavailable {
+				background-color: #e60827;
+				color: $white;
+			}
 
-            &-busy,
-            &.busy {
-                background-color: #fc8800;
-                color: $white;
-            }
+			&-busy,
+			&.busy {
+				background-color: #fc8800;
+				color: $white;
+			}
 
-            &-available,
-            &.available {
-                background-color: #00cc00;
-                color: $white;
-            }
-        }
+			&-available,
+			&.available {
+				background-color: #00cc00;
+				color: $white;
+			}
+		}
 
-        &--more {
-            background-color: $light-grey;
-            color: $white;
+		&--more {
+			background-color: $light-grey;
+			color: $white;
 
-            &:focus, &:hover {
-                background: darken($oil, 10);
-                color: $white;
-            }
-        }
+			&:focus, &:hover {
+				background: darken($oil, 10);
+				color: $white;
+			}
+		}
 
-        &--chat {
-            
-            background: #71efc4;
-            font-weight: bold;
-            color: $grey;
-            margin: 0;
+		&--chat {
+			
+			background: #71efc4;
+			font-weight: bold;
+			color: $grey;
+			margin: 0;
 
-            &:focus, &:hover {
-                background: linear-gradient(25deg, #71efc4 0%, darken(#71efc4, 25) 100%);
-                color: $primary-color;
-            }
-        }
-    }
+			&:focus, &:hover {
+				background: linear-gradient(25deg, #71efc4 0%, darken(#71efc4, 25) 100%);
+				color: $primary-color;
+			}
+		}
+	}
 
-    &__description,
-    &__reviews {
-        margin: 0 $column-gutter/2;
-        border: solid 2px $primary-color;
+	&__description,
+	&__reviews {
+		margin: 0 $column-gutter/2;
+		border: solid 2px $primary-color;
 
-        legend {
-            text-transform: uppercase;
-            font-weight: $font-weight-normal;
-            font-size: rem-calc(20);
-        }
-    }
+		legend {
+			text-transform: uppercase;
+			font-weight: $font-weight-normal;
+			font-size: rem-calc(20);
+		}
+	}
 
-    &__reviews {
-        &:not(.expanded) {
-            .review--hidden {
-                display: none;
-            }
-        }
+	&__reviews {
+		&:not(.expanded) {
+			.review--hidden {
+				display: none;
+			}
+		}
 
-        &__expand {
-            @include button-base;
-            @include button-size;
-            font-size: 1rem;
-            background: #3f3e3e;
-            float: right;
-            margin: 0;
+		&__expand {
+			@include button-base;
+			@include button-size;
+			font-size: 1rem;
+			background: #3f3e3e;
+			float: right;
+			margin: 0;
 
-            &:focus, &:hover {
-                background: darken(#3f3e3e, 10);
-            }
-        }
-    }
+			&:focus, &:hover {
+				background: darken(#3f3e3e, 10);
+			}
+		}
+	}
 
-    &__bottom {
-        @include grid-column(12);
-    }
+	&__bottom {
+		@include grid-column(12);
+	}
 }
 
 .review {
-    &__author,
-    &__rating {
-        margin-right: 20px;
-    }
+	&__author,
+	&__rating {
+		margin-right: 20px;
+	}
 }
 
 body.account {
-    ul.conversations {
-        margin: 0;
+	ul.conversations {
+		margin: 0;
+		height: 345px;
+    	overflow: hidden;
+    	&::-webkit-scrollbar-track{
+    		box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    		background-color: #F5F5F5;
+    	}
+    	&::-webkit-scrollbar{
+			width: 12px;
+			background-color: #F5F5F5;
+		}
+		&::-webkit-scrollbar-thumb{
+			border-radius: 10px;
+			box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+			background-color: #555;
+		}
 
-        li {
-            list-style-type: none;
-            font-style: italic;
-            font-size: 1.2em;
-            cursor: pointer;
+		li {
+			
+			
+			list-style-type: none;
+			font-style: italic;
+			font-size: 1.2em;
+			cursor: pointer;
 
-            &.active {
-                font-weight: bold;
-            }
+			&.active {
+				font-weight: bold;
+			}
 
-            img {
-                width: 30px;
-                border: 1px solid white;
-            }
-        }
-    }
+			img {
+				width: 30px;
+				border: 1px solid white;
+			}
+		}
+	}
 
-    div.conversations {
-        .no_message {
-            text-align: center;
-            font-weight: bold;
-            color: $black;
-        }
+	div.conversations {
+		.no_message {
+			text-align: center;
+			font-weight: bold;
+			color: $black;
+		}
 
-        .conversation {
-            display: none;
+		.conversation {
+			display: none;
 
-            &.active {
-                display: block;
-            }
+			&.active {
+				display: block;
+			}
 
-            .conversation_header {
-                font-weight: bold;
-                text-align: center;
-            }
-        }
-    }
+			.conversation_header {
+				font-weight: bold;
+				text-align: center;
+			}
+		}
+	}
 }
 
 // Chat
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 .chat_container {
-    margin: {
-        top: $column-gutter/2;
-        bottom: $column-gutter/2;
-    }
+	margin: {
+		top: $column-gutter/2;
+		bottom: $column-gutter/2;
+	}
 }
 
 // Footer
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 .footer {
-    @include grid-row();
-    margin: {
-        top: $column-gutter;
-        bottom: -2rem;
-    }
-    color: #aaadb1;
-    background: #454545;
-    padding: 1rem;
-    bottom: 0;
-    max-width: 100%;
-    &__content {
-        @include grid-column(12);
-        text-align: center;
-        margin: 0;
-    }
+	@include grid-row();
+	margin: {
+		top: $column-gutter;
+		bottom: -2rem;
+	}
+	color: #aaadb1;
+	background: #454545;
+	padding: 1rem;
+	bottom: 0;
+	max-width: 100%;
+	&__content {
+		@include grid-column(12);
+		text-align: center;
+		margin: 0;
+	}
 
-    a {
-        color: #aaadb1;
+	a {
+		color: #aaadb1;
 
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 // Modal
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 .reveal-modal {
-    @include globalPopinStyle($primary-color);
+	@include globalPopinStyle($primary-color);
 
-    &.register {
-        @include registerPopinStyle($primary-color);
+	&.register {
+		@include registerPopinStyle($primary-color);
 
-        .button {
-            border: none;
-            border-radius: 0;
-            color: $black;
-            font-size: rem-calc(16);
-            font-weight: bold;
-            margin: 0 0 1rem 0;
+		.button {
+			border: none;
+			border-radius: 0;
+			color: $black;
+			font-size: rem-calc(16);
+			font-weight: bold;
+			margin: 0 0 1rem 0;
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 
-    &.checkEmail, &.confirmed {
-        @include checkEmailPopinStyle($primary-color);
-    }
+	&.checkEmail, &.confirmed {
+		@include checkEmailPopinStyle($primary-color);
+	}
 
-    &.resetPassword {
-        @include resettingPasswordPopinStyle($primary-color);
-    }
+	&.resetPassword {
+		@include resettingPasswordPopinStyle($primary-color);
+	}
 }
 
 .tunnel-sidebar {
-    width: 235px;
+	width: 235px;
 
-    .photo {
-        margin: 0;
+	.photo {
+		margin: 0;
 
-        span {
-            display: inline-block;
-            background: url(../img/tarot/hexagone_bleu.png);
-        }
-    }
+		span {
+			display: inline-block;
+			background: url(../img/tarot/hexagone_bleu.png);
+		}
+	}
 
-    .content {
-        color: #454545;
-        font-family: $indie-flower;
-        font-size: 22px;
-        padding-top: 15px;
-        text-align: center;
+	.content {
+		color: #454545;
+		font-family: $indie-flower;
+		font-size: 22px;
+		padding-top: 15px;
+		text-align: center;
 
-        span {
-            font-weight: bold;
-        }
-    }
+		span {
+			font-weight: bold;
+		}
+	}
 }
 
 .tunnel-div {
-    text-align: center;
+	text-align: center;
 
-    .button {
-        border-radius: 0;
-        font-size: 20px;
-        color: #454545;
-        font-family: Raleway Bold;
-        padding: {
-            left: $column-gutter*2;
-            right: $column-gutter*2;
-        }
-    }
+	.button {
+		border-radius: 0;
+		font-size: 20px;
+		color: #454545;
+		font-family: Raleway Bold;
+		padding: {
+			left: $column-gutter*2;
+			right: $column-gutter*2;
+		}
+	}
 
-    span.error {
-        ul {
-            list-style-type: none;
-            margin: 0;
-        }
-    }
+	span.error {
+		ul {
+			list-style-type: none;
+			margin: 0;
+		}
+	}
 
-    .tunnel-cb-header {
-        background: $lightBlue;
+	.tunnel-cb-header {
+		background: $lightBlue;
 
-        h1 {
-            color: $primary-color;
-            margin: 0;
-            padding: 25px 0;
-            font-family: Raleway Black;
-            font-size: 32px;
-            text-transform: uppercase;
+		h1 {
+			color: $primary-color;
+			margin: 0;
+			padding: 25px 0;
+			font-family: Raleway Black;
+			font-size: 32px;
+			text-transform: uppercase;
 
-            .amount {
-                color: white;
+			.amount {
+				color: white;
 
-                i {
-                    font-size: 40px;
-                    font-family: $lobster;
-                }
-            }
+				i {
+					font-size: 40px;
+					font-family: $lobster;
+				}
+			}
 
-            @media #{$small-only} {
-                font-size: 16px;
-                padding: 10px 0;
+			@media #{$small-only} {
+				font-size: 16px;
+				padding: 10px 0;
 
-                .amount i {
-                    font-size: inherit;
-                    font-family: inherit;
-                }
-            }
-        }
-    }
+				.amount i {
+					font-size: inherit;
+					font-family: inherit;
+				}
+			}
+		}
+	}
 
-    .tunnel-cb-headline {
-        background: $primary-color;
-        color: white;
-        font-family: $indie-flower;
-        font-size: 22px;
-        line-height: 60px;
+	.tunnel-cb-headline {
+		background: $primary-color;
+		color: white;
+		font-family: $indie-flower;
+		font-size: 22px;
+		line-height: 60px;
 
-        span {
-            font-family: Lobster;
-            font-size: 23px;
-        }
+		span {
+			font-family: Lobster;
+			font-size: 23px;
+		}
 
-        @media #{$small-only} {
-            font-size: 16px;
-            padding: 8px 0;
-            line-height: 22px;
+		@media #{$small-only} {
+			font-size: 16px;
+			padding: 8px 0;
+			line-height: 22px;
 
-            span {
-                display: block;
-            }
-        }
-    }
+			span {
+				display: block;
+			}
+		}
+	}
 
-    .tunnel-cb-main {
-        background: $darkGrey;
-        padding-bottom: 20px;
-        font-family: Raleway Bold;
-        color: white;
+	.tunnel-cb-main {
+		background: $darkGrey;
+		padding-bottom: 20px;
+		font-family: Raleway Bold;
+		color: white;
 
-        .tunnel-cb-form {
-            width: 80%;
-            margin: 0 auto;
+		.tunnel-cb-form {
+			width: 80%;
+			margin: 0 auto;
 
-            h2 {
-                color: inherit;
-                font-size: 22px;
-                font-weight: bold;
-                padding: 20px 0 15px;
-                margin: 0;
-                text-decoration: underline;
-            }
+			h2 {
+				color: inherit;
+				font-size: 22px;
+				font-weight: bold;
+				padding: 20px 0 15px;
+				margin: 0;
+				text-decoration: underline;
+			}
 
-            label {
-                color: inherit;
-                font-size: 15px;
-                text-align: right;
-                line-height: 34px;
+			label {
+				color: inherit;
+				font-size: 15px;
+				text-align: right;
+				line-height: 34px;
 
-                @media #{$small-only} {
-                    text-align: left;
-                }
+				@media #{$small-only} {
+					text-align: left;
+				}
 
-                &::after {
-                    content: ' :';
-                }
-            }
+				&::after {
+					content: ' :';
+				}
+			}
 
-            .row {
-                .columns:nth-child(2) {
-                    text-align: left;
-                }
-            }
+			.row {
+				.columns:nth-child(2) {
+					text-align: left;
+				}
+			}
 
-            .expiration {
-                text-align: left;
+			.expiration {
+				text-align: left;
 
-                select {
-                    width: 100px;
-                    margin-right: 10px;
-                }
-            }
+				select {
+					width: 100px;
+					margin-right: 10px;
+				}
+			}
 
-            input[type="text"], select {
-                font-family: Raleway Regular;
-                margin-bottom: 1rem;
-            }
+			input[type="text"], select {
+				font-family: Raleway Regular;
+				margin-bottom: 1rem;
+			}
 
-            span.error {
-                margin: -1rem 0 1rem;
-            }
+			span.error {
+				margin: -1rem 0 1rem;
+			}
 
-            .securityCode {
-                position: relative;
-                text-align: left;
+			.securityCode {
+				position: relative;
+				text-align: left;
 
-                input {
-                    display: inline-block;
-                    width: 100px;
-                }
+				input {
+					display: inline-block;
+					width: 100px;
+				}
 
-                &::after {
-                    content: ' ';
-                    background: url(../img/tchat/securityCode.png);
-                    position: absolute;
-                    top: -14px;
-                    width: 90px;
-                    height: 39px;
-                    margin-left: 5px;
-                }
-            }
+				&::after {
+					content: ' ';
+					background: url(../img/tchat/securityCode.png);
+					position: absolute;
+					top: -14px;
+					width: 90px;
+					height: 39px;
+					margin-left: 5px;
+				}
+			}
 
-            .agreement {
-                margin-bottom: 0.75rem;
-                text-align: left;
+			.agreement {
+				margin-bottom: 0.75rem;
+				text-align: left;
 
-                * {
-                    display: inline;
-                }
+				* {
+					display: inline;
+				}
 
-                input {
-                    margin-bottom: 0;
-                }
+				input {
+					margin-bottom: 0;
+				}
 
-                label {
-                    font-family: Raleway Regular;
-                    line-height: 20px;
+				label {
+					font-family: Raleway Regular;
+					line-height: 20px;
 
-                    &::after {
-                        content: none;
-                    }
-                }
-            }
-            .global_error {
-                margin-top: 1rem;
-            }
-        }
-    }
+					&::after {
+						content: none;
+					}
+				}
+			}
+			.global_error {
+				margin-top: 1rem;
+			}
+		}
+	}
 
-    .tunnel-email-main {
-        background: $darkGrey;
-        overflow: hidden;
+	.tunnel-email-main {
+		background: $darkGrey;
+		overflow: hidden;
 
-        h2 {
-            margin: 70px 0;
-            background: white;
-            color: $primary-color;
-            line-height: 75px;
-            font-family: Lobster;
+		h2 {
+			margin: 70px 0;
+			background: white;
+			color: $primary-color;
+			line-height: 75px;
+			font-family: Lobster;
 
-            @media #{$small-only} {
-                margin: 0 0 20px;
-                line-height: 50px;
-            }
-        }
+			@media #{$small-only} {
+				margin: 0 0 20px;
+				line-height: 50px;
+			}
+		}
 
-        .tunnel-email-form form {
-            @include grid-row();
+		.tunnel-email-form form {
+			@include grid-row();
 
-            font-family: Raleway Bold;
+			font-family: Raleway Bold;
 
-            .tunnel-email-label {
-                @include grid-column(3);
+			.tunnel-email-label {
+				@include grid-column(3);
 
-                text-align: right;
+				text-align: right;
 
-                @media #{$small-only} {
-                    text-align: left;
-                }
+				@media #{$small-only} {
+					text-align: left;
+				}
 
-                label {
-                    color: white;
-                    font-size: 15px;
-                    line-height: 34px;
+				label {
+					color: white;
+					font-size: 15px;
+					line-height: 34px;
 
-                    &:after {
-                        content: ' :';
-                    }
-                }
-            }
+					&:after {
+						content: ' :';
+					}
+				}
+			}
 
-            .tunnel-email-widget {
-                @include grid-column(6);
+			.tunnel-email-widget {
+				@include grid-column(6);
 
-                input {
-                    margin: 0;
-                }
-            }
+				input {
+					margin: 0;
+				}
+			}
 
-            h3 {
-                color: white;
-                clear: left;
-                font-family: inherit;
-                font-size: 20px;
-                padding: 20px 0;
-                margin: 0;
+			h3 {
+				color: white;
+				clear: left;
+				font-family: inherit;
+				font-size: 20px;
+				padding: 20px 0;
+				margin: 0;
 
-                @media #{$small-only} {
-                    font-size: 15px;
-                }
-            }
+				@media #{$small-only} {
+					font-size: 15px;
+				}
+			}
 
-            .button {
-                margin-bottom: 30px;
-            }
+			.button {
+				margin-bottom: 30px;
+			}
 
-            @media #{$small-only} {
-                .tunnel-email-label {
-                    @include grid-column(8, $offset: 2);
-                }
+			@media #{$small-only} {
+				.tunnel-email-label {
+					@include grid-column(8, $offset: 2);
+				}
 
-                .tunnel-email-widget {
-                    @include grid-column(8, $offset: 2);
-                }
-            }
+				.tunnel-email-widget {
+					@include grid-column(8, $offset: 2);
+				}
+			}
 
 
-        }
-    }
+		}
+	}
 }
 
 @media #{$small-only} {
-    body.chat {
-        .header__content {
-            span {
-                font-size: 14px;
-                margin: 5px auto;
-            }
+	body.chat {
+		.header__content {
+			span {
+				font-size: 14px;
+				margin: 5px auto;
+			}
 
-            img {
-                width: 55%;
-                margin: 5px auto;
-            }
-        }
+			img {
+				width: 55%;
+				margin: 5px auto;
+			}
+		}
 
-        .chat_header {
-            .chat_title {
-                font-size: 17px;
-            }
-        }
+		.chat_header {
+			.chat_title {
+				font-size: 17px;
+			}
+		}
 
-        .page__sidebar {
-            display: none;
-        }
-    }
+		.page__sidebar {
+			display: none;
+		}
+	}
 }
 // Google Adword iFrame
 iframe[name="google_conversion_frame"] {
-    display: none;
+	display: none;
 }
 // Aggregate Rating To be removed
 .rating {
-    display: inline-block;
+	display: inline-block;
 }
 .star {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
 }
 .hightlight {
-    color: #71efc4;
-    margin: 0 5px;
+	color: #71efc4;
+	margin: 0 5px;
 }
 .consom-info {
-    list-style: none;
-    .item {
-        padding: 1rem 0;
-        display: flex;
-        align-items: center;
-        $conso:(
-        1:"credit",
-        2:"abo",
-        3:"duration",
-        4:"cal",
-        5:"cart",
-        );
-        @each $item, $icon in $conso{
-            &:nth-child(#{$item}) .icon{
-                background: url('../img/user/' + $icon +'.png') center no-repeat;
-            }
-        }
-    }
-    .icon {
-        margin-right: 1rem;
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-    }
+	list-style: none;
+	.item {
+		padding: 1rem 0;
+		display: flex;
+		align-items: center;
+		$conso:(
+		1:"credit",
+		2:"abo",
+		3:"duration",
+		4:"cal",
+		5:"cart",
+		);
+		@each $item, $icon in $conso{
+			&:nth-child(#{$item}) .icon{
+				background: url('../img/user/' + $icon +'.png') center no-repeat;
+			}
+		}
+	}
+	.icon {
+		margin-right: 1rem;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+	}
 }
 
 .logout {
-    float: right;
-    &:hover{
-        color: #989898;
-    }
-    span {
-        border-radius: 50%;
-        border: 1px solid;
-        width: 18px;
-        height: 18px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 12px;
-    }
+	float: right;
+	&:hover{
+		color: #989898;
+	}
+	span {
+		border-radius: 50%;
+		border: 1px solid;
+		width: 18px;
+		height: 18px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+	}
 }
 
 // Saved cards
 
 .cards{
-    list-style: none;
-    margin: 0;
-    .card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.6rem;
-        border-bottom: 1px solid rgba(191, 191, 190, 0.5);
-        &:hover{
-            background: rgba(191, 191, 190, 0.2);
-            cursor: pointer
-        }
-        &-number {
-            font-size: 1.6rem;
-            line-height: 1.6rem;
-        }
-    }
+	list-style: none;
+	margin: 0;
+	.card {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.6rem;
+		border-bottom: 1px solid rgba(191, 191, 190, 0.5);
+		&:hover{
+			background: rgba(191, 191, 190, 0.2);
+			cursor: pointer
+		}
+		&-number {
+			font-size: 1.6rem;
+			line-height: 1.6rem;
+		}
+	}
 }
 // 
 .delete-card, .add-card {
-    background: transparent;
-    color: $grey;
-    font-size: 1.2rem;
-    padding: 0;
-    margin: 0;
-    &:hover{
-        background: transparent;
-        color: $grey;
-    }
+	background: transparent;
+	color: $grey;
+	font-size: 1.2rem;
+	padding: 0;
+	margin: 0;
+	&:hover{
+		background: transparent;
+		color: $grey;
+	}
 }
 //
 .bottom-btns {
-    margin-top: 10px;
-    & > div {
-        display: inline-flex;
-        align-items: center;
-        height: 50px;
-        &:last-child {
-            justify-content: flex-end;
-        }
-        
-    }
-    
+	margin-top: 10px;
+	& > div {
+		display: inline-flex;
+		align-items: center;
+		height: 50px;
+		&:last-child {
+			justify-content: flex-end;
+		}
+		
+	}
+	
+}
+
+// Media Object
+.media-object{
+	@include media-object-container;
+	border-radius: 8px;
+	background: #fdfafa;
+	box-shadow: 1px 2px 0px 1px rgba(43, 41, 41, 0.49),inset 0px 1px 4px 0px rgba(0, 0, 0, 0.24);
+    padding: 0.3rem 1rem
+}
+.media-object-section{
+	@include media-object-section(1rem);
+	vertical-align: middle;
+	h4{
+		color: #ff8a00;
+	}
+	p{
+		color: #8e8e8e;
+	}
+}
+.thumbnail {
+	width: 60px;
+	overflow: hidden;
+	height: 60px;
+	border-radius: 6px;
+	img {
+		width: 100% !important;
+	}
+}
+.all {
+    color: #454545;
+    background: transparent;
+    &:hover{
+    	color: #828282;
+    	background: transparent;
+    	&::before{
+    		opacity: 0.5;
+		}
+	}
+	&::before{
+    	content: '';
+    	display: inline-block;
+    	background: url('../img/user/double-arrow.png') no-repeat center;
+    	margin-right: 1rem;
+    	padding: 0.61538rem 1.23077rem 0.69231rem 1.23077rem;
+	}
+}
+h2.conversation_header {
+    text-align: center;
+}
+.media-object-section .thumbnail {
+    width: 28px;
+    height: 28px;
+}
+
+li.conversation.media-object-date {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0 1rem;
+}
+.conversations-list p {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.active p{
+	font-weight: normal;
+}
+.messages{
+	list-style: none;
+    margin: 0;
+	.message{
+		display: flex;
+    	align-items: center;
+    	justify-content: space-between;
+    	padding: 0.6rem;
+    	border-bottom: 1px solid rgba(191, 191, 190, 0.5);
+    	
+    	&-title{
+    	    font-size: 1.6rem;
+    		line-height: 1.6rem;
+			color: #9a9898;
+    		&::before {
+    			content: '';
+    			display: inline-block;
+    			padding: 1rem;
+    			margin-right: 1rem;
+    		}
+		}
+		&-date{
+		    color: #9a9898;
+    		font-size: 1.2rem;
+    		padding: 0;
+    		margin: 0;
+		}
+	}
+}
+.unread .message-title::before {
+	background: url("../img/user/unread.png") no-repeat center;
+	}
+.read .message-title::before {
+	background: url("../img/user/read.png") no-repeat center;
+	}
+
+.message{
+	&-content {
+    	padding: 1rem 2rem;
+	}
+	&-header {
+	    border-bottom: 1px solid #dfdfdf;
+	    padding: 1rem;
+	}
+	&-title {
+	   font-size: 1.8rem;
+	   &::before{
+			content: '';
+    		display: inline-block;
+    		padding: 1rem;
+    		margin-right: 1rem;
+    		background: url(../img/user/messages-grey.png) no-repeat center;
+    		background-size: cover;
+		}
+	}
+}
+
+.date {
+    font-size: 1.6rem;
+    float: right;
+}
+.active{
+	.message{
+		&-title{
+    		color: #454545;
+    		&::before{
+    			background: url('../img/user/messages-grey.png') no-repeat center;
+    			background-size: cover;
+			}
+		}
+		&-date{
+			color: #454545;
+		}
+	}
 }
 
 
+// Compte
+.page__header--logo.large-6.columns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.page__header--menu.large-6.columns {
+    display: inline-flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.columns .page__title {
+    margin-right: -50px;
+}
+@media only screen and (max-width: 49.23077em){
+.page__header--logo.large-6.columns {
+    align-items: center;
+}
+.page__header--menu.large-6.columns {
+    justify-content: center;
+    align-items: center;
+}
+.columns .page__title {
+    margin-right: 0;
+}
+}
