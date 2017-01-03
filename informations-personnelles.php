@@ -1,69 +1,42 @@
-<!DOCTYPE html>
-<html lang="fr" class="default">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Informations personnelles</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="noindex, nofollow" />
-        <link rel="stylesheet" href="css/tarot.css">
-        <link rel="icon" type="image/x-icon" href="img/favicon.png" />
-        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato|Lobster|Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet">
-    </head>
-    <body class="account personnal_informations pi">
-        <section class="header header-default">
-            <div class="header__content">
-                <a href="voyants.html">
-                    <img src="img/tarot/logo.png" alt="Tarot Direct" class="header__logo" />
-                </a>
-            </div>
-            <div class="header__login">
-                Amine&nbsp;&nbsp;
-                <a href="informations-personnelles.html" class="button">Mon compte</a>&nbsp;&nbsp;
-                <a href="logout" class="button">Me déconnecter</a>
-            </div>
-        </section>
-        <section class="page">
-            <header class="page__header">
-                <div class="page__header--content">
-                    <div class="page__header--logo">
-                        <img src="img/user/personnal_informations-grey.png" alt="Informations Personnelles">
-                        <h1 class="page__title">Informations personnelles</h1>
-                    </div>
-                </div>
-            </header>
-            <div class="page__sidebar">
-                <div class="sidebar__block sidebar__block--menu">
-                    <a href="" class="sidebar__button">Menu</a>
-                </div>
-                <div class="sidebar__block sidebar__block--nav">
-                    <a href="informations-personnelles.html" class="sidebar__button sidebar__button--active">Informations personnelles</a>
-                    <a href="ma-consommation.html" class="sidebar__button">Ma consommation</a>
-                    <a href="cartes-enregistrees.html" class="sidebar__button">Cartes enregistrées</a>
-                    <a href="mes-messages.html" class="sidebar__button">Messages</a>
-                    <a href="historique-chat.html" class="sidebar__button">Historique Tchats</a>
-                    <a href="factures.html" class="sidebar__button">Factures</a>
-                </div>
-            </div>
-            <div class="page__content">
-                <div class="page-user">
-                    <form name="user_personnal_informations" method="post" action="">
-                        <div id="user_personnal_informations">
-                            <div>
-                                <label for="user_personnal_informations_username" class="required">Pseudo</label>
-                                <input type="text" id="user_personnal_informations_username" name="user_personnal_informations[username]" required="required" value="" placeholder="pseudo"/>
-                            </div> <!-- UserName-->
-                            <div>                
-                                <label for="user_personnal_informations_prenom" class="required">Prénom</label>
-                                <input type="text" id="user_personnal_informations_prenom" name="user_personnal_informations[prenom]" required="required" value="" placeholder="Prénom"/>
-                            </div> <!-- Name -->
-                            <div>
-                                <label for="user_personnal_informations_mail" class="required">Mail</label>
-                                <input type="email" id="user_personnal_informations_mail" name="user_personnal_informations[mail]" required="required" value="" placeholder="Adresse email"/>
-                            </div> <!-- EMail -->
-                            <div>
-                                <label class="required">Date de naissance</label>
-                                <div id="user_personnal_informations_dateNaissance" class="birthday_container">
+<?php
+$description = "A major key, never panic. Don’t panic, when it gets crazy and rough, don’t panic, stay calm. Give thanks to the most high.";
+
+include('inc/functions.php');
+
+echo siteHead('Informations personnelles', $description, 'default pi');
+?>
+
+<body class="account personnal_informations">
+  <?php include('inc/header.php'); ?>
+<section class="page">
+  <header class="page__header">
+    <div class="page__header--content">
+      <div class="page__header--logo">
+        <img src="img/user/personnal_informations-grey.png" alt="Informations Personnelles">
+        <h1 class="page__title">Informations personnelles</h1>
+      </div>
+    </div>
+  </header>
+  <?php include('inc/sidebar.php'); ?>
+  <div class="page__content">
+    <div class="page-user">
+      <form name="user_personnal_informations" method="post" action="">
+        <div id="user_personnal_informations">
+          <div>
+            <label for="user_personnal_informations_username" class="required">Pseudo</label>
+            <input type="text" id="user_personnal_informations_username" name="user_personnal_informations[username]" required="required" value="" placeholder="pseudo"/>
+          </div> <!-- UserName-->
+          <div>
+            <label for="user_personnal_informations_prenom" class="required">Prénom</label>
+            <input type="text" id="user_personnal_informations_prenom" name="user_personnal_informations[prenom]" required="required" value="" placeholder="Prénom"/>
+          </div> <!-- Name -->
+          <div>
+            <label for="user_personnal_informations_mail" class="required">Mail</label>
+            <input type="email" id="user_personnal_informations_mail" name="user_personnal_informations[mail]" required="required" value="" placeholder="Adresse email"/>
+          </div> <!-- EMail -->
+          <div>
+            <label class="required">Date de naissance</label>
+            <div id="user_personnal_informations_dateNaissance" class="birthday_container">
                                     <div class="select_wrapper">
                                         <select id="user_personnal_informations_dateNaissance_day" name="user_personnal_informations[dateNaissance][day]">
                                             <option value="1"  selected="selected">1</option>
@@ -244,8 +217,8 @@
                                         <span class="arrow"></span>
                                     </div>
                                 </div>
-                            </div> <!-- BirthDay -->
-                            <div>
+          </div> <!-- BirthDay -->
+          <div>
                                 <label for="user_personnal_informations_genre" class="required">Sexe</label>
                                 <div class="select_wrapper">
                                     <select id="user_personnal_informations_genre" name="user_personnal_informations[genre]">
@@ -255,7 +228,7 @@
                                     <span class="arrow"></span>
                                 </div>
                             </div> <!-- Gender -->
-                            <div>
+          <div>
                                 <h4>Vos adresses <button type="button" class="add_element button">+</button></h4>
                                 <div id="user_personnal_informations_adresses" data-prototype="
                                 <div>
@@ -287,68 +260,43 @@
                                 </div>
                             </div> <!-- Adresse -->
                             
-                            <div>
+          <div>
                                 <button type="submit" class="button" id="user_personnal_informations_save" name="user_personnal_informations[save]">Enregistrer</button>
                             </div> <!-- Submit -->
-                            <input type="hidden" id="user_personnal_informations__token" name="user_personnal_informations[_token]" value="sSbvPnCKSvIuE3uADFbmhfcXMlCSGnol6WuK3axPQoI" />
-                        </div>
-                    </form>
-
-                </div>
-                <div class="page__menu">
-                    <div class="page__menu--item"><a href="ma-consommation.html"><i class="icon item-2"></i><span class="item__text">Ma consommation</span></a></div>
-                    <div class="page__menu--item"><a href="cartes-enregistrees.html"><i class="icon item-3"></i><span class="item__text">Cartes enregistrées</span></a></div>
-                    <div class="page__menu--item"><a href="mes-messages.html"><i class="icon item-4"></i><span class="item__text">Mes messages (3)</span></a></div>
-                    <div class="page__menu--item"><a href="historique-chat.html"><i class="icon item-5"></i><span class="item__text">Historique des conversations</span></a></div>
-                    <div class="page__menu--item"><a href="factures.html"><i class="icon item-6"></i><span class="item__text">Factures</span></a></div>
-                </div>
-            </div>
-        </section>
-        <div class="page">
-            <div class="page-home__content">
-                <div class="page__block page__block--white">
-                    <div class="page__block__reinsurance">
-                        <i class="icon icon-reinsurance-security"></i>
-                        <i class="icon"></i>
-                        <p>Garantie anonymat<br />Protection des données personnelles</p>
-                    </div>
-                    <div class="page__block__reinsurance">
-                        <i class="icon icon-reinsurance-expertise"></i>
-                        <p>Voyants experts<br />Grâce à plusieurs années d’expériences</p>
-                    </div>
-                    <div class="page__block__reinsurance">
-                        <i class="icon icon-reinsurance-plan"></i>
-                        <p>Prix adaptatifs<br />Des formules adaptées à vos besoins</p>
-                    </div>
-                    <div class="page__block__reinsurance">
-                        <i class="icon icon-reinsurance-payment"></i>
-                        <p>Paiement sécurisé<br />Transaction vias Be2Bill</p>
-                    </div>
-                </div>
-            </div>
+          <input type="hidden" id="user_personnal_informations__token" name="user_personnal_informations[_token]" value="sSbvPnCKSvIuE3uADFbmhfcXMlCSGnol6WuK3axPQoI" />
         </div>
-        <footer class="footer">
-            <p class="footer__content">
-                © 2016 - <a href="voyants.html">Tarot Direct</a> - <a href="cgv.html">CGV</a> - <a href="mentions-legales.html">Mentions légales</a>
-            </p>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="js/tarot.js"></script>
-        <script type="text/javascript">
-        $(window).load(function () {
-            var dynamicForm = new DynamicForm({
-                container_id: 'user_personnal_informations_adresses',
-                remove_element_content: '-',
-                append_add_button: false,
-                append_label_index: false,
-                translation: {
-                    element_num: 'Adresse'
-                }
-            });
-            $('.account.personnal_informations form button.add_element').on('click', function () {
-                dynamicForm.add();
-            });
-        });
-        </script>
-    </body>
-</html>
+      </form>
+    </div>
+    <div class="page__menu">
+      <div class="page__menu--item"><a href="ma-consommation.html"><i class="icon item-2"></i><span class="item__text">Ma consommation</span></a></div>
+      <div class="page__menu--item"><a href="cartes-enregistrees.html"><i class="icon item-3"></i><span class="item__text">Cartes enregistrées</span></a></div>
+      <div class="page__menu--item"><a href="mes-messages.html"><i class="icon item-4"></i><span class="item__text">Mes messages (3)</span></a></div>
+      <div class="page__menu--item"><a href="historique-chat.html"><i class="icon item-5"></i><span class="item__text">Historique des conversations</span></a></div>
+      <div class="page__menu--item"><a href="factures.html"><i class="icon item-6"></i><span class="item__text">Factures</span></a></div>
+    </div>
+  </div>
+</section>
+    <?php include('inc/footer.php'); ?>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/tarot.js"></script>
+    <script type="text/javascript">
+    $(window).load(function () {
+      var eLiConversations = $('ul.conversations li');
+      eLiConversations.on('click', function () {
+        eLiConversations.removeClass('active');
+        $(this).addClass('active');
+        $('div.conversations')
+        .find('.conversation.active').removeClass('active').end()
+        .find('.conversation[data-conversation_id="' + $(this).data('conversation_id') + '"]').addClass('active');
+      });
+    });
+    var chatContainer = {
+      height: "+=200",
+      overflow: "auto"
+    }
+    $('.all').click(function(){
+      $('.conversations').css(chatContainer);
+      $(this).hide();
+    });
+    </script>
+</body>
