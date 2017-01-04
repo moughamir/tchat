@@ -13,13 +13,13 @@
     <body class="default">
         <section class="header header-default">
             <div class="header__content">
-                <a href="voyants.html">
+                <a href="voyants.php">
                     <img src="img/tarot/logo.png" alt="Tarot Direct" class="header__logo" />
                 </a>
             </div>
             <div class="header__login">
                <span>{{USER}}</span>
-                <a href="informations-personnelles.html" class="button">Mon compte</a>
+                <a href="informations-personnelles.php" class="button">Mon compte</a>
                 <a href="logout" class="button">Me déconnecter</a>
             </div>
         </section>
@@ -35,7 +35,7 @@
                         Voici le solde de votre compte :<br/>
                         Il vous reste : {{X}} seconde
                     </div>
-                    <a href="compte.html" class="sidebar__button">Accéder à mon compte</a>
+                    <a href="compte.php" class="sidebar__button">Accéder à mon compte</a>
                     <a href="logout" class="sidebar__button">Me déconnecter</a>
                 </div>
                 <div class="sidebar__block sidebar__block--opening">
@@ -71,7 +71,7 @@
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <a href="chat/franck" class="psychic__button psychic__button--status available">Disponible</a>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/franck"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -88,7 +88,7 @@
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <a href="chat/olivier" class="psychic__button psychic__button--status available">Disponible</a>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/olivier"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -105,7 +105,7 @@
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status busy">En consultation</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/anita"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -122,7 +122,7 @@
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status busy">En consultation</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/veronique"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -137,7 +137,7 @@
                                 <p class="psychic__info">Spécialité: <span>Cartomancie</span><br />Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/charly"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -154,7 +154,7 @@
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/christelle"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -171,7 +171,7 @@
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/daniel"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -188,7 +188,7 @@
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/emilien"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -205,7 +205,7 @@
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/patricia"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -222,7 +222,7 @@
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/sonia"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -239,7 +239,7 @@
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/vincent"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -274,7 +274,7 @@
         </div>
         <footer class="footer">
             <p class="footer__content">
-                © 2016 - <a href="voyants.html">Tarot Direct</a> - <a href="cgv.html">CGV</a> - <a href="mentions-legales.html">Mentions légales</a>
+                © 2016 - <a href="voyants.php">Tarot Direct</a> - <a href="cgv.php">CGV</a> - <a href="mentions-legales.php">Mentions légales</a>
             </p>
         </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
