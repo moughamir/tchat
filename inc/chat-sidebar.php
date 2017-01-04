@@ -5,7 +5,7 @@
                         Voici le solde de votre compte :<br/>
                         Il vous reste : {{X}} seconde
                     </div>
-                    <a href="compte.html" class="sidebar__button">Accéder à mon compte</a>
+                    <a href="compte.php" class="sidebar__button">Accéder à mon compte</a>
                     <a href="logout" class="sidebar__button">Me déconnecter</a>
                 </div>
                 <div class="sidebar__block sidebar__block--opening">

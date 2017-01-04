@@ -22,5 +22,5 @@
   </div>
 </div>
 <footer class="footer">
-  <p class="footer__content">© 2016 - <a href="voyants.html">Tarot Direct</a> - <a href="cgv.html">CGV</a> - <a href="mentions-legales.html">Mentions légales</a></p>
+  <p class="footer__content">© 2016 - <a href="voyants.php">Tarot Direct</a> - <a href="cgv.php">CGV</a> - <a href="mentions-legales.php">Mentions légales</a></p>
 </footer>
