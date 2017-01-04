@@ -26,7 +26,7 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <a href="chat/franck" class="psychic__button psychic__button--status available">Disponible</a>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/franck"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -43,7 +43,7 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <a href="chat/olivier" class="psychic__button psychic__button--status available">Disponible</a>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/olivier"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -60,7 +60,7 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status busy">En consultation</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/anita"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -77,7 +77,7 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status busy">En consultation</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/veronique"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -94,7 +94,7 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/charly"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -111,7 +111,7 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/christelle"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -128,7 +128,7 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/daniel"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -145,7 +145,7 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/emilien"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -162,7 +162,7 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/patricia"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -179,7 +179,7 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/sonia"  class="psychic__button psychic__button--chat">Lancer le tchat</a>
@@ -196,7 +196,8 @@ echo siteHead('Liste des voyants', $description, 'default');
                                     Support divinatoire: <span>Tarot</span>
                                 </p>
                                 <div class="psychic__button psychic__button--status unavailable">Indisponible</div>
-                                <a class="psychic__button psychic__button--more" href="fiche-voyant.html">En savoir +</a>
+                                <a href="informations-personnelles.php"></a>
+                                <a class="psychic__button psychic__button--more" href="fiche-voyant.php">En savoir +</a>
                             </div>
                             <div class="psychic__bottom">
                                 <a  href="chat/vincent"  class="psychic__button psychic__button--chat">Lancer le tchat</a>

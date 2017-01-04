@@ -13,13 +13,13 @@
     <body class="simple">
         <section class="header header-default">
             <div class="header__content">
-                <a href="voyants.html">
+                <a href="voyants.php">
                     <img src="img/tarot/logo.png" alt="Tarot Direct" class="header__logo" />
                 </a>
             </div>
             <div class="header__login">
                 Amine&nbsp;&nbsp;
-                <a href="informations-personnelles.html" class="button">Mon compte</a>&nbsp;&nbsp;
+                <a href="informations-personnelles.php" class="button">Mon compte</a>&nbsp;&nbsp;
                 <a href="logout" class="button">Me déconnecter</a>
             </div>
         </section>
@@ -31,7 +31,7 @@
                         Voici le solde de votre compte :<br/>
                         Il vous reste : 0 seconde
                     </div>
-                    <a href="compte.html" class="sidebar__button">Accéder à mon compte</a>
+                    <a href="compte.php" class="sidebar__button">Accéder à mon compte</a>
                     <a href="logout" class="sidebar__button">Me déconnecter</a>
                 </div>
                 <div class="sidebar__block sidebar__block--opening">
@@ -86,9 +86,9 @@
         <footer class="footer">
             <p class="footer__content">
                 © 2016 -
-                <a href="voyants.html">Tarot Direct</a> -
-                <a href="cgv.html">CGV</a> -
-                <a href="mentions-legales.html">Mentions légales</a>
+                <a href="voyants.php">Tarot Direct</a> -
+                <a href="cgv.php">CGV</a> -
+                <a href="mentions-legales.php">Mentions légales</a>
             </p>
         </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
