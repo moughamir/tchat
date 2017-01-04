@@ -23,7 +23,7 @@ echo siteHead('Mon Compte', $description, 'default');
   <?php include('inc/sidebar.php'); ?>
   <div class="page__content">
     <div class="page-user">
-      <?php include './inc/page-menu.php'; ?>
+      <?php include 'inc/page-menu.php'; ?>
     </div>
   </div>
 </section>
