@@ -3550,11 +3550,11 @@ button.add_element.button {
     background: linear-gradient(35deg, #401075 0%, #11c2b4 100%); }
 
 .header {
-    background: url(../img/tarot/header.png) #fff no-repeat;
+    background: url(../img/tarot/header.png) #fff no-repeat center;
     background-size: cover;
-    background-position: 50% 50%;
-    box-shadow: 0 3px 10px -5px black;
-    z-index: 9999;
+    box-shadow: 0 3px 10px -5px #313131;
+    z-index: 2;
+    position: relative;
 }
 .header__content {
     margin: 0 auto;
