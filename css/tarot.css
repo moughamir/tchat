@@ -3966,6 +3966,8 @@ button.add_element.button {
     margin-bottom: 0.76923rem;
     padding-top: 0.76923rem;
     padding-bottom: 0.76923rem; }
+.sidebar__block a{
+    text-align: left; }
 @media only screen and (max-width: 49.23077em) {
     .sidebar__block--user, .sidebar__block--chat {
         display: none; } }
