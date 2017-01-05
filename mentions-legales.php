@@ -23,6 +23,9 @@
                 <a href="logout" class="button">Me déconnecter</a>
             </div>
         </section>
+        <div class="headline">
+            <span class="headline__content">Mentions légales</span>
+        </div>
         <section class="page">
             <div class="page__sidebar">
                 <div class="sidebar__block sidebar__block--user">
@@ -102,9 +105,9 @@
         </script>
         <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
         <noscript>
-            <div style="display:inline;">
-                <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/933151112/?value=0&amp;guid=ON&amp;script=0"/>
-            </div>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/933151112/?value=0&amp;guid=ON&amp;script=0"/>
+        </div>
         </noscript>
         <script>
             (function (i, s, o, g, r, a, m) {

@@ -23,6 +23,9 @@
                 <a href="logout" class="button">Me déconnecter</a>
             </div>
         </section>
+        <div class="headline">
+            <span class="headline__content">Conditions générales de vente</span>
+        </div>
         <section class="page">
             <div class="page__sidebar">
                 <div class="sidebar__block sidebar__block--user">
@@ -56,108 +59,158 @@
             </div>
             <div class="page__content">
                 <div class="page__block page__block--white">
-                    <h1>Conditions Générales de Vente</h1><p><b>1. Objet </b></p><p>Les présentes Conditions
+                    <h1>Conditions Générales de Vente</h1>
+                    <p><b>1. Objet </b></p>
+                    <p>Les présentes Conditions
                         Générales d’Utilisation (CGU) ont pour objet de régir l’utilisation par
                         les Utilisateurs du site Internet du Prestataire et des Services 
-                        associés.</p><p>Lors de son inscription, En cochant la case <i>« Je certifie être majeur(e) et avoir lu et accepté les CGU »</i>, l’Utilisateur reconnaît avoir pris connaissance et accepte, sans réserve, l'ensemble des dispositions des présentes CGU.</p><p>Le
+                        associés.</p>
+                    <p>Lors de son inscription, En cochant la case <i>« Je certifie être majeur(e) et avoir lu et accepté les CGU »</i>, 
+                        l’Utilisateur reconnaît avoir pris connaissance et accepte, sans réserve, l'ensemble des dispositions des présentes CGU.</p>
+                    <p>Le
                         Prestataire peut modifier à tout moment les présentes CGU. 
                         L'Utilisateur sera invité à prendre connaissance et à accepter les 
                         nouvelles dispositions des CGU. En cas de refus par ce dernier, le 
                         Prestataire désinscrira l'Utilisateur et supprimera le Compte 
                         Utilisateur à la fin de l'exécution des Services en cours (fin de mois 
-                        pour un abonnement). </p><p>Le Prestataire propose des Services en arts 
+                        pour un abonnement). </p>
+                    <p>Le Prestataire propose des Services en arts 
                         divinatoires via le site Internet. La pratique de la divination est un 
                         art et ne s'apparente en aucune façon à une science exacte. Il s'agit un
                         moyen de divertissement et de loisirs, ce dont l'Utilisateur reconnaît 
-                        avoir pleinement conscience. </p><p>Par conséquent, aucun Utilisateur ne
+                        avoir pleinement conscience.</p>
+                    <p>Par conséquent, aucun Utilisateur ne
                         saurait prétendre que des prédictions sont totalement fiables, tout 
-                        comme la réalisation de celles-ci n'est nullement garantie.</p><p><b>2. Définitions</b></p><p>Prestataire
+                        comme la réalisation de celles-ci n'est nullement garantie.</p>
+                    <p><b>2. Définitions</b></p>
+                    <p>Prestataire
                         : la société KG COM est propriétaire et exploite le site Internet. 
                         Forme sociale : SAS - immatriculée au RCS LYON 538 563 917 - Siège 
-                        social : 40 rue de Bruxelles, 69100 Villeurbanne, France.</p><p>Consultants : les consultants sont les personnes salariés ou collaborateurs qui exécutent les Services sur le site Internet.</p><p>Compte
+                        social : 40 rue de Bruxelles, 69100 Villeurbanne, France.</p>
+                    <p>Consultants : les consultants sont les personnes salariés ou collaborateurs qui exécutent les Services sur le site Internet.</p>
+                    <p>Compte
                         Utilisateur : correspond à l'espace personnel de chaque Utilisateur sur
                         le Site. Les Utilisateurs y accèdent via un mot de passe et un 
                         identifiant qui leur sont strictement personnels et confidentiels. Le 
                         Compte d'Utilisateur permet à l'Utilisateur de disposer d'une identité 
-                        et d'interagir avec les Consultants sur le site Internet</p><p>Utilisateur
+                        et d'interagir avec les Consultants sur le site Internet</p>
+                    <p>Utilisateur
                         : tout Participant bénéficiant de l'exécution d'un Service. Toute 
                         personne physique jouissant de sa pleine capacité juridique conformément
                         à la loi française et âgée d'au moins 18 ans, ou toute personne morale,
-                        qui s’inscrit sur le site Internet.</p><p>Services : les prestations payantes ou gratuites fournies aux Utilisateurs du site Internet par les Consultants.</p><p><b>3. Inscription et accès aux Services du site Internet</b></p><p>L'inscription sur le site Internet est gratuite.</p><p>L'Utilisateur s'engage à renseigner tous les champs obligatoires du formulaire en communiquant des informations exactes.</p><p>L'Utilisateur renseigne les informations ci-dessous en vue de son inscription :</p><p>- Pseudonyme ;</p><p>- Adresse e-mail ;</p><p>- Mot de passe pour se connecter au site Internet ;</p><p>- Numéro de téléphone ;</p><p>- Informations de sa carte bancaire ; </p><p>- Nom, prénom, date de naissance ;</p><p>- Adresse du domicile,</p><p>Ces informations pourront être modifiées à tout moment par l'Utilisateur.</p><p>Dès
-                        validation de l'inscription par le Prestataire et acceptation des 
+                        qui s’inscrit sur le site Internet.</p>
+                    <p>Services : les prestations payantes ou gratuites fournies aux Utilisateurs du site Internet par les Consultants.</p>
+                    <p><b>3. Inscription et accès aux Services du site Internet</b></p>
+                    <p>L'inscription sur le site Internet est gratuite.</p>
+                    <p>L'Utilisateur s'engage à renseigner tous les champs obligatoires du formulaire en communiquant des informations exactes.</p>
+                    <p>L'Utilisateur renseigne les informations ci-dessous en vue de son inscription :</p>
+                    <p>- Pseudonyme ;</p>
+                    <p>- Adresse e-mail ;</p>
+                    <p>- Mot de passe pour se connecter au site Internet ;</p>
+                    <p>- Numéro de téléphone ;</p>
+                    <p>- Informations de sa carte bancaire ; </p>
+                    <p>- Nom, prénom, date de naissance ;</p>
+                    <p>- Adresse du domicile,</p>
+                    <p>Ces informations pourront être modifiées à tout moment par l'Utilisateur.</p>
+                    <p>Dès validation de l'inscription par le Prestataire et acceptation des 
                         présentes CGU par l'Utilisateur, un message de confirmation 
-                        d'inscription est envoyé à l'adresse email de l'Utilisateur.</p><p>La 
-                        fourniture par l'Utilisateur d'informations erronées, incomplètes, 
+                        d'inscription est envoyé à l'adresse email de l'Utilisateur.</p>
+                    <p>La fourniture par l'Utilisateur d'informations erronées, incomplètes, 
                         mensongères et/ou appartenant à un tiers lors de son inscription engage 
                         sa responsabilité. Dans ce cas, le Prestataire s'autorise à supprimer 
-                        immédiatement le Compte Utilisateur.</p><p>Les frais de télécommunication permettant d'accéder aux Services restent à la charge exclusive des Utilisateurs.</p><p>La configuration exigée pour bénéficier des Services du site Internet est :</p><p>- activation de Javascript ;</p><p>- acceptation des cookies ;</p><p>- acceptation de l'affichage des fenêtres pop-up.</p><p>Le Prestataire recommande de télécharger la version la plus récente du navigateur Internet. </p><p><b>4. Obligations et Responsabilité de l'Utilisateur</b></p><p>Dans le cadre de l'utilisation des Services, l'Utilisateur s'engage à se conformer aux lois et règlements en vigueur.</p><p>L'Utilisateur
-                        définit lui-même le périmètre de sa vie privée qu'il souhaite divulguer
-                        au Consultant et renseigne uniquement les informations le concernant. </p><p>L'Utilisateur est seul responsable des informations ou contenus qu'il renseigne ou édite. </p><p>Lors
-                        de l'utilisation des Services proposés, l'Utilisateur peut choisir 
+                        immédiatement le Compte Utilisateur.</p>
+                    <p>Les frais de télécommunication permettant d'accéder aux Services restent à la charge exclusive des Utilisateurs.</p>
+                    <p>La configuration exigée pour bénéficier des Services du site Internet est :</p>
+                    <p>- activation de Javascript ;</p>
+                    <p>- acceptation des cookies ;</p>
+                    <p>- acceptation de l'affichage des fenêtres pop-up.</p>
+                    <p>Le Prestataire recommande de télécharger la version la plus récente du navigateur Internet. </p>
+                    <p><b>4. Obligations et Responsabilité de l'Utilisateur</b></p>
+                    <p>Dans le cadre de l'utilisation des Services, l'Utilisateur s'engage à se conformer aux lois et règlements en vigueur.</p>
+                    <p>L'Utilisateur définit lui-même le périmètre de sa vie privée qu'il souhaite divulguer
+                        au Consultant et renseigne uniquement les informations le concernant. </p>
+                    <p>L'Utilisateur est seul responsable des informations ou contenus qu'il renseigne ou édite. </p>
+                    <p>Lors de l'utilisation des Services proposés, l'Utilisateur peut choisir 
                         d'envoyer au Consultant avec qui il échange des photographies. 
                         L'Utilisateur pourra, à tout moment, décider de modifier ou de supprimer
                         lesdites photographies dans son Compte Utilisateur. Dans tous les cas, 
                         les photographies ne seront accessibles qu’aux Consultants avec lesquels
-                        l’Utilisateur correspond dans le cadre des Services.</p><p>Les 
-                        photographies représentant un Utilisateur ou un tiers « topless », 
+                        l’Utilisateur correspond dans le cadre des Services.</p>
+                    <p>Les photographies représentant un Utilisateur ou un tiers « topless », 
                         dénudé, à caractère sexuel ou représentant un mineur âgé de moins de 18 
-                        ans sont expressément interdites.</p><p>Avant chaque envoi à un 
+                        ans sont expressément interdites.</p>
+                    <p>Avant chaque envoi à un 
                         Consultant d'une photographie d'un Tiers, l’Utilisateur doit disposer 
-                        d’un accord écrit du Tiers concerné.</p><p>Avant chaque envoi à un 
-                        Consultant d'une photographie d'un mineur, l’Utilisateur, s’il n’est pas
-                        le parent ou le responsable, doit disposer d’un accord écrit des 
-                        parents ou du responsable du mineur. </p><p>Tous propos ou contenus de 
-                        l'Utilisateur contrevenant aux droits d'autrui ou à caractère 
+                        d’un accord écrit du Tiers concerné.</p>
+                    <p>Avant chaque envoi à un Consultant d'une photographie d'un mineur, l’Utilisateur, s’il n’est pas
+                        le parent ou le responsable, doit disposer d’un accord écrit des parents ou du responsable du mineur. </p>
+                    <p>Tous propos ou contenus de l'Utilisateur contrevenant aux droits d'autrui ou à caractère 
                         diffamatoire, injurieux, obscène, offensant, violent ou incitant à la 
                         violence, politique, raciste ou xénophobe et de manière générale tous 
                         propos ou contenus contraires aux lois et règlements en vigueur ou aux 
-                        bonnes mœurs sont expressément prohibés.</p><p>La diffusion, sous 
-                        quelque forme que ce soit, des informations ou contenus intégrant des 
+                        bonnes mœurs sont expressément prohibés.</p>
+                    <p>La diffusion, sous quelque forme que ce soit, des informations ou contenus intégrant des 
                         liens vers des sites tiers qui auraient un caractère illégal et/ou 
-                        contraires aux bonnes mœurs est expressément prohibée.</p><p>La fonction
-                        "Anonyme" pour les commentaires laissés après une communication ne 
+                        contraires aux bonnes mœurs est expressément prohibée.</p>
+                    <p>La fonction "Anonyme" pour les commentaires laissés après une communication ne 
                         dissimule le pseudonyme de l'Utilisateur que pour les autres 
-                        Utilisateurs du site Internet mais pas pour le Prestataire.</p><p>L'Utilisateur
-                        s'interdit de solliciter un Consultant pour bénéficier de prestations 
+                        Utilisateurs du site Internet mais pas pour le Prestataire.</p>
+                    <p>L'Utilisateur s'interdit de solliciter un Consultant pour bénéficier de prestations 
                         de services similaires ou de même nature que les Services en dehors du 
-                        site Internet.</p><p>L'Utilisateur s'engage à ne pas diffuser le contenu
+                        site Internet.</p>
+                    <p>L'Utilisateur s'engage à ne pas diffuser le contenu
                         des échanges et messages (enregistrement ou retranscription écrite) qui
-                        leur ont été directement adressés dans le cadre des Services.</p><p>L'Utilisateur
-                        s'engage à ne pas utiliser le site Internet ou les Services dans le but
-                        d’organiser des rassemblements ou des manifestations.</p><p>En cas de 
-                        non-respect par l'Utilisateur de l'une des présentes dispositions des 
+                        leur ont été directement adressés dans le cadre des Services.</p>
+                    <p>L'Utilisateur s'engage à ne pas utiliser le site Internet ou les Services dans le but
+                        d’organiser des rassemblements ou des manifestations.</p>
+                    <p>En cas de non-respect par l'Utilisateur de l'une des présentes dispositions des 
                         CGU, le Prestataire se réserve le droit de supprimer le propos ou le 
                         contenu litigieux, de supprimer immédiatement le Compte Utilisateur et 
-                        d'engager toute action judiciaire qui s'avérerait nécessaire.</p><p>La suppression d'un Compte Utilisateur n'autorise en aucune façon la création d'un nouveau Compte Utilisateur.</p><p>Dans
-                        le cas où la responsabilité du Prestataire serait recherchée en raison 
+                        d'engager toute action judiciaire qui s'avérerait nécessaire.</p>
+                    <p>La suppression d'un Compte Utilisateur n'autorise en aucune façon la création d'un nouveau Compte Utilisateur.</p>
+                    <p>Dans le cas où la responsabilité du Prestataire serait recherchée en raison 
                         d'un manquement par un Utilisateur aux obligations légales et 
                         réglementaires ou découlant des présentes CGU, ce dernier s'engage à 
                         garantir le Prestataire contre toutes réclamations et condamnations qui 
                         pourraient être prononcées à son encontre trouvant son origine dans le 
-                        manquement imputé à l'Utilisateur. </p><p><b>5. Obligations et Responsabilité du Prestataire</b></p><p>Lors de la fourniture des Services, le Prestataire s'engage à :</p><p>- communiquer avec tact, sérieux et prudence dans l'optique d'éclairer l'Utilisateur ;</p><p>- respecter la plus grande confidentialité sur les informations confiées par l'Utilisateur ;</p><p>- ne pas faire de prédictions concernant la santé, le décès, le physique de l'Utilisateur et/ou de tiers ;</p><p>- n'effectuer aucun travail occulte (désenvoûtement, sorcellerie, magie noire).</p><p>Le Prestataire s'engage à fournir aux Utilisateurs à fournir des Service conforme aux règles de l'art et à la législation.</p><p>Le
-                        Prestataire n'est pas responsable des cas d'escroquerie, d'usurpation 
+                        manquement imputé à l'Utilisateur. </p>
+                    <p><b>5. Obligations et Responsabilité du Prestataire</b></p>
+                    <p>Lors de la fourniture des Services, le Prestataire s'engage à :</p>
+                    <p>- communiquer avec tact, sérieux et prudence dans l'optique d'éclairer l'Utilisateur ;</p>
+                    <p>- respecter la plus grande confidentialité sur les informations confiées par l'Utilisateur ;</p>
+                    <p>- ne pas faire de prédictions concernant la santé, le décès, le physique de l'Utilisateur et/ou de tiers ;</p>
+                    <p>- n'effectuer aucun travail occulte (désenvoûtement, sorcellerie, magie noire).</p>
+                    <p>Le Prestataire s'engage à fournir aux Utilisateurs à fournir des Service conforme aux règles de l'art et à la législation.</p>
+                    <p>Le Prestataire n'est pas responsable des cas d'escroquerie, d'usurpation 
                         d'identité, d'atteinte à la vie privée des tiers et de toutes autres 
                         infractions pénales commises par des Utilisateurs ou des tiers, au moyen
-                        du site Internet et des Services mis à leur disposition. </p><p>Le 
-                        Prestataire se réserve le droit de conserver les traces de tout contenu 
+                        du site Internet et des Services mis à leur disposition. </p>
+                    <p>Le Prestataire se réserve le droit de conserver les traces de tout contenu 
                         ou action d'un Utilisateur, susceptibles de constituer une infraction, 
                         afin de les mettre à disposition des autorités administratives ou 
-                        judiciaires en cas de litige.</p><p>Le Prestataire ne garantit pas que 
-                        les Services ou le site Internet seront utilisables en cas de 
+                        judiciaires en cas de litige.</p>
+                    <p>Le Prestataire ne garantit pas que les Services ou le site Internet seront utilisables en cas de 
                         défaillance du fournisseur d'accès Internet de l'Utilisateur ou en cas 
                         de non fonctionnement ou de mauvaises conditions d'accès provoquées par 
                         l'encombrement du réseau Internet et toutes autres raisons extérieures 
-                        et ayant un caractère de force majeure.</p><p>Le Prestataire ne garantit
-                        pas que les Services ou le site Internet seront utilisables en cas 
+                        et ayant un caractère de force majeure.</p>
+                    <p>Le Prestataire ne garantit pas que les Services ou le site Internet seront utilisables en cas 
                         d'opérations de maintenance de son réseau et/ou de ses composants 
-                        matériels et logiciels.</p><p>Le Prestataire préviendra les Utilisateurs
+                        matériels et logiciels.</p>
+                    <p>Le Prestataire préviendra les Utilisateurs
                         par email toute interruption ou toute détérioration importante 
                         affectant les Services, étant précisé que le Prestataire ne peut 
-                        garantir de délai pour la reprise desdits Services.</p><p>En aucun cas 
-                        les Services du site Internet proposés par le Prestataire ne peuvent 
+                        garantir de délai pour la reprise desdits Services.</p>
+                    <p>En aucun cas les Services du site Internet proposés par le Prestataire ne peuvent 
                         être assimilés à des activités de conseil. Ils visent uniquement à un 
-                        divertissement des Utilisateurs.</p><p>Le Prestataire ne dispose pas des moyens techniques de:</p> <ul><li>vérifier l'identité et l'âge des Utilisateurs inscrits,</li><li>effectuer une modération des contenus,</li><li>contrôler les contenus des informations, déclarations et messages édités par les Utilisateurs.</li></ul> <p>Le
-                        Prestataire ne peut être tenu responsable des actes de toute nature, 
+                        divertissement des Utilisateurs.</p>
+                    <p>Le Prestataire ne dispose pas des moyens techniques de:</p> 
+                    <ul>
+                        <li>vérifier l'identité et l'âge des Utilisateurs inscrits,</li>
+                        <li>effectuer une modération des contenus,</li>
+                        <li>contrôler les contenus des informations, déclarations et messages édités par les Utilisateurs.</li>
+                    </ul> 
+                    <p>Le Prestataire ne peut être tenu responsable des actes de toute nature, 
                         illégaux ou passibles de sanctions pénales, commis par les Utilisateurs 
                         lors de l'utilisation des Services du site Internet.</p><p><b>6. Description - Prix - Résiliation des Services</b></p><p>Les Services sont fournis par le Prestataire par un échange instantané de messages textuels avec un Consultant.</p><p>L'Utilisateur prend connaissance du tarif associé à chacune des offres de Services.</p><p>Les Services sont disponibles :</p> <ul><li>Du Lundi au Vendredi de 8h à minuit </li></ul> <p>Le
                         Prestataire ne peut garantit à l’Utilisateur de la disponibilité 
@@ -347,9 +400,9 @@
         </script>
         <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
         <noscript>
-            <div style="display:inline;">
-                <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/933151112/?value=0&amp;guid=ON&amp;script=0"/>
-            </div>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/933151112/?value=0&amp;guid=ON&amp;script=0"/>
+        </div>
         </noscript>
         <script>
             (function (i, s, o, g, r, a, m) {

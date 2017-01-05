@@ -24,8 +24,7 @@
             </div>
         </section>
         <div class="headline">
-            <span class="headline__content">fiche <span>du voyant</span>
-            </span>
+            <span class="headline__content">Fiche du voyant</span>
         </div>
         <section class="page">
             <div class="page__sidebar">
