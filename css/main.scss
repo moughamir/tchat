@@ -107,7 +107,11 @@ $icons:
 // Header
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 .header {
-	background: $white;
+	  background: url(../img/tarot/header.png) #fff no-repeat center;
+    background-size: cover;
+    box-shadow: 0 3px 10px -5px #313131;
+    z-index: 2;
+    position: relative;
 
 	&__content {
 		@include grid-row();
@@ -138,7 +142,7 @@ $icons:
 	}
 
 	&__logo {
-		margin: rem-calc(10) auto;
+		margin: 0 auto;
 
 		@media #{$small-only} {
 			display: block;
