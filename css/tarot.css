@@ -3587,7 +3587,7 @@ button.add_element.button {
         text-align: center;
         margin: 10px auto 15px; } }
 .header__logo {
-    margin: 0.76923rem auto; }
+    margin: 6px auto; }
 @media only screen and (max-width: 49.23077em) {
     .header__logo {
         display: block;

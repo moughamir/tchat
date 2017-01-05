@@ -138,7 +138,7 @@ $icons:
 	}
 
 	&__logo {
-		margin: rem-calc(10) auto;
+		margin: 0 auto;
 
 		@media #{$small-only} {
 			display: block;
