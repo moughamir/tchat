@@ -276,22 +276,18 @@ echo siteHead('Informations personnelles', $description, 'default pi');
     <script src="js/tarot.js"></script>
     <script type="text/javascript">
     $(window).load(function () {
-      var eLiConversations = $('ul.conversations li');
-      eLiConversations.on('click', function () {
-        eLiConversations.removeClass('active');
-        $(this).addClass('active');
-        $('div.conversations')
-        .find('.conversation.active').removeClass('active').end()
-        .find('.conversation[data-conversation_id="' + $(this).data('conversation_id') + '"]').addClass('active');
+      var dynamicForm = new DynamicForm({
+        container_id: 'user_personnal_informations_adresses',
+        remove_element_content: '-',
+        append_add_button: false,
+        append_label_index: false,
+        translation: {
+          element_num: 'Adresse'
+        }
       });
-    });
-    var chatContainer = {
-      height: "+=200",
-      overflow: "auto"
-    }
-    $('.all').click(function(){
-      $('.conversations').css(chatContainer);
-      $(this).hide();
+      $('.account.personnal_informations form button.add_element').on('click', function () {
+        dynamicForm.add();
+      });
     });
     </script>
 </body>
