@@ -4217,8 +4217,9 @@ button.add_element.button {
     color: #FFFFFF;
     margin: 0; }
 .psychic__button--chat:focus, .psychic__button--chat:hover {
-    background: linear-gradient(25deg, #401075 0%, #17ca8d 100%);
-    color: #454545; }
+    background: #454545;
+    color: #FFF;
+}
 .psychic__description, .psychic__reviews {
     margin: 0 0.76923rem;
     border: solid 2px #454545; }
