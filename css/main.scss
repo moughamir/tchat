@@ -100,8 +100,11 @@ $icons:
 	outline: none;
     min-width: 128px;
 	&:focus, &:hover {
-		background: linear-gradient(35deg, rgba(113,239,196,1) 0%, rgba(17,194,180,1) 100%);
-	}
+			background: -webkit-linear-gradient(35deg, rgba(113,239,196,1) 0%, rgba(17,194,180,1) 100%);
+			background: -moz-linear-gradient(35deg, rgba(113,239,196,1) 0%, rgba(17,194,180,1) 100%);
+			background: -o-linear-gradient(35deg, rgba(113,239,196,1) 0%, rgba(17,194,180,1) 100%);
+			background: linear-gradient(35deg, rgba(113,239,196,1) 0%, rgba(17,194,180,1) 100%);
+		}
 }
 
 // Header
@@ -871,8 +874,8 @@ background: url('../img/user/' + $bg +'-grey.png') no-repeat center;
 			margin: 0;
 
 			&:focus, &:hover {
-				background: linear-gradient(25deg, #71efc4 0%, darken(#71efc4, 25) 100%);
-				color: $primary-color;
+				background: #primary-color;
+				color: #ffffff;
 			}
 		}
 	}
