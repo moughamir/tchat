@@ -3,9 +3,9 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
-const imagemin = require('gulp-imagemin');
+const rename = require('gulp-rename');
 
-var source = 'scss/**/*.scss',
+var source = 'css/main.scss',
     target = './css/',
     sassOptions = {
       errLogToConsole: true,
@@ -23,6 +23,9 @@ gulp.task('sass', function () {
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(sourcemaps.write())
+    .pipe(rename({
+      basename: 'tarot'
+    }))
     .pipe(gulp.dest(target));
 });
 gulp.task('watch', function() {
@@ -32,9 +35,5 @@ gulp.task('watch', function() {
       console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
 });
-gulp.task('imagemin', () =>
-    gulp.src('images_landing/previsions-2017/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('images_landing/previsions-2017/'))
-);
+
 gulp.task('default', ['sass', 'watch']);
